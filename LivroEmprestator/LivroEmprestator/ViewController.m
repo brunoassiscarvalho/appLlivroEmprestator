@@ -16,12 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 50.0f)];
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = view.bounds;
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor blackColor] CGColor], nil];
     [view.layer insertSublayer:gradient atIndex:0];
+    
 }
 
 - (void)didReceiveMemoryWarning {
