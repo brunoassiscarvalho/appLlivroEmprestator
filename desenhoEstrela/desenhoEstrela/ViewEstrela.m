@@ -33,89 +33,64 @@
     UIBezierPath *path = [UIBezierPath new];
     
     NSInteger rMaior = 75;
-    NSInteger  rMenor = 50;
-    NSInteger quantidadePontas =6 ;
+    NSInteger  rMenor = 45;
+    NSInteger quantidadePontas =5;
     float passo= 360/(quantidadePontas*2);
-    float angulo= 0;
+    float angulo=54;
     
     // Converte de polar para Cartesiano
-    float x1 = rMaior * cos(angulo);
-    float y1 = rMaior * sin(angulo);
+    float x1 = rMaior * cos(angulo/ 180 * M_PI);
+    float y1 = rMaior * sin(angulo/ 180 * M_PI);
+    
+    float x2 = 0;
+    float y2 = 0;
     
     [path moveToPoint:CGPointMake(x1+100, y1+100)];
    
-    for(int i =0 ; i<= quantidadePontas ; i++){
-       
+    for(int i =0 ; i<= quantidadePontas-2 ; i++){
         
         angulo+=passo;
-        
-        float x2 = rMenor * cos(angulo);
-        float y2 = rMenor * sin(angulo);
-        
+        x2 = rMenor * cos(angulo/ 180 * M_PI);
+        y2 = rMenor * sin(angulo/ 180 * M_PI);
         [path addLineToPoint:CGPointMake(x2+100, y2+100)];
         
-        
         angulo+=passo;
-        x1 = rMaior * cos(angulo);
-        y1 = rMaior * sin(angulo);
-        
-        
+        x1 = rMaior * cos(angulo/ 180 * M_PI);
+        y1 = rMaior * sin(angulo/ 180 * M_PI);
         [path addLineToPoint:CGPointMake(x1+100, y1+100)];
-        
-
-      //[path moveToPoint:CGPointMake(0, 10)];
-        
     }
+    
+    angulo+=passo;
+    
+    x2 = rMenor * cos(angulo/ 180 * M_PI);
+    y2 = rMenor * sin(angulo/ 180 * M_PI);
+    [path addLineToPoint:CGPointMake(x2+100, y2+100)];
+    
     [path closePath];
-    
-    
-    
-    
-    //10, 200, 10
-    
-    
-    UIColor *verdeDoFelipe = [UIColor colorWithRed:10.0/255.0
-                                             green:200.0/255.0
+
+    UIColor *verde = [UIColor colorWithRed:10.0/255.0
+                                             green:100.0/255.0
                                               blue:10.0/255.0
                                              alpha:1];
     
     
-    UIColor *outraCor = [UIColor magentaColor];
+    UIColor *preto = [UIColor blackColor];
     
-    [verdeDoFelipe setFill];
-    [outraCor setStroke];
+    [verde setFill];
+    [preto setStroke];
     
     [path fill];
     [path stroke];
+    
+    CGRect frame = CGRectMake(72,65,200, 20);
+    UILabel *nome = [[UILabel alloc] initWithFrame:frame];
+    nome.text = @"BRUNO";
+    nome.textColor = [UIColor redColor];
+    [nome setFont:[UIFont fontWithName:@"Arial-BoldMT" size:16]];
+    [self addSubview:nome];
+    
+    UIImage *imageObject = [UIImage imageNamed:@"YinYang"];
+    [imageObject drawInRect:CGRectMake(75,85, 50, 50)];
+    
 }
-
-//- (void)drawRect:(CGRect)rect {
-//    UIBezierPath *path = [UIBezierPath new];
-//    
-//    [path moveToPoint:CGPointMake(75, 10)];
-//    [path addLineToPoint:CGPointMake(160, 150)];
-//    [path addLineToPoint:CGPointMake(10, 150)];
-//    [path closePath];
-//    
-//    
-//    //10, 200, 10
-//    
-//    
-//    UIColor *verdeDoFelipe = [UIColor colorWithRed:10.0/255.0
-//                                             green:200.0/255.0
-//                                              blue:10.0/255.0
-//                                             alpha:1];
-//    
-//    
-//    UIColor *outraCor = [UIColor magentaColor];
-//    
-//    [verdeDoFelipe setFill];
-//    [outraCor setStroke];
-//    
-//    [path fill];
-//    [path stroke];
-//}
-
-
-
 @end
