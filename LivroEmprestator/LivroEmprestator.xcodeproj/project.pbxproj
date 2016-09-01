@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */; };
+		570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD01D77AEC5001EC129 /* TableListaContatos.m */; };
+		570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD31D77BA26001EC129 /* ViewFiguras.m */; };
 		57B1519B1D5BF434006C6560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1519A1D5BF434006C6560 /* main.m */; };
 		57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1519D1D5BF434006C6560 /* AppDelegate.m */; };
 		57B151A11D5BF434006C6560 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B151A01D5BF434006C6560 /* ViewController.m */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		570E5DCC1D77AB22001EC129 /* ViewLIstaContatos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewLIstaContatos.h; sourceTree = "<group>"; };
+		570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewLIstaContatos.m; sourceTree = "<group>"; };
+		570E5DCF1D77AEC5001EC129 /* TableListaContatos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListaContatos.h; sourceTree = "<group>"; };
+		570E5DD01D77AEC5001EC129 /* TableListaContatos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListaContatos.m; sourceTree = "<group>"; };
+		570E5DD21D77BA26001EC129 /* ViewFiguras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewFiguras.h; sourceTree = "<group>"; };
+		570E5DD31D77BA26001EC129 /* ViewFiguras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFiguras.m; sourceTree = "<group>"; };
 		57B151961D5BF434006C6560 /* LivroEmprestator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivroEmprestator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B1519A1D5BF434006C6560 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57B1519C1D5BF434006C6560 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +87,12 @@
 			isa = PBXGroup;
 			children = (
 				57B1519A1D5BF434006C6560 /* main.m */,
+				570E5DCC1D77AB22001EC129 /* ViewLIstaContatos.h */,
+				570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */,
+				570E5DCF1D77AEC5001EC129 /* TableListaContatos.h */,
+				570E5DD01D77AEC5001EC129 /* TableListaContatos.m */,
+				570E5DD21D77BA26001EC129 /* ViewFiguras.h */,
+				570E5DD31D77BA26001EC129 /* ViewFiguras.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,7 +170,10 @@
 				57B151A11D5BF434006C6560 /* ViewController.m in Sources */,
 				57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */,
 				57B1519B1D5BF434006C6560 /* main.m in Sources */,
+				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
 				57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */,
+				570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */,
+				570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +324,7 @@
 				57B151B21D5BF434006C6560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
