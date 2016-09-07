@@ -17,6 +17,9 @@
 		57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57B151A51D5BF434006C6560 /* LivroEmprestator.xcdatamodeld */; };
 		57B151A91D5BF434006C6560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B151A81D5BF434006C6560 /* Assets.xcassets */; };
 		57B151AC1D5BF434006C6560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B151AA1D5BF434006C6560 /* LaunchScreen.storyboard */; };
+		9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEC1D7F80E60078357F /* ViewPentagono.m */; };
+		9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEF1D7F84800078357F /* ViewCirculo.m */; };
+		9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAF21D7F8E6C0078357F /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,12 @@
 		57B151A81D5BF434006C6560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B151AB1D5BF434006C6560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B151AD1D5BF434006C6560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C28EAEB1D7F80E60078357F /* ViewPentagono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPentagono.h; sourceTree = "<group>"; };
+		9C28EAEC1D7F80E60078357F /* ViewPentagono.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPentagono.m; sourceTree = "<group>"; };
+		9C28EAEE1D7F84800078357F /* ViewCirculo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCirculo.h; sourceTree = "<group>"; };
+		9C28EAEF1D7F84800078357F /* ViewCirculo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCirculo.m; sourceTree = "<group>"; };
+		9C28EAF11D7F8E6C0078357F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9C28EAF21D7F8E6C0078357F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +78,8 @@
 		57B151981D5BF434006C6560 /* LivroEmprestator */ = {
 			isa = PBXGroup;
 			children = (
+				9C28EAF11D7F8E6C0078357F /* LoginViewController.h */,
+				9C28EAF21D7F8E6C0078357F /* LoginViewController.m */,
 				57B1519C1D5BF434006C6560 /* AppDelegate.h */,
 				57B1519D1D5BF434006C6560 /* AppDelegate.m */,
 				57B1519F1D5BF434006C6560 /* ViewController.h */,
@@ -93,6 +104,10 @@
 				570E5DD01D77AEC5001EC129 /* TableListaContatos.m */,
 				570E5DD21D77BA26001EC129 /* ViewFiguras.h */,
 				570E5DD31D77BA26001EC129 /* ViewFiguras.m */,
+				9C28EAEB1D7F80E60078357F /* ViewPentagono.h */,
+				9C28EAEC1D7F80E60078357F /* ViewPentagono.m */,
+				9C28EAEE1D7F84800078357F /* ViewCirculo.h */,
+				9C28EAEF1D7F84800078357F /* ViewCirculo.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -167,11 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */,
 				57B151A11D5BF434006C6560 /* ViewController.m in Sources */,
 				57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */,
 				57B1519B1D5BF434006C6560 /* main.m in Sources */,
+				9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */,
 				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
 				57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */,
+				9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */,
 				570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */,
 				570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */,
 			);
@@ -288,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LivroEmprestator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.LivroEmprestator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LivroEmprestator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.LivroEmprestator;
 				PRODUCT_NAME = "$(TARGET_NAME)";

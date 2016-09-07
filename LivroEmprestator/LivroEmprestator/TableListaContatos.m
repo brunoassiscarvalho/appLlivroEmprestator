@@ -9,13 +9,23 @@
 #import "TableListaContatos.h"
 
 @interface TableListaContatos ()
+@property (strong, nonatomic) IBOutlet UITableView *tabela;
 
+@property (strong, nonatomic) NSMutableArray<NSString *> *nomes;
 @end
 
 @implementation TableListaContatos
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tabela setDataSource:self];
+    
+    self.nomes = [[NSMutableArray alloc] init];
+    
+    [self.nomes addObject:[NSString stringWithFormat:@"Fulano"]];
+    [self.nomes addObject:[NSString stringWithFormat:@"Beltrano"]];
+    [self.nomes addObject:[NSString stringWithFormat:@"Celtrano"]];
+    [self.nomes addObject:[NSString stringWithFormat:@"Ciclano"]];
     
     
     
@@ -38,17 +48,53 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+        return self.nomes.count;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemLIstaContatos" forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Configure the cell...
+    UITableViewCell *cell =
+    [tableView dequeueReusableCellWithIdentifier:@"ItemLIstaContatos"
+                                    forIndexPath:indexPath];
+    
+    if (indexPath.row % 2) {
+        [cell setBackgroundColor:[UIColor blueColor]];
+    }else {
+        [cell setBackgroundColor:[UIColor purpleColor]];
+    }
+    
+    NSString *nome = [self.nomes objectAtIndex:indexPath.row];
+    
+    [cell.textLabel setText:nome];
+    [cell.textLabel setTextColor:[UIColor whiteColor]];
+    
+    
     
     return cell;
+    
+    
+    
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.nomes removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
+
 
 
 /*
