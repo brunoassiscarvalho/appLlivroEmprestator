@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		570C611A1D9347B0004ABF23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 570C61191D9347B0004ABF23 /* main.m */; };
+		570C611D1D9347B0004ABF23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 570C611C1D9347B0004ABF23 /* AppDelegate.m */; };
+		570C61201D9347B0004ABF23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570C611F1D9347B0004ABF23 /* ViewController.m */; };
+		570C61231D9347B0004ABF23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570C61211D9347B0004ABF23 /* Main.storyboard */; };
+		570C61251D9347B0004ABF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570C61241D9347B0004ABF23 /* Assets.xcassets */; };
+		570C61281D9347B0004ABF23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570C61261D9347B0004ABF23 /* LaunchScreen.storyboard */; };
+		570C61311D9354BF004ABF23 /* IncrivelBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 570C61301D9354BF004ABF23 /* IncrivelBehavior.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		570C61151D9347B0004ABF23 /* Quadrados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadrados.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		570C61191D9347B0004ABF23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		570C611B1D9347B0004ABF23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		570C611C1D9347B0004ABF23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		570C611E1D9347B0004ABF23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		570C611F1D9347B0004ABF23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		570C61221D9347B0004ABF23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		570C61241D9347B0004ABF23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		570C61271D9347B0004ABF23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		570C61291D9347B0004ABF23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		570C612F1D9354BF004ABF23 /* IncrivelBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncrivelBehavior.h; sourceTree = "<group>"; };
+		570C61301D9354BF004ABF23 /* IncrivelBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncrivelBehavior.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		570C61121D9347B0004ABF23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		570C610C1D9347B0004ABF23 = {
+			isa = PBXGroup;
+			children = (
+				570C61171D9347B0004ABF23 /* Quadrados */,
+				570C61161D9347B0004ABF23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		570C61161D9347B0004ABF23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				570C61151D9347B0004ABF23 /* Quadrados.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		570C61171D9347B0004ABF23 /* Quadrados */ = {
+			isa = PBXGroup;
+			children = (
+				570C611B1D9347B0004ABF23 /* AppDelegate.h */,
+				570C611C1D9347B0004ABF23 /* AppDelegate.m */,
+				570C611E1D9347B0004ABF23 /* ViewController.h */,
+				570C611F1D9347B0004ABF23 /* ViewController.m */,
+				570C61211D9347B0004ABF23 /* Main.storyboard */,
+				570C61241D9347B0004ABF23 /* Assets.xcassets */,
+				570C61261D9347B0004ABF23 /* LaunchScreen.storyboard */,
+				570C61291D9347B0004ABF23 /* Info.plist */,
+				570C61181D9347B0004ABF23 /* Supporting Files */,
+				570C612F1D9354BF004ABF23 /* IncrivelBehavior.h */,
+				570C61301D9354BF004ABF23 /* IncrivelBehavior.m */,
+			);
+			path = Quadrados;
+			sourceTree = "<group>";
+		};
+		570C61181D9347B0004ABF23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				570C61191D9347B0004ABF23 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		570C61141D9347B0004ABF23 /* Quadrados */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 570C612C1D9347B0004ABF23 /* Build configuration list for PBXNativeTarget "Quadrados" */;
+			buildPhases = (
+				570C61111D9347B0004ABF23 /* Sources */,
+				570C61121D9347B0004ABF23 /* Frameworks */,
+				570C61131D9347B0004ABF23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quadrados;
+			productName = Quadrados;
+			productReference = 570C61151D9347B0004ABF23 /* Quadrados.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		570C610D1D9347B0004ABF23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = IESB;
+				TargetAttributes = {
+					570C61141D9347B0004ABF23 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 570C61101D9347B0004ABF23 /* Build configuration list for PBXProject "Quadrados" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 570C610C1D9347B0004ABF23;
+			productRefGroup = 570C61161D9347B0004ABF23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				570C61141D9347B0004ABF23 /* Quadrados */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		570C61131D9347B0004ABF23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570C61281D9347B0004ABF23 /* LaunchScreen.storyboard in Resources */,
+				570C61251D9347B0004ABF23 /* Assets.xcassets in Resources */,
+				570C61231D9347B0004ABF23 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		570C61111D9347B0004ABF23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570C61201D9347B0004ABF23 /* ViewController.m in Sources */,
+				570C61311D9354BF004ABF23 /* IncrivelBehavior.m in Sources */,
+				570C611D1D9347B0004ABF23 /* AppDelegate.m in Sources */,
+				570C611A1D9347B0004ABF23 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		570C61211D9347B0004ABF23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				570C61221D9347B0004ABF23 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		570C61261D9347B0004ABF23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				570C61271D9347B0004ABF23 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		570C612A1D9347B0004ABF23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		570C612B1D9347B0004ABF23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		570C612D1D9347B0004ABF23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Quadrados/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.Quadrados;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		570C612E1D9347B0004ABF23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Quadrados/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.Quadrados;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		570C61101D9347B0004ABF23 /* Build configuration list for PBXProject "Quadrados" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570C612A1D9347B0004ABF23 /* Debug */,
+				570C612B1D9347B0004ABF23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		570C612C1D9347B0004ABF23 /* Build configuration list for PBXNativeTarget "Quadrados" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570C612D1D9347B0004ABF23 /* Debug */,
+				570C612E1D9347B0004ABF23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 570C610D1D9347B0004ABF23 /* Project object */;
+}
