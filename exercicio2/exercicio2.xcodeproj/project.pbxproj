@@ -13,6 +13,17 @@
 		579D9CC81D9C911E00F10E55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579D9CC61D9C911E00F10E55 /* Main.storyboard */; };
 		579D9CCA1D9C911E00F10E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579D9CC91D9C911E00F10E55 /* Assets.xcassets */; };
 		579D9CCD1D9C911E00F10E55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579D9CCB1D9C911E00F10E55 /* LaunchScreen.storyboard */; };
+		57FCBAD31DA47A460061CC4D /* carroceria.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAD21DA47A460061CC4D /* carroceria.m */; };
+		57FCBAD61DA47A730061CC4D /* portas.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAD51DA47A730061CC4D /* portas.m */; };
+		57FCBAD91DA47A8A0061CC4D /* capo.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAD81DA47A8A0061CC4D /* capo.m */; };
+		57FCBADC1DA47AA70061CC4D /* tampaPortaMalas.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBADB1DA47AA70061CC4D /* tampaPortaMalas.m */; };
+		57FCBADF1DA47AB30061CC4D /* roda.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBADE1DA47AB30061CC4D /* roda.m */; };
+		57FCBAE21DA47AC40061CC4D /* motor.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAE11DA47AC40061CC4D /* motor.m */; };
+		57FCBAE51DA47AD40061CC4D /* painel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAE41DA47AD40061CC4D /* painel.m */; };
+		57FCBAE81DA47AEE0061CC4D /* bancosDianteiros.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAE71DA47AEE0061CC4D /* bancosDianteiros.m */; };
+		57FCBAEB1DA47B060061CC4D /* bancosTraseiros.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAEA1DA47B060061CC4D /* bancosTraseiros.m */; };
+		57FCBAEE1DA47B150061CC4D /* cintoSeguranca.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAED1DA47B150061CC4D /* cintoSeguranca.m */; };
+		57FCBAF11DA47B270061CC4D /* airBag.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FCBAF01DA47B270061CC4D /* airBag.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,28 @@
 		579D9CC91D9C911E00F10E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579D9CCC1D9C911E00F10E55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		579D9CCE1D9C911E00F10E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57FCBAD11DA47A460061CC4D /* carroceria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carroceria.h; sourceTree = "<group>"; };
+		57FCBAD21DA47A460061CC4D /* carroceria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = carroceria.m; sourceTree = "<group>"; };
+		57FCBAD41DA47A730061CC4D /* portas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portas.h; sourceTree = "<group>"; };
+		57FCBAD51DA47A730061CC4D /* portas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = portas.m; sourceTree = "<group>"; };
+		57FCBAD71DA47A8A0061CC4D /* capo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = capo.h; sourceTree = "<group>"; };
+		57FCBAD81DA47A8A0061CC4D /* capo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = capo.m; sourceTree = "<group>"; };
+		57FCBADA1DA47AA70061CC4D /* tampaPortaMalas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tampaPortaMalas.h; sourceTree = "<group>"; };
+		57FCBADB1DA47AA70061CC4D /* tampaPortaMalas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tampaPortaMalas.m; sourceTree = "<group>"; };
+		57FCBADD1DA47AB30061CC4D /* roda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = roda.h; sourceTree = "<group>"; };
+		57FCBADE1DA47AB30061CC4D /* roda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = roda.m; sourceTree = "<group>"; };
+		57FCBAE01DA47AC40061CC4D /* motor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = motor.h; sourceTree = "<group>"; };
+		57FCBAE11DA47AC40061CC4D /* motor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = motor.m; sourceTree = "<group>"; };
+		57FCBAE31DA47AD40061CC4D /* painel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = painel.h; sourceTree = "<group>"; };
+		57FCBAE41DA47AD40061CC4D /* painel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = painel.m; sourceTree = "<group>"; };
+		57FCBAE61DA47AEE0061CC4D /* bancosDianteiros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bancosDianteiros.h; sourceTree = "<group>"; };
+		57FCBAE71DA47AEE0061CC4D /* bancosDianteiros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bancosDianteiros.m; sourceTree = "<group>"; };
+		57FCBAE91DA47B060061CC4D /* bancosTraseiros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bancosTraseiros.h; sourceTree = "<group>"; };
+		57FCBAEA1DA47B060061CC4D /* bancosTraseiros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bancosTraseiros.m; sourceTree = "<group>"; };
+		57FCBAEC1DA47B150061CC4D /* cintoSeguranca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cintoSeguranca.h; sourceTree = "<group>"; };
+		57FCBAED1DA47B150061CC4D /* cintoSeguranca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cintoSeguranca.m; sourceTree = "<group>"; };
+		57FCBAEF1DA47B270061CC4D /* airBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = airBag.h; sourceTree = "<group>"; };
+		57FCBAF01DA47B270061CC4D /* airBag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = airBag.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +108,28 @@
 			isa = PBXGroup;
 			children = (
 				579D9CBE1D9C911E00F10E55 /* main.m */,
+				57FCBAD11DA47A460061CC4D /* carroceria.h */,
+				57FCBAD21DA47A460061CC4D /* carroceria.m */,
+				57FCBAD41DA47A730061CC4D /* portas.h */,
+				57FCBAD51DA47A730061CC4D /* portas.m */,
+				57FCBAD71DA47A8A0061CC4D /* capo.h */,
+				57FCBAD81DA47A8A0061CC4D /* capo.m */,
+				57FCBADA1DA47AA70061CC4D /* tampaPortaMalas.h */,
+				57FCBADB1DA47AA70061CC4D /* tampaPortaMalas.m */,
+				57FCBADD1DA47AB30061CC4D /* roda.h */,
+				57FCBADE1DA47AB30061CC4D /* roda.m */,
+				57FCBAE01DA47AC40061CC4D /* motor.h */,
+				57FCBAE11DA47AC40061CC4D /* motor.m */,
+				57FCBAE31DA47AD40061CC4D /* painel.h */,
+				57FCBAE41DA47AD40061CC4D /* painel.m */,
+				57FCBAE61DA47AEE0061CC4D /* bancosDianteiros.h */,
+				57FCBAE71DA47AEE0061CC4D /* bancosDianteiros.m */,
+				57FCBAE91DA47B060061CC4D /* bancosTraseiros.h */,
+				57FCBAEA1DA47B060061CC4D /* bancosTraseiros.m */,
+				57FCBAEC1DA47B150061CC4D /* cintoSeguranca.h */,
+				57FCBAED1DA47B150061CC4D /* cintoSeguranca.m */,
+				57FCBAEF1DA47B270061CC4D /* airBag.h */,
+				57FCBAF01DA47B270061CC4D /* airBag.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -149,9 +204,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FCBAE51DA47AD40061CC4D /* painel.m in Sources */,
+				57FCBAE21DA47AC40061CC4D /* motor.m in Sources */,
+				57FCBAEB1DA47B060061CC4D /* bancosTraseiros.m in Sources */,
+				57FCBAF11DA47B270061CC4D /* airBag.m in Sources */,
+				57FCBAD91DA47A8A0061CC4D /* capo.m in Sources */,
+				57FCBADC1DA47AA70061CC4D /* tampaPortaMalas.m in Sources */,
 				579D9CC51D9C911E00F10E55 /* ViewController.m in Sources */,
 				579D9CC21D9C911E00F10E55 /* AppDelegate.m in Sources */,
+				57FCBAD61DA47A730061CC4D /* portas.m in Sources */,
+				57FCBAD31DA47A460061CC4D /* carroceria.m in Sources */,
 				579D9CBF1D9C911E00F10E55 /* main.m in Sources */,
+				57FCBAE81DA47AEE0061CC4D /* bancosDianteiros.m in Sources */,
+				57FCBAEE1DA47B150061CC4D /* cintoSeguranca.m in Sources */,
+				57FCBADF1DA47AB30061CC4D /* roda.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +368,7 @@
 				579D9CD31D9C911E00F10E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

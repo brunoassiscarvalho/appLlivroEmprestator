@@ -18,7 +18,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self fatorial: 10];
-    [self fibonacci: 100];
+    [self fibonacci: 50];
+    [self impares:4];
+    [self palindromo: @"SOCORRAM-ME, SUBI NO ÔNIBUS EM MARROCOS"];
+    [self armstrong:111];
+    
+    NSArray *array = @[@1, @2, @3, @4, @5, @6];
+    [self somaMatriz: array ];
+    [self imprimeDiagonal:@"ola pessoal"];
+    
+     
     
     
    
@@ -45,7 +54,7 @@
 }*/
 
 -(void)fibonacci:(int)range{
-    //int range = 15;
+
     NSMutableArray* arr = [[NSMutableArray alloc]init];
     for (int k =0; k< range; k++)
     {
@@ -66,6 +75,82 @@
     
     
 }
+
+-(void)impares:(int)quantidade{
+    int resposta = 1;
+    for (int i =0; i< quantidade; i++)
+    {
+    
+        NSLog(@"%d",resposta);
+        resposta+=2;
+    }
+}
+
+-(Boolean)palindromo: (NSString*) oracao{
+    
+    Boolean retorno = false;
+    NSData *temp = [oracao dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSMutableString *textoLimpo =[[NSMutableString alloc] initWithData:temp encoding:NSASCIIStringEncoding];
+    
+    
+    NSCharacterSet *charactersToRemove = [[NSCharacterSet alphanumericCharacterSet] invertedSet];
+    textoLimpo = [[textoLimpo  componentsSeparatedByCharactersInSet:charactersToRemove] componentsJoinedByString:@""];
+    
+    NSMutableString *textoReverso = [NSMutableString string];
+    NSInteger charIndex = [textoLimpo  length];
+    while (charIndex > 0) {
+        charIndex--;
+        NSRange subStrRange = NSMakeRange(charIndex, 1);
+        [textoReverso appendString:[textoLimpo  substringWithRange:subStrRange]];
+    }
+    if ([textoLimpo caseInsensitiveCompare: textoReverso] == NSOrderedSame){
+        retorno=true;
+        NSLog(@"  %@ é um palindromo", oracao);
+        
+    }else{
+        NSLog(@"  %@ não é um palindromo", oracao);
+    }
+    return retorno;
+}
+
+-(void) somaMatriz: (NSArray*) matriz{
+    NSLog(@"a soma da matriz é:  %ld",[[matriz valueForKeyPath:@"@sum.self"] integerValue]);
+    
+}
+
+-(void) imprimeDiagonal: (NSString*) texto{
+    NSInteger charIndex = [texto  length];
+    for (int i =0; i<charIndex ; i++) {
+        NSRange subStrRange = NSMakeRange(i, 1);
+        NSLog(@"%@%@ ", [@"" stringByPaddingToLength:i withString:@" " startingAtIndex:0],[texto  substringWithRange:subStrRange]);
+    }
+    
+}
+
+
+
+
+
+-(void)armstrong:(int)num{
+    
+    NSString* myString2 = [NSString stringWithFormat:@"%d",num];
+    long i = myString2.length;
+    int temp=num;
+    int sum=0, r=0;
+    while(num!=0){
+        r=num%10;
+        num=num/10;
+        sum=sum+pow(r,i);
+    }
+    if(sum==temp)
+        NSLog(@"%d é um numero de Armstrong",temp);
+    else
+        NSLog(@"%d não é um numero de Armstrong",temp);
+    
+}
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
