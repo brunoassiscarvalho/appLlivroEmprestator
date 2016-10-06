@@ -24,25 +24,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)animateOneFrame
-{
-    NSRect viewBounds = [self bounds];
-    dispatch_queue_t queue = dispatch_get_current_queue();
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    __weak typeof (self) weakSelf = self;
+    dispatch_queue_t fila = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    dispatch_async(fila, ^{
+        NSURL *url = [NSURL URLWithString:@"https://s-media-cache-ak0.pinimg.com/originals/4f/c7/84/4fc7841e00ceda2bdc69f00271e4dae7.jpg"];
         
-        NSImage *image = [self extractImageFrom:@"my_url.com"];
-        NSSize imageSize = [image size];
-        NSRect imageRect = NSMakeRect( 0, 0, imageSize.width, imageSize.height );
+        NSData *bytes = [NSData dataWithContentsOfURL:url];
+        UIImage *imagem = [UIImage imageWithData:bytes];
         
-        dispatch_sync(queue, ^{
-            [image drawInRect:viewBounds fromRect:imageRect operation:NSCompositeCopy fraction:1.0];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImageView *iv = [[UIImageView alloc] initWithImage:imagem];
+            [iv sizeToFit];
+            [weakSelf.myScroll setContentSize:imagem.size];
+            [weakSelf.myScroll addSubview:iv];
+            
+            [weakSelf setTitle:@"Game"];
         });
         
+                                           
+    
     });
-    return;
 }
+
 
 /*
 #pragma mark - Navigation
