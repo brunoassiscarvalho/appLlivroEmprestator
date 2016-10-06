@@ -21,7 +21,7 @@
     [self fibonacci: 50];
     [self impares:4];
     [self palindromo: @"SOCORRAM-ME, SUBI NO ÔNIBUS EM MARROCOS"];
-    [self armstrong:111];
+    [self armstrong:23];
     
     NSArray *array = @[@1, @2, @3, @4, @5, @6];
     [self somaMatriz: array ];
