@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ControllerScroll : UIViewController
+@interface ControllerScroll : UIViewController <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *imagemScroll;
+@property (weak, nonatomic) IBOutlet UIImageView *viewImagem;
 
 @end

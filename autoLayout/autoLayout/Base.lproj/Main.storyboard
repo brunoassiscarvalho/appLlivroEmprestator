@@ -73,7 +73,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFg-cj-EJg" customClass="UITextView"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFg-cj-EJg" customClass="UITextView">
+                                <frame key="frameInset" minY="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUJ-dI-pgQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="NmV-yN-Spm" id="MtK-sh-kJ7"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,12 +95,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imagemScroll" destination="TFg-cj-EJg" id="icE-uU-Oa1"/>
                         <outlet property="myScroll" destination="TFg-cj-EJg" id="Ngj-Cl-mNP"/>
+                        <outlet property="viewImagem" destination="XUJ-dI-pgQ" id="xIS-c8-1A8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPF-n5-hAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="121"/>
+            <point key="canvasLocation" x="1040.8" y="120.98950524737631"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.imagemScroll setMaximumZoomScale:5.0];
+    [self.imagemScroll setMinimumZoomScale:0.1];
+    [self.imagemScroll setClipsToBounds:YES];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -35,11 +39,10 @@
         UIImage *imagem = [UIImage imageWithData:bytes];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            UIImageView *iv = [[UIImageView alloc] initWithImage:imagem];
-            [iv sizeToFit];
+            [self.viewImagem setImage:(imagem)];
+            [self.viewImagem sizeToFit];
             [weakSelf.myScroll setContentSize:imagem.size];
-            [weakSelf.myScroll addSubview:iv];
-            
+            [weakSelf.myScroll addSubview:self.viewImagem];
             [weakSelf setTitle:@"Game"];
         });
         
@@ -48,6 +51,10 @@
     });
 }
 
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.viewImagem;
+}
 
 /*
 #pragma mark - Navigation
