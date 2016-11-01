@@ -14,11 +14,14 @@
 		570957261DC7DAAA00A98C6D /* IOS2exercico6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 570957241DC7DAAA00A98C6D /* IOS2exercico6.xcdatamodeld */; };
 		570957281DC7DAAA00A98C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570957271DC7DAAA00A98C6D /* Assets.xcassets */; };
 		5709572B1DC7DAAA00A98C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570957291DC7DAAA00A98C6D /* LaunchScreen.storyboard */; };
-		5709573D1DC7DD6E00A98C6D /* Exercicio01.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709573B1DC7DD6E00A98C6D /* Exercicio01.m */; };
-		5709573E1DC7DD6E00A98C6D /* Exercicio01.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5709573C1DC7DD6E00A98C6D /* Exercicio01.xib */; };
 		570957421DC7E04700A98C6D /* Exercio01TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570957401DC7E04700A98C6D /* Exercio01TableViewCell.m */; };
 		570957431DC7E04700A98C6D /* Exercio01TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570957411DC7E04700A98C6D /* Exercio01TableViewCell.xib */; };
 		570957461DC7F36A00A98C6D /* Exercicio01TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570957451DC7F36A00A98C6D /* Exercicio01TableViewController.m */; };
+		57C606FA1DC9301300F2A41F /* Exercicio02TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C606F81DC9301300F2A41F /* Exercicio02TableViewCell.m */; };
+		57C606FB1DC9301300F2A41F /* Exercicio02TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C606F91DC9301300F2A41F /* Exercicio02TableViewCell.xib */; };
+		57C606FE1DC93D2A00F2A41F /* Exercicio02TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C606FD1DC93D2A00F2A41F /* Exercicio02TableViewController.m */; };
+		57C607051DC9402100F2A41F /* Exercicio03TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C607031DC9402100F2A41F /* Exercicio03TableViewCell.m */; };
+		57C607061DC9402100F2A41F /* Exercicio03TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C607041DC9402100F2A41F /* Exercicio03TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,14 +36,19 @@
 		570957271DC7DAAA00A98C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5709572A1DC7DAAA00A98C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5709572C1DC7DAAA00A98C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5709573A1DC7DD6E00A98C6D /* Exercicio01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio01.h; sourceTree = "<group>"; };
-		5709573B1DC7DD6E00A98C6D /* Exercicio01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio01.m; sourceTree = "<group>"; };
-		5709573C1DC7DD6E00A98C6D /* Exercicio01.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Exercicio01.xib; sourceTree = "<group>"; };
 		5709573F1DC7E04700A98C6D /* Exercio01TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercio01TableViewCell.h; sourceTree = "<group>"; };
 		570957401DC7E04700A98C6D /* Exercio01TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercio01TableViewCell.m; sourceTree = "<group>"; };
 		570957411DC7E04700A98C6D /* Exercio01TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Exercio01TableViewCell.xib; sourceTree = "<group>"; };
 		570957441DC7F36A00A98C6D /* Exercicio01TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio01TableViewController.h; sourceTree = "<group>"; };
 		570957451DC7F36A00A98C6D /* Exercicio01TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio01TableViewController.m; sourceTree = "<group>"; };
+		57C606F71DC9301300F2A41F /* Exercicio02TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio02TableViewCell.h; sourceTree = "<group>"; };
+		57C606F81DC9301300F2A41F /* Exercicio02TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio02TableViewCell.m; sourceTree = "<group>"; };
+		57C606F91DC9301300F2A41F /* Exercicio02TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Exercicio02TableViewCell.xib; sourceTree = "<group>"; };
+		57C606FC1DC93D2A00F2A41F /* Exercicio02TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio02TableViewController.h; sourceTree = "<group>"; };
+		57C606FD1DC93D2A00F2A41F /* Exercicio02TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio02TableViewController.m; sourceTree = "<group>"; };
+		57C607021DC9402100F2A41F /* Exercicio03TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio03TableViewCell.h; sourceTree = "<group>"; };
+		57C607031DC9402100F2A41F /* Exercicio03TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio03TableViewCell.m; sourceTree = "<group>"; };
+		57C607041DC9402100F2A41F /* Exercicio03TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Exercicio03TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,8 @@
 				5709571F1DC7DAAA00A98C6D /* ViewController.m */,
 				570957441DC7F36A00A98C6D /* Exercicio01TableViewController.h */,
 				570957451DC7F36A00A98C6D /* Exercicio01TableViewController.m */,
+				57C606FC1DC93D2A00F2A41F /* Exercicio02TableViewController.h */,
+				57C606FD1DC93D2A00F2A41F /* Exercicio02TableViewController.m */,
 				570957211DC7DAAA00A98C6D /* Main.storyboard */,
 				570957271DC7DAAA00A98C6D /* Assets.xcassets */,
 				570957291DC7DAAA00A98C6D /* LaunchScreen.storyboard */,
@@ -93,12 +103,15 @@
 			isa = PBXGroup;
 			children = (
 				570957191DC7DAAA00A98C6D /* main.m */,
-				5709573A1DC7DD6E00A98C6D /* Exercicio01.h */,
-				5709573B1DC7DD6E00A98C6D /* Exercicio01.m */,
-				5709573C1DC7DD6E00A98C6D /* Exercicio01.xib */,
 				5709573F1DC7E04700A98C6D /* Exercio01TableViewCell.h */,
 				570957401DC7E04700A98C6D /* Exercio01TableViewCell.m */,
 				570957411DC7E04700A98C6D /* Exercio01TableViewCell.xib */,
+				57C606F71DC9301300F2A41F /* Exercicio02TableViewCell.h */,
+				57C606F81DC9301300F2A41F /* Exercicio02TableViewCell.m */,
+				57C606F91DC9301300F2A41F /* Exercicio02TableViewCell.xib */,
+				57C607021DC9402100F2A41F /* Exercicio03TableViewCell.h */,
+				57C607031DC9402100F2A41F /* Exercicio03TableViewCell.m */,
+				57C607041DC9402100F2A41F /* Exercicio03TableViewCell.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -162,10 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				570957431DC7E04700A98C6D /* Exercio01TableViewCell.xib in Resources */,
-				5709573E1DC7DD6E00A98C6D /* Exercicio01.xib in Resources */,
 				5709572B1DC7DAAA00A98C6D /* LaunchScreen.storyboard in Resources */,
 				570957281DC7DAAA00A98C6D /* Assets.xcassets in Resources */,
 				570957231DC7DAAA00A98C6D /* Main.storyboard in Resources */,
+				57C607061DC9402100F2A41F /* Exercicio03TableViewCell.xib in Resources */,
+				57C606FB1DC9301300F2A41F /* Exercicio02TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,11 +191,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				570957201DC7DAAA00A98C6D /* ViewController.m in Sources */,
-				5709573D1DC7DD6E00A98C6D /* Exercicio01.m in Sources */,
 				5709571D1DC7DAAA00A98C6D /* AppDelegate.m in Sources */,
 				570957461DC7F36A00A98C6D /* Exercicio01TableViewController.m in Sources */,
+				57C607051DC9402100F2A41F /* Exercicio03TableViewCell.m in Sources */,
+				57C606FA1DC9301300F2A41F /* Exercicio02TableViewCell.m in Sources */,
 				5709571A1DC7DAAA00A98C6D /* main.m in Sources */,
 				570957421DC7E04700A98C6D /* Exercio01TableViewCell.m in Sources */,
+				57C606FE1DC93D2A00F2A41F /* Exercicio02TableViewController.m in Sources */,
 				570957261DC7DAAA00A98C6D /* IOS2exercico6.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +355,7 @@
 				570957311DC7DAAA00A98C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
