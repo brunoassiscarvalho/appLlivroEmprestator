@@ -17,6 +17,7 @@
 		570957421DC7E04700A98C6D /* Exercio01TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570957401DC7E04700A98C6D /* Exercio01TableViewCell.m */; };
 		570957431DC7E04700A98C6D /* Exercio01TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570957411DC7E04700A98C6D /* Exercio01TableViewCell.xib */; };
 		570957461DC7F36A00A98C6D /* Exercicio01TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570957451DC7F36A00A98C6D /* Exercicio01TableViewController.m */; };
+		57355F731DC942D6004A778C /* Exercicio03TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F721DC942D6004A778C /* Exercicio03TableViewController.m */; };
 		57C606FA1DC9301300F2A41F /* Exercicio02TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C606F81DC9301300F2A41F /* Exercicio02TableViewCell.m */; };
 		57C606FB1DC9301300F2A41F /* Exercicio02TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C606F91DC9301300F2A41F /* Exercicio02TableViewCell.xib */; };
 		57C606FE1DC93D2A00F2A41F /* Exercicio02TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C606FD1DC93D2A00F2A41F /* Exercicio02TableViewController.m */; };
@@ -41,6 +42,8 @@
 		570957411DC7E04700A98C6D /* Exercio01TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Exercio01TableViewCell.xib; sourceTree = "<group>"; };
 		570957441DC7F36A00A98C6D /* Exercicio01TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio01TableViewController.h; sourceTree = "<group>"; };
 		570957451DC7F36A00A98C6D /* Exercicio01TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio01TableViewController.m; sourceTree = "<group>"; };
+		57355F711DC942D6004A778C /* Exercicio03TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Exercicio03TableViewController.h; path = ../Exercicio03TableViewController.h; sourceTree = "<group>"; };
+		57355F721DC942D6004A778C /* Exercicio03TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Exercicio03TableViewController.m; path = ../Exercicio03TableViewController.m; sourceTree = "<group>"; };
 		57C606F71DC9301300F2A41F /* Exercicio02TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio02TableViewCell.h; sourceTree = "<group>"; };
 		57C606F81DC9301300F2A41F /* Exercicio02TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio02TableViewCell.m; sourceTree = "<group>"; };
 		57C606F91DC9301300F2A41F /* Exercicio02TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Exercicio02TableViewCell.xib; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				570957451DC7F36A00A98C6D /* Exercicio01TableViewController.m */,
 				57C606FC1DC93D2A00F2A41F /* Exercicio02TableViewController.h */,
 				57C606FD1DC93D2A00F2A41F /* Exercicio02TableViewController.m */,
+				57355F711DC942D6004A778C /* Exercicio03TableViewController.h */,
+				57355F721DC942D6004A778C /* Exercicio03TableViewController.m */,
 				570957211DC7DAAA00A98C6D /* Main.storyboard */,
 				570957271DC7DAAA00A98C6D /* Assets.xcassets */,
 				570957291DC7DAAA00A98C6D /* LaunchScreen.storyboard */,
@@ -194,6 +199,7 @@
 				5709571D1DC7DAAA00A98C6D /* AppDelegate.m in Sources */,
 				570957461DC7F36A00A98C6D /* Exercicio01TableViewController.m in Sources */,
 				57C607051DC9402100F2A41F /* Exercicio03TableViewCell.m in Sources */,
+				57355F731DC942D6004A778C /* Exercicio03TableViewController.m in Sources */,
 				57C606FA1DC9301300F2A41F /* Exercicio02TableViewCell.m in Sources */,
 				5709571A1DC7DAAA00A98C6D /* main.m in Sources */,
 				570957421DC7E04700A98C6D /* Exercio01TableViewCell.m in Sources */,

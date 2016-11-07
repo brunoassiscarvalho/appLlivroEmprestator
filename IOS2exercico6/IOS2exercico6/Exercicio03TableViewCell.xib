@@ -1,19 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="Exercicio03TableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="182" id="KGk-i7-Jjw" customClass="Exercicio03TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <frame key="frameInset" width="320" height="181"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assassins-creed-ezio" translatesAutoresizingMaskIntoConstraints="NO" id="Xlp-lC-EVL">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Xlp-lC-EVL" secondAttribute="height" multiplier="1:1" id="AQ1-gc-BQv"/>
+                            <constraint firstAttribute="height" constant="60" id="hgD-vY-xZ4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@xxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a7-kG-wOv">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9p-q8-J0y">
+                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ul4-Un-LSK">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OrU-38-Hqt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <state key="normal" title="☜"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3W-HG-afj">
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <state key="normal" title="★"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7C-s4-o0j">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="59d-Mb-6VO"/>
+                            <constraint firstAttribute="width" constant="30" id="6JH-rW-Akr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <state key="normal" title="✚"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4n-F9-ynC">
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <state key="normal" title="∞"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ul4-Un-LSK" firstAttribute="baseline" secondItem="j4n-F9-ynC" secondAttribute="baseline" id="0id-jA-Ita"/>
+                    <constraint firstItem="u9p-q8-J0y" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="2uq-Qa-tG8"/>
+                    <constraint firstItem="Xlp-lC-EVL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="2zH-n0-o7t"/>
+                    <constraint firstItem="u9p-q8-J0y" firstAttribute="top" secondItem="6a7-kG-wOv" secondAttribute="bottom" constant="3" id="35p-HL-ra5"/>
+                    <constraint firstItem="Ul4-Un-LSK" firstAttribute="top" secondItem="u9p-q8-J0y" secondAttribute="bottom" constant="8" symbolic="YES" id="3uM-oc-2Yb"/>
+                    <constraint firstItem="u9p-q8-J0y" firstAttribute="trailing" secondItem="T7C-s4-o0j" secondAttribute="trailing" id="73c-CY-aVQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="j4n-F9-ynC" secondAttribute="bottom" constant="3" id="8s5-Lj-eJn"/>
+                    <constraint firstItem="j3W-HG-afj" firstAttribute="baseline" secondItem="T7C-s4-o0j" secondAttribute="baseline" id="A8r-Nv-TgG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="j3W-HG-afj" secondAttribute="bottom" constant="3" id="DmF-kT-RBO"/>
+                    <constraint firstItem="j4n-F9-ynC" firstAttribute="leading" secondItem="Ul4-Un-LSK" secondAttribute="trailing" constant="20" id="FSi-bn-mfW"/>
+                    <constraint firstItem="j3W-HG-afj" firstAttribute="top" secondItem="T7C-s4-o0j" secondAttribute="top" id="Hmb-vV-KFA"/>
+                    <constraint firstItem="u9p-q8-J0y" firstAttribute="leading" secondItem="Ul4-Un-LSK" secondAttribute="leading" id="Iea-iq-YKN"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="T7C-s4-o0j" secondAttribute="bottom" constant="3" id="Pt5-BW-3BS"/>
+                    <constraint firstItem="Xlp-lC-EVL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RKh-Md-7NH"/>
+                    <constraint firstItem="j4n-F9-ynC" firstAttribute="baseline" secondItem="j3W-HG-afj" secondAttribute="baseline" id="TTk-aa-2ik"/>
+                    <constraint firstItem="j4n-F9-ynC" firstAttribute="baseline" secondItem="j3W-HG-afj" secondAttribute="firstBaseline" id="bLh-9B-69d"/>
+                    <constraint firstItem="j4n-F9-ynC" firstAttribute="top" secondItem="j3W-HG-afj" secondAttribute="top" id="dwA-i3-rMc"/>
+                    <constraint firstItem="6a7-kG-wOv" firstAttribute="leading" secondItem="Xlp-lC-EVL" secondAttribute="trailing" constant="10" id="e7l-2r-mHV"/>
+                    <constraint firstItem="6a7-kG-wOv" firstAttribute="leading" secondItem="u9p-q8-J0y" secondAttribute="leading" id="irT-9s-Wze"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ul4-Un-LSK" secondAttribute="bottom" constant="3" id="l7v-Sr-PU5"/>
+                    <constraint firstItem="j4n-F9-ynC" firstAttribute="baseline" secondItem="Ul4-Un-LSK" secondAttribute="firstBaseline" id="r0f-00-PtE"/>
+                    <constraint firstItem="Ul4-Un-LSK" firstAttribute="top" secondItem="j4n-F9-ynC" secondAttribute="top" id="rav-9r-zMO"/>
+                    <constraint firstItem="j3W-HG-afj" firstAttribute="baseline" secondItem="j4n-F9-ynC" secondAttribute="firstBaseline" id="sK4-hL-1WX"/>
+                    <constraint firstItem="j3W-HG-afj" firstAttribute="leading" secondItem="j4n-F9-ynC" secondAttribute="trailing" constant="20" id="ujY-Jj-gXi"/>
+                    <constraint firstItem="Xlp-lC-EVL" firstAttribute="top" secondItem="6a7-kG-wOv" secondAttribute="top" id="vba-qI-e6O"/>
+                    <constraint firstItem="j3W-HG-afj" firstAttribute="baseline" secondItem="T7C-s4-o0j" secondAttribute="firstBaseline" id="wqB-JP-YfY"/>
+                </constraints>
             </tableViewCellContentView>
+            <point key="canvasLocation" x="25" y="-70"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="assassins-creed-ezio" width="3937" height="2409"/>
+    </resources>
 </document>

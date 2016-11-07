@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="476"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="476"/>
+                <frame key="frameInset" width="320" height="475"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ACsymbol" translatesAutoresizingMaskIntoConstraints="NO" id="437-I5-i2b">
@@ -123,10 +123,9 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLX-84-zGG">
                         <constraints>
                             <constraint firstAttribute="width" secondItem="SLX-84-zGG" secondAttribute="height" multiplier="60:7" id="ASE-k9-Bg5"/>
-                            <constraint firstAttribute="height" constant="35" id="Ylc-3O-obg"/>
                         </constraints>
                         <string key="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -151,6 +150,7 @@
                     <constraint firstItem="Hcs-C6-nHv" firstAttribute="top" secondItem="4Hk-oh-BCf" secondAttribute="bottom" constant="1" id="bWh-tI-Qx2"/>
                     <constraint firstItem="i3T-Ff-SW9" firstAttribute="baseline" secondItem="QHc-0V-Wg6" secondAttribute="baseline" id="eM1-dK-gXe"/>
                     <constraint firstItem="437-I5-i2b" firstAttribute="centerY" secondItem="p9X-hh-XML" secondAttribute="centerY" id="gut-4b-qjl"/>
+                    <constraint firstItem="SLX-84-zGG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="haW-Ls-eRR"/>
                     <constraint firstItem="QHc-0V-Wg6" firstAttribute="baseline" secondItem="DeB-jI-Tmx" secondAttribute="baseline" id="i7Q-Bg-QON"/>
                     <constraint firstItem="DeB-jI-Tmx" firstAttribute="top" secondItem="4Hk-oh-BCf" secondAttribute="bottom" constant="30" id="j6C-34-z7P"/>
                     <constraint firstItem="Hcs-C6-nHv" firstAttribute="baseline" secondItem="we5-cR-FGq" secondAttribute="baseline" id="mK1-fv-wAZ"/>
@@ -159,6 +159,7 @@
                     <constraint firstItem="QHc-0V-Wg6" firstAttribute="baseline" secondItem="i3T-Ff-SW9" secondAttribute="firstBaseline" id="szB-vi-Y6N"/>
                     <constraint firstItem="4Hk-oh-BCf" firstAttribute="centerX" secondItem="QHc-0V-Wg6" secondAttribute="centerX" id="tHJ-Ot-5Hi"/>
                     <constraint firstItem="437-I5-i2b" firstAttribute="top" secondItem="ZJL-ez-c3t" secondAttribute="top" id="upm-8Z-C91"/>
+                    <constraint firstAttribute="trailing" secondItem="SLX-84-zGG" secondAttribute="trailing" constant="10" id="vTV-J2-Qyl"/>
                     <constraint firstItem="4Hk-oh-BCf" firstAttribute="top" secondItem="SLX-84-zGG" secondAttribute="bottom" constant="10" id="vy0-s2-BFZ"/>
                     <constraint firstItem="DeB-jI-Tmx" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="y5W-81-GqG"/>
                     <constraint firstItem="437-I5-i2b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="ydN-8l-zg5"/>

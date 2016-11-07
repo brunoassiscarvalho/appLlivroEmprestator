@@ -10,6 +10,11 @@
 		570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */; };
 		570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD01D77AEC5001EC129 /* TableListaContatos.m */; };
 		570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD31D77BA26001EC129 /* ViewFiguras.m */; };
+		57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F751DC9616C004A778C /* ViewControllerLivro.m */; };
+		57355F7F1DC964DB004A778C /* Usuario+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F781DC964DB004A778C /* Usuario+CoreDataClass.m */; };
+		57355F801DC964DB004A778C /* Usuario+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F7A1DC964DB004A778C /* Usuario+CoreDataProperties.m */; };
+		57355F811DC964DB004A778C /* Livro+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F7C1DC964DB004A778C /* Livro+CoreDataClass.m */; };
+		57355F821DC964DB004A778C /* Livro+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F7E1DC964DB004A778C /* Livro+CoreDataProperties.m */; };
 		57B1519B1D5BF434006C6560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1519A1D5BF434006C6560 /* main.m */; };
 		57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1519D1D5BF434006C6560 /* AppDelegate.m */; };
 		57B151A11D5BF434006C6560 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B151A01D5BF434006C6560 /* ViewController.m */; };
@@ -18,10 +23,7 @@
 		57B151A91D5BF434006C6560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B151A81D5BF434006C6560 /* Assets.xcassets */; };
 		57B151AC1D5BF434006C6560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B151AA1D5BF434006C6560 /* LaunchScreen.storyboard */; };
 		57D1B2D81DC010F600BD7068 /* ViewControllerUsuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1B2D71DC010F600BD7068 /* ViewControllerUsuario.m */; };
-		57D1B2E11DC022BD00BD7068 /* Livro+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1B2DA1DC022BD00BD7068 /* Livro+CoreDataClass.m */; };
-		57D1B2E21DC022BD00BD7068 /* Livro+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1B2DC1DC022BD00BD7068 /* Livro+CoreDataProperties.m */; };
-		57D1B2E31DC022BD00BD7068 /* Usuario+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1B2DE1DC022BD00BD7068 /* Usuario+CoreDataClass.m */; };
-		57D1B2E41DC022BD00BD7068 /* Usuario+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1B2E01DC022BD00BD7068 /* Usuario+CoreDataProperties.m */; };
+		57D8F10E1DD1187F0031C818 /* TableViewControllerListaLivros.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D8F10D1DD1187F0031C818 /* TableViewControllerListaLivros.m */; };
 		9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEC1D7F80E60078357F /* ViewPentagono.m */; };
 		9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEF1D7F84800078357F /* ViewCirculo.m */; };
 		9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAF21D7F8E6C0078357F /* LoginViewController.m */; };
@@ -34,6 +36,16 @@
 		570E5DD01D77AEC5001EC129 /* TableListaContatos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListaContatos.m; sourceTree = "<group>"; };
 		570E5DD21D77BA26001EC129 /* ViewFiguras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewFiguras.h; sourceTree = "<group>"; };
 		570E5DD31D77BA26001EC129 /* ViewFiguras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFiguras.m; sourceTree = "<group>"; };
+		57355F741DC9616C004A778C /* ViewControllerLivro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerLivro.h; sourceTree = "<group>"; };
+		57355F751DC9616C004A778C /* ViewControllerLivro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerLivro.m; sourceTree = "<group>"; };
+		57355F771DC964DB004A778C /* Usuario+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataClass.h"; path = "../Usuario+CoreDataClass.h"; sourceTree = "<group>"; };
+		57355F781DC964DB004A778C /* Usuario+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataClass.m"; path = "../Usuario+CoreDataClass.m"; sourceTree = "<group>"; };
+		57355F791DC964DB004A778C /* Usuario+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataProperties.h"; path = "../Usuario+CoreDataProperties.h"; sourceTree = "<group>"; };
+		57355F7A1DC964DB004A778C /* Usuario+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataProperties.m"; path = "../Usuario+CoreDataProperties.m"; sourceTree = "<group>"; };
+		57355F7B1DC964DB004A778C /* Livro+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataClass.h"; path = "../Livro+CoreDataClass.h"; sourceTree = "<group>"; };
+		57355F7C1DC964DB004A778C /* Livro+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataClass.m"; path = "../Livro+CoreDataClass.m"; sourceTree = "<group>"; };
+		57355F7D1DC964DB004A778C /* Livro+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataProperties.h"; path = "../Livro+CoreDataProperties.h"; sourceTree = "<group>"; };
+		57355F7E1DC964DB004A778C /* Livro+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataProperties.m"; path = "../Livro+CoreDataProperties.m"; sourceTree = "<group>"; };
 		57B151961D5BF434006C6560 /* LivroEmprestator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivroEmprestator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B1519A1D5BF434006C6560 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57B1519C1D5BF434006C6560 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,14 +60,8 @@
 		57D1B29C1DC0055A00BD7068 /* LivroEmprestator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LivroEmprestator-Bridging-Header.h"; sourceTree = "<group>"; };
 		57D1B2D61DC010F600BD7068 /* ViewControllerUsuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerUsuario.h; sourceTree = "<group>"; };
 		57D1B2D71DC010F600BD7068 /* ViewControllerUsuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerUsuario.m; sourceTree = "<group>"; };
-		57D1B2D91DC022BD00BD7068 /* Livro+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataClass.h"; path = "../Livro+CoreDataClass.h"; sourceTree = "<group>"; };
-		57D1B2DA1DC022BD00BD7068 /* Livro+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataClass.m"; path = "../Livro+CoreDataClass.m"; sourceTree = "<group>"; };
-		57D1B2DB1DC022BD00BD7068 /* Livro+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataProperties.h"; path = "../Livro+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57D1B2DC1DC022BD00BD7068 /* Livro+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataProperties.m"; path = "../Livro+CoreDataProperties.m"; sourceTree = "<group>"; };
-		57D1B2DD1DC022BD00BD7068 /* Usuario+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataClass.h"; path = "../Usuario+CoreDataClass.h"; sourceTree = "<group>"; };
-		57D1B2DE1DC022BD00BD7068 /* Usuario+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataClass.m"; path = "../Usuario+CoreDataClass.m"; sourceTree = "<group>"; };
-		57D1B2DF1DC022BD00BD7068 /* Usuario+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataProperties.h"; path = "../Usuario+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57D1B2E01DC022BD00BD7068 /* Usuario+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataProperties.m"; path = "../Usuario+CoreDataProperties.m"; sourceTree = "<group>"; };
+		57D8F10C1DD1187F0031C818 /* TableViewControllerListaLivros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerListaLivros.h; sourceTree = "<group>"; };
+		57D8F10D1DD1187F0031C818 /* TableViewControllerListaLivros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerListaLivros.m; sourceTree = "<group>"; };
 		9C28EAEB1D7F80E60078357F /* ViewPentagono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPentagono.h; sourceTree = "<group>"; };
 		9C28EAEC1D7F80E60078357F /* ViewPentagono.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPentagono.m; sourceTree = "<group>"; };
 		9C28EAEE1D7F84800078357F /* ViewCirculo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCirculo.h; sourceTree = "<group>"; };
@@ -128,6 +134,10 @@
 				9C28EAEF1D7F84800078357F /* ViewCirculo.m */,
 				57D1B2D61DC010F600BD7068 /* ViewControllerUsuario.h */,
 				57D1B2D71DC010F600BD7068 /* ViewControllerUsuario.m */,
+				57355F741DC9616C004A778C /* ViewControllerLivro.h */,
+				57355F751DC9616C004A778C /* ViewControllerLivro.m */,
+				57D8F10C1DD1187F0031C818 /* TableViewControllerListaLivros.h */,
+				57D8F10D1DD1187F0031C818 /* TableViewControllerListaLivros.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -135,14 +145,14 @@
 		57D1B2B11DC0074600BD7068 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
-				57D1B2D91DC022BD00BD7068 /* Livro+CoreDataClass.h */,
-				57D1B2DA1DC022BD00BD7068 /* Livro+CoreDataClass.m */,
-				57D1B2DB1DC022BD00BD7068 /* Livro+CoreDataProperties.h */,
-				57D1B2DC1DC022BD00BD7068 /* Livro+CoreDataProperties.m */,
-				57D1B2DD1DC022BD00BD7068 /* Usuario+CoreDataClass.h */,
-				57D1B2DE1DC022BD00BD7068 /* Usuario+CoreDataClass.m */,
-				57D1B2DF1DC022BD00BD7068 /* Usuario+CoreDataProperties.h */,
-				57D1B2E01DC022BD00BD7068 /* Usuario+CoreDataProperties.m */,
+				57355F771DC964DB004A778C /* Usuario+CoreDataClass.h */,
+				57355F781DC964DB004A778C /* Usuario+CoreDataClass.m */,
+				57355F791DC964DB004A778C /* Usuario+CoreDataProperties.h */,
+				57355F7A1DC964DB004A778C /* Usuario+CoreDataProperties.m */,
+				57355F7B1DC964DB004A778C /* Livro+CoreDataClass.h */,
+				57355F7C1DC964DB004A778C /* Livro+CoreDataClass.m */,
+				57355F7D1DC964DB004A778C /* Livro+CoreDataProperties.h */,
+				57355F7E1DC964DB004A778C /* Livro+CoreDataProperties.m */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -218,20 +228,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D8F10E1DD1187F0031C818 /* TableViewControllerListaLivros.m in Sources */,
 				9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */,
-				57D1B2E21DC022BD00BD7068 /* Livro+CoreDataProperties.m in Sources */,
 				57B151A11D5BF434006C6560 /* ViewController.m in Sources */,
 				57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */,
 				57B1519B1D5BF434006C6560 /* main.m in Sources */,
-				57D1B2E11DC022BD00BD7068 /* Livro+CoreDataClass.m in Sources */,
-				57D1B2E41DC022BD00BD7068 /* Usuario+CoreDataProperties.m in Sources */,
 				9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */,
 				57D1B2D81DC010F600BD7068 /* ViewControllerUsuario.m in Sources */,
-				57D1B2E31DC022BD00BD7068 /* Usuario+CoreDataClass.m in Sources */,
+				57355F7F1DC964DB004A778C /* Usuario+CoreDataClass.m in Sources */,
 				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
+				57355F801DC964DB004A778C /* Usuario+CoreDataProperties.m in Sources */,
+				57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */,
 				57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */,
 				9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */,
+				57355F821DC964DB004A778C /* Livro+CoreDataProperties.m in Sources */,
 				570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */,
+				57355F811DC964DB004A778C /* Livro+CoreDataClass.m in Sources */,
 				570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

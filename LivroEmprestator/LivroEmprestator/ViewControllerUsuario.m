@@ -43,7 +43,7 @@
 }
 */
 
--(void) incluirProduto{
+-(void) incluirUsuario{
     AppDelegate *delegate = (AppDelegate *)
     [[UIApplication sharedApplication]delegate];
     NSPersistentContainer *container = delegate.persistentContainer;
@@ -80,7 +80,7 @@
     
 }
 - (IBAction)concluirCadastro:(id)sender {
-    [self incluirProduto];
+    [self incluirUsuario];
 }
 
 
