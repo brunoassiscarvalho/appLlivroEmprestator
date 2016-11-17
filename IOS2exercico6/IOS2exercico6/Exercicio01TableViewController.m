@@ -9,7 +9,7 @@
 #import "Exercicio01TableViewController.h"
 #import "Exercio01TableViewCell.h"
 
-@interface Exercicio01TableViewController ()
+@interface Exercicio01TableViewController ()<UITableViewDelegate>
 
 @end
 

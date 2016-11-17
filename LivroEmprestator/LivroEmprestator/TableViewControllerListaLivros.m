@@ -10,8 +10,9 @@
 #import "AppDelegate.h"
 #import "Livro+CoreDataClass.h"
 #import "ViewControllerLivro.h"
+#import "TableViewCellLivro.h"
 
-@interface TableViewControllerListaLivros () <NSFetchedResultsControllerDelegate>
+@interface TableViewControllerListaLivros () <NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
@@ -34,6 +35,10 @@
                                                                                    cacheName:nil];
         [_fetchedResultsController setDelegate:self];
     }
+    
+    UINib *nib = [UINib nibWithNibName:@"TableViewCellLivro" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"TableViewCellLivro"];
+    
     return _fetchedResultsController;
 }
 
@@ -64,18 +69,23 @@
     return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celulaLivro"
-                                                            forIndexPath:indexPath];
+  /*  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celulaLivro"
+                                                            forIndexPath:indexPath];*/
+    
+    TableViewCellLivro *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellLivro" forIndexPath:indexPath];
+    
     [self configurarCelula:cell noIndexPath:indexPath];
     return cell;
 }
 
-- (void) configurarCelula: (UITableViewCell *) cell noIndexPath: (NSIndexPath *) indexPath {
+- (void) configurarCelula: (TableViewCellLivro *) cell noIndexPath: (NSIndexPath *) indexPath {
     Livro *livro = [self.fetchedResultsController objectAtIndexPath:indexPath];
    // NSInteger numeroIndice = indexPath.row;
     
    // NSString *integerAsString = [NSString stringWithFormat: @"%ld", (long)numeroIndice];
-    [cell.textLabel setText:livro.titulo];
+
+    
+    cell preencherComTitulo:<#(NSString *)#> autor:<#(NSString *)#> imagem:<#(UIImage *)#>
 }
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Celula Selecionada: %@", indexPath);
@@ -92,6 +102,17 @@
     
     }
 }
+
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 525; //retornar aqui a altura estimada da célula... olhe no XIB a altura.
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension; //isso faz a tableView aceitar células com alturas dinâmicas
+}
+
 
 
 @end
