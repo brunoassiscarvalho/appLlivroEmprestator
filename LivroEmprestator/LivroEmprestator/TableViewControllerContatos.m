@@ -7,9 +7,13 @@
 //
 
 #import "TableViewControllerContatos.h"
+#import "AppDelegate.h"
+#import "Usuario+CoreDataClass.h"
+#import "TableViewCellContato.h"
 
-@interface TableViewControllerContatos () <NSURLSessionDataDelegate>
+@interface TableViewControllerContatos () <NSURLSessionDataDelegate,NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong , nonatomic) NSMutableData * bytesResposta;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 
 @end
@@ -32,6 +36,13 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sc delegate:self delegateQueue:nil];
     NSURLSessionDataTask *dataTask= [ session dataTaskWithURL:[NSURL URLWithString:@"https://jsonplaceholder.typicode.com/users"]];
     [dataTask resume];
+    
+    NSError *erro;
+    if (![self.fetchedResultsController performFetch:&erro]) {
+        NSLog(@"Erro ao recuperar pessoas: %@", erro);
+    }else {
+        [self.tableView reloadData];
+    }
 }
 
 
@@ -44,6 +55,8 @@
     [_bytesResposta appendData:data];
 }
 
+
+
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error{
     if(error){
         NSLog(@"Erro de conexão: %@",error);
@@ -54,78 +67,73 @@
         if(erroJSON){
             NSLog(@"JSON recebido é inválido: %@",erroJSON);
         }else{
+            
+            AppDelegate *delegate = (AppDelegate *)
+            [[UIApplication sharedApplication]delegate];
+            NSPersistentContainer *container = delegate.persistentContainer;
+            NSManagedObjectContext *context = container.viewContext;
+            
             NSLog(@"Dados recebidos:%@", usuarios);
             for (NSDictionary *usuario in usuarios){
                 NSLog(@"Usuario: %@", [usuario objectForKey:@"name"]);
+                Usuario *usuarioCoreData = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
+                
+                [usuarioCoreData setApelido:[usuario objectForKey:@"username"]];
+                [usuarioCoreData setNome:[usuario objectForKey:@"name"]];
+                [usuarioCoreData setEmail:[usuario objectForKey:@"email"]];
             }
         }
     }
 }
 
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (!_fetchedResultsController) {
+        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSPersistentContainer *persistentContainer = delegate.persistentContainer;
+        
+        NSFetchRequest *fetchRequest = [Usuario fetchRequest];
+        [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"apelido" ascending:YES]]];
+        
+        _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                        managedObjectContext:persistentContainer.viewContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+        [_fetchedResultsController setDelegate:self];
+    }
+    
+    UINib *nib = [UINib nibWithNibName:@"TableViewCellContato" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"TableViewCellContato"];
+    
+    return _fetchedResultsController;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+return self.fetchedResultsController.sections.count;
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
     return 0;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    /*  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celulaLivro"
+     forIndexPath:indexPath];*/
+    TableViewCellContato *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellContato" forIndexPath:indexPath];
+    [self configurarCelula:cell noIndexPath:indexPath];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void) configurarCelula: (TableViewCellContato *) cell noIndexPath: (NSIndexPath *) indexPath {
+    Usuario *contato = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    // NSInteger numeroIndice = indexPath.row;
+    // NSString *integerAsString = [NSString stringWithFormat: @"%ld", (long)numeroIndice];
+    //Para converter NSdata para imagem
+    //UIImage *imagem = [UIImage imageWithData:livro.imagem];
+    [cell preencherComApelido:contato.apelido];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

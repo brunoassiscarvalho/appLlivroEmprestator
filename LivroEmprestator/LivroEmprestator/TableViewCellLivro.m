@@ -29,7 +29,7 @@
 
 -(void) preencherComTitulo: (NSString *)tituloLivro autor:(NSString*)nomeAutor imagem:(UIImage*) imagemLivro{
     [self.tituloLivro setText:tituloLivro];
-    [self.tituloLivro setText:nomeAutor];
+    [self.nomeAutor setText:nomeAutor];
     [self.imagemLivro setImage: imagemLivro];
 }
 

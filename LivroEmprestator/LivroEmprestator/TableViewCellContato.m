@@ -8,6 +8,13 @@
 
 #import "TableViewCellContato.h"
 
+@interface TableViewCellContato()
+@property (weak, nonatomic) IBOutlet UILabel *apelido;
+@property (weak, nonatomic) IBOutlet UIImageView *imagem;
+
+
+@end
+
 @implementation TableViewCellContato
 
 - (void)awakeFromNib {
@@ -20,5 +27,11 @@
 
     // Configure the view for the selected state
 }
+
+-(void) preencherComApelido: (NSString *)apelido {
+    [self.apelido setText:apelido];
+    
+    }
+
 
 @end

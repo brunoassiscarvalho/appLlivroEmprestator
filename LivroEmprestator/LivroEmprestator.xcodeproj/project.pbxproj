@@ -11,10 +11,10 @@
 		570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD01D77AEC5001EC129 /* TableListaContatos.m */; };
 		570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD31D77BA26001EC129 /* ViewFiguras.m */; };
 		57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F751DC9616C004A778C /* ViewControllerLivro.m */; };
-		57355F7F1DC964DB004A778C /* Usuario+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F781DC964DB004A778C /* Usuario+CoreDataClass.m */; };
-		57355F801DC964DB004A778C /* Usuario+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F7A1DC964DB004A778C /* Usuario+CoreDataProperties.m */; };
-		57355F811DC964DB004A778C /* Livro+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F7C1DC964DB004A778C /* Livro+CoreDataClass.m */; };
-		57355F821DC964DB004A778C /* Livro+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F7E1DC964DB004A778C /* Livro+CoreDataProperties.m */; };
+		575772DD1DE3A6E800AC3303 /* Usuario+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 575772D61DE3A6E800AC3303 /* Usuario+CoreDataClass.m */; };
+		575772DE1DE3A6E800AC3303 /* Usuario+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 575772D81DE3A6E800AC3303 /* Usuario+CoreDataProperties.m */; };
+		575772DF1DE3A6E800AC3303 /* Livro+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 575772DA1DE3A6E800AC3303 /* Livro+CoreDataClass.m */; };
+		575772E01DE3A6E800AC3303 /* Livro+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 575772DC1DE3A6E800AC3303 /* Livro+CoreDataProperties.m */; };
 		578F85441DDD14B700EA5018 /* TableViewCellLivro.m in Sources */ = {isa = PBXBuildFile; fileRef = 578F85421DDD14B700EA5018 /* TableViewCellLivro.m */; };
 		578F85451DDD14B700EA5018 /* TableViewCellLivro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 578F85431DDD14B700EA5018 /* TableViewCellLivro.xib */; };
 		578F85481DDD25B400EA5018 /* TableViewControllerContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 578F85471DDD25B400EA5018 /* TableViewControllerContatos.m */; };
@@ -43,14 +43,14 @@
 		570E5DD31D77BA26001EC129 /* ViewFiguras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFiguras.m; sourceTree = "<group>"; };
 		57355F741DC9616C004A778C /* ViewControllerLivro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerLivro.h; sourceTree = "<group>"; };
 		57355F751DC9616C004A778C /* ViewControllerLivro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerLivro.m; sourceTree = "<group>"; };
-		57355F771DC964DB004A778C /* Usuario+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataClass.h"; path = "../Usuario+CoreDataClass.h"; sourceTree = "<group>"; };
-		57355F781DC964DB004A778C /* Usuario+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataClass.m"; path = "../Usuario+CoreDataClass.m"; sourceTree = "<group>"; };
-		57355F791DC964DB004A778C /* Usuario+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataProperties.h"; path = "../Usuario+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57355F7A1DC964DB004A778C /* Usuario+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataProperties.m"; path = "../Usuario+CoreDataProperties.m"; sourceTree = "<group>"; };
-		57355F7B1DC964DB004A778C /* Livro+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataClass.h"; path = "../Livro+CoreDataClass.h"; sourceTree = "<group>"; };
-		57355F7C1DC964DB004A778C /* Livro+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataClass.m"; path = "../Livro+CoreDataClass.m"; sourceTree = "<group>"; };
-		57355F7D1DC964DB004A778C /* Livro+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataProperties.h"; path = "../Livro+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57355F7E1DC964DB004A778C /* Livro+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataProperties.m"; path = "../Livro+CoreDataProperties.m"; sourceTree = "<group>"; };
+		575772D51DE3A6E800AC3303 /* Usuario+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataClass.h"; path = "../Usuario+CoreDataClass.h"; sourceTree = "<group>"; };
+		575772D61DE3A6E800AC3303 /* Usuario+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataClass.m"; path = "../Usuario+CoreDataClass.m"; sourceTree = "<group>"; };
+		575772D71DE3A6E800AC3303 /* Usuario+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataProperties.h"; path = "../Usuario+CoreDataProperties.h"; sourceTree = "<group>"; };
+		575772D81DE3A6E800AC3303 /* Usuario+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataProperties.m"; path = "../Usuario+CoreDataProperties.m"; sourceTree = "<group>"; };
+		575772D91DE3A6E800AC3303 /* Livro+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataClass.h"; path = "../Livro+CoreDataClass.h"; sourceTree = "<group>"; };
+		575772DA1DE3A6E800AC3303 /* Livro+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataClass.m"; path = "../Livro+CoreDataClass.m"; sourceTree = "<group>"; };
+		575772DB1DE3A6E800AC3303 /* Livro+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataProperties.h"; path = "../Livro+CoreDataProperties.h"; sourceTree = "<group>"; };
+		575772DC1DE3A6E800AC3303 /* Livro+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataProperties.m"; path = "../Livro+CoreDataProperties.m"; sourceTree = "<group>"; };
 		578F85411DDD14B700EA5018 /* TableViewCellLivro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellLivro.h; sourceTree = "<group>"; };
 		578F85421DDD14B700EA5018 /* TableViewCellLivro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellLivro.m; sourceTree = "<group>"; };
 		578F85431DDD14B700EA5018 /* TableViewCellLivro.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellLivro.xib; sourceTree = "<group>"; };
@@ -166,14 +166,14 @@
 		57D1B2B11DC0074600BD7068 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
-				57355F771DC964DB004A778C /* Usuario+CoreDataClass.h */,
-				57355F781DC964DB004A778C /* Usuario+CoreDataClass.m */,
-				57355F791DC964DB004A778C /* Usuario+CoreDataProperties.h */,
-				57355F7A1DC964DB004A778C /* Usuario+CoreDataProperties.m */,
-				57355F7B1DC964DB004A778C /* Livro+CoreDataClass.h */,
-				57355F7C1DC964DB004A778C /* Livro+CoreDataClass.m */,
-				57355F7D1DC964DB004A778C /* Livro+CoreDataProperties.h */,
-				57355F7E1DC964DB004A778C /* Livro+CoreDataProperties.m */,
+				575772D51DE3A6E800AC3303 /* Usuario+CoreDataClass.h */,
+				575772D61DE3A6E800AC3303 /* Usuario+CoreDataClass.m */,
+				575772D71DE3A6E800AC3303 /* Usuario+CoreDataProperties.h */,
+				575772D81DE3A6E800AC3303 /* Usuario+CoreDataProperties.m */,
+				575772D91DE3A6E800AC3303 /* Livro+CoreDataClass.h */,
+				575772DA1DE3A6E800AC3303 /* Livro+CoreDataClass.m */,
+				575772DB1DE3A6E800AC3303 /* Livro+CoreDataProperties.h */,
+				575772DC1DE3A6E800AC3303 /* Livro+CoreDataProperties.m */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -255,22 +255,22 @@
 				57D8F10E1DD1187F0031C818 /* TableViewControllerListaLivros.m in Sources */,
 				9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */,
 				578F85441DDD14B700EA5018 /* TableViewCellLivro.m in Sources */,
+				575772E01DE3A6E800AC3303 /* Livro+CoreDataProperties.m in Sources */,
 				57B151A11D5BF434006C6560 /* ViewController.m in Sources */,
+				575772DF1DE3A6E800AC3303 /* Livro+CoreDataClass.m in Sources */,
 				57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */,
 				57B1519B1D5BF434006C6560 /* main.m in Sources */,
 				9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */,
 				57D1B2D81DC010F600BD7068 /* ViewControllerUsuario.m in Sources */,
-				57355F7F1DC964DB004A778C /* Usuario+CoreDataClass.m in Sources */,
 				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
-				57355F801DC964DB004A778C /* Usuario+CoreDataProperties.m in Sources */,
 				57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */,
 				57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */,
+				575772DE1DE3A6E800AC3303 /* Usuario+CoreDataProperties.m in Sources */,
 				578F85481DDD25B400EA5018 /* TableViewControllerContatos.m in Sources */,
 				9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */,
-				57355F821DC964DB004A778C /* Livro+CoreDataProperties.m in Sources */,
 				570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */,
-				57355F811DC964DB004A778C /* Livro+CoreDataClass.m in Sources */,
 				570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */,
+				575772DD1DE3A6E800AC3303 /* Usuario+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  Livro+CoreDataProperties.m
 //  LivroEmprestator
 //
-//  Created by ALUNO on 01/11/16.
+//  Created by ALUNO on 21/11/16.
 //  Copyright © 2016 IESB. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 
 @dynamic ano;
 @dynamic edicao;
+@dynamic imagem;
 @dynamic resumo;
 @dynamic titulo;
 

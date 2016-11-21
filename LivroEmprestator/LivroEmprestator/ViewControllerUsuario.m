@@ -9,7 +9,10 @@
 #import "ViewControllerUsuario.h"
 #import "AppDelegate.h"
 #import "Usuario+CoreDataClass.h"
-@interface ViewControllerUsuario ()
+@import Photos;
+@import MobileCoreServices;
+
+@interface ViewControllerUsuario () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *apelido;
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 @property (weak, nonatomic) IBOutlet UITextField *dataNascimento;
@@ -17,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *cidade;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UISwitch *sexo;
+@property (weak, nonatomic) IBOutlet UIImageView *imagemUsuario;
 
 
 @end
@@ -69,19 +73,60 @@
     [usuario setCidade:self.cidade.text];
     [usuario setEmail:self.email.text];
     
+    NSData *bytesDaImagem = UIImagePNGRepresentation(_imagemUsuario.image);
+    [usuario setImagem: bytesDaImagem];
+    
     NSError *erroCoreData;
     if(![context save:&erroCoreData]){
         NSLog(@"Deu Erro! %@" , erroCoreData);
     }else{
         NSLog(@"Produto incluido com sucesso!");
     }
-    
-    
-    
+
 }
+
 - (IBAction)concluirCadastro:(id)sender {
     [self incluirUsuario];
 }
 
+- (IBAction)editarFotoUsuario:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [UIImagePickerController new];
+    [picker setDelegate:self];
+    [picker setAllowsEditing:YES];
+    [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    
+    //Todos os tipos disponíveis:
+    [picker setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary]];
+    
+    [self presentViewController:picker animated:YES completion:nil];
+
+}
+/*-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage *imagem = info[UIImagePickerControllerOriginalImage];
+    
+}*/
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *imagemEscolhida = info[UIImagePickerControllerEditedImage]; //Veja as outras opções.
+    
+    //Você vai precisar disso para o exercício
+ NSData *bytesDaImagem = UIImagePNGRepresentation(imagemEscolhida);
+    
+    //Para converter de volta
+UIImage *imagem = [UIImage imageWithData:bytesDaImagem];
+    
+    [self.imagemUsuario setImage:imagem];
+   
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    NSLog(@"Usuário cancelou.");
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 @end

@@ -71,22 +71,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   /*  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celulaLivro"
                                                             forIndexPath:indexPath];*/
-    
     TableViewCellLivro *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellLivro" forIndexPath:indexPath];
-    
     [self configurarCelula:cell noIndexPath:indexPath];
     return cell;
 }
 
 - (void) configurarCelula: (TableViewCellLivro *) cell noIndexPath: (NSIndexPath *) indexPath {
     Livro *livro = [self.fetchedResultsController objectAtIndexPath:indexPath];
-   // NSInteger numeroIndice = indexPath.row;
-    
-   // NSString *integerAsString = [NSString stringWithFormat: @"%ld", (long)numeroIndice];
-
-    
-    cell preencherComTitulo:<#(NSString *)#> autor:<#(NSString *)#> imagem:<#(UIImage *)#>
+    // NSInteger numeroIndice = indexPath.row;
+    // NSString *integerAsString = [NSString stringWithFormat: @"%ld", (long)numeroIndice];
+    //Para converter NSdata para imagem
+    UIImage *imagem = [UIImage imageWithData:livro.imagem];
+    [cell preencherComTitulo:livro.titulo autor:@"implementar" imagem:imagem];
 }
+
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Celula Selecionada: %@", indexPath);
     [self performSegueWithIdentifier:@"segueEditaLivro" sender:self];

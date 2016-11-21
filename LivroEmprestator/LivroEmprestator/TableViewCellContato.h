@@ -10,4 +10,5 @@
 
 @interface TableViewCellContato : UITableViewCell
 
+-(void) preencherComApelido: (NSString *)apelido;
 @end

@@ -2,7 +2,7 @@
 //  Usuario+CoreDataProperties.h
 //  LivroEmprestator
 //
-//  Created by ALUNO on 01/11/16.
+//  Created by ALUNO on 21/11/16.
 //  Copyright © 2016 IESB. All rights reserved.
 //
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *nome;
 @property (nullable, nonatomic, copy) NSString *sexo;
 @property (nullable, nonatomic, copy) NSString *uf;
+@property (nullable, nonatomic, retain) NSData *imagem;
 
 @end
 

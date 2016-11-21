@@ -10,11 +10,13 @@
 #import "AppDelegate.h"
 #import "Livro+CoreDataClass.h"
 
-@interface ViewControllerLivro ()
+@interface ViewControllerLivro () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *titulo;
 @property (weak, nonatomic) IBOutlet UITextField *ano;
 @property (weak, nonatomic) IBOutlet UITextField *edicao;
 @property (weak, nonatomic) IBOutlet UITextField *resumo;
+@property (weak, nonatomic) IBOutlet UIImageView *imagem;
 
 
 @end
@@ -30,6 +32,9 @@
         [self.ano setText:_livroSelecionado.ano];
         [self.edicao setText:_livroSelecionado.edicao];
         [self.resumo setText:_livroSelecionado.resumo];
+        
+        UIImage *imagemLivro = [UIImage imageWithData:_livroSelecionado.imagem];
+        [self.imagem setImage: imagemLivro];
     }
     // Do any additional setup after loading the view.
 }
@@ -66,9 +71,10 @@
     [livro setResumo:self.resumo.text];
     [livro setEdicao:self.edicao.text];
     
+    NSData *bytesDaImagem = UIImagePNGRepresentation(_imagem.image);
+    [livro setImagem: bytesDaImagem];
     
-    
-    
+
     _livroSelecionado=nil;
     NSError *erroCoreData;
     if(![context save:&erroCoreData]){
@@ -77,6 +83,35 @@
         NSLog(@"Produto incluido com sucesso!");
     }
     
+}
+
+- (IBAction)editarImagemLivro:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [UIImagePickerController new];
+    [picker setDelegate:self];
+    [picker setAllowsEditing:YES];
+    [picker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    
+    //Todos os tipos disponíveis:
+    [picker setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary]];
+    
+    [self presentViewController:picker animated:YES completion:nil];
+    
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *imagemEscolhida = info[UIImagePickerControllerEditedImage]; //Veja as outras opções.
+    
+    //Você vai precisar disso para o exercício
+    NSData *bytesDaImagem = UIImagePNGRepresentation(imagemEscolhida);
+    
+    //Para converter de volta
+    UIImage *imagem = [UIImage imageWithData:bytesDaImagem];
+    
+    [self.imagem setImage:imagem];
+    
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)salvarLivro:(UIButton *)sender {
