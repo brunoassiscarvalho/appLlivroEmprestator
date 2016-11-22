@@ -11,6 +11,11 @@
 		570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD01D77AEC5001EC129 /* TableListaContatos.m */; };
 		570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD31D77BA26001EC129 /* ViewFiguras.m */; };
 		57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F751DC9616C004A778C /* ViewControllerLivro.m */; };
+		573B00111DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m in Sources */ = {isa = PBXBuildFile; fileRef = 573B00101DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m */; };
+		573B00141DE507E10024B1AB /* ViewControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 573B00131DE507E10024B1AB /* ViewControllerConfig.m */; };
+		573B00181DE50BB70024B1AB /* TableViewCellInteracoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 573B00161DE50BB70024B1AB /* TableViewCellInteracoes.m */; };
+		573B00191DE50BB70024B1AB /* TableViewCellInteracoes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573B00171DE50BB70024B1AB /* TableViewCellInteracoes.xib */; };
+		573B001C1DE50E390024B1AB /* TableViewControllerIteracoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 573B001B1DE50E390024B1AB /* TableViewControllerIteracoes.m */; };
 		575772DD1DE3A6E800AC3303 /* Usuario+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 575772D61DE3A6E800AC3303 /* Usuario+CoreDataClass.m */; };
 		575772DE1DE3A6E800AC3303 /* Usuario+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 575772D81DE3A6E800AC3303 /* Usuario+CoreDataProperties.m */; };
 		575772DF1DE3A6E800AC3303 /* Livro+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 575772DA1DE3A6E800AC3303 /* Livro+CoreDataClass.m */; };
@@ -43,6 +48,15 @@
 		570E5DD31D77BA26001EC129 /* ViewFiguras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFiguras.m; sourceTree = "<group>"; };
 		57355F741DC9616C004A778C /* ViewControllerLivro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerLivro.h; sourceTree = "<group>"; };
 		57355F751DC9616C004A778C /* ViewControllerLivro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerLivro.m; sourceTree = "<group>"; };
+		573B000F1DE4F0CB0024B1AB /* ViewControllerDetalheLivro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDetalheLivro.h; sourceTree = "<group>"; };
+		573B00101DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDetalheLivro.m; sourceTree = "<group>"; };
+		573B00121DE507E10024B1AB /* ViewControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerConfig.h; sourceTree = "<group>"; };
+		573B00131DE507E10024B1AB /* ViewControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerConfig.m; sourceTree = "<group>"; };
+		573B00151DE50BB70024B1AB /* TableViewCellInteracoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellInteracoes.h; sourceTree = "<group>"; };
+		573B00161DE50BB70024B1AB /* TableViewCellInteracoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellInteracoes.m; sourceTree = "<group>"; };
+		573B00171DE50BB70024B1AB /* TableViewCellInteracoes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellInteracoes.xib; sourceTree = "<group>"; };
+		573B001A1DE50E390024B1AB /* TableViewControllerIteracoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerIteracoes.h; sourceTree = "<group>"; };
+		573B001B1DE50E390024B1AB /* TableViewControllerIteracoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerIteracoes.m; sourceTree = "<group>"; };
 		575772D51DE3A6E800AC3303 /* Usuario+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataClass.h"; path = "../Usuario+CoreDataClass.h"; sourceTree = "<group>"; };
 		575772D61DE3A6E800AC3303 /* Usuario+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataClass.m"; path = "../Usuario+CoreDataClass.m"; sourceTree = "<group>"; };
 		575772D71DE3A6E800AC3303 /* Usuario+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataProperties.h"; path = "../Usuario+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -159,6 +173,15 @@
 				578F85491DDD25E700EA5018 /* TableViewCellContato.h */,
 				578F854A1DDD25E700EA5018 /* TableViewCellContato.m */,
 				578F854B1DDD25E700EA5018 /* TableViewCellContato.xib */,
+				573B000F1DE4F0CB0024B1AB /* ViewControllerDetalheLivro.h */,
+				573B00101DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m */,
+				573B00121DE507E10024B1AB /* ViewControllerConfig.h */,
+				573B00131DE507E10024B1AB /* ViewControllerConfig.m */,
+				573B00151DE50BB70024B1AB /* TableViewCellInteracoes.h */,
+				573B00161DE50BB70024B1AB /* TableViewCellInteracoes.m */,
+				573B00171DE50BB70024B1AB /* TableViewCellInteracoes.xib */,
+				573B001A1DE50E390024B1AB /* TableViewControllerIteracoes.h */,
+				573B001B1DE50E390024B1AB /* TableViewControllerIteracoes.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -240,6 +263,7 @@
 				57B151AC1D5BF434006C6560 /* LaunchScreen.storyboard in Resources */,
 				57B151A91D5BF434006C6560 /* Assets.xcassets in Resources */,
 				578F85451DDD14B700EA5018 /* TableViewCellLivro.xib in Resources */,
+				573B00191DE50BB70024B1AB /* TableViewCellInteracoes.xib in Resources */,
 				57B151A41D5BF434006C6560 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,16 +285,20 @@
 				57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */,
 				57B1519B1D5BF434006C6560 /* main.m in Sources */,
 				9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */,
+				573B00111DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m in Sources */,
 				57D1B2D81DC010F600BD7068 /* ViewControllerUsuario.m in Sources */,
+				573B00141DE507E10024B1AB /* ViewControllerConfig.m in Sources */,
 				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
 				57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */,
 				57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */,
+				573B00181DE50BB70024B1AB /* TableViewCellInteracoes.m in Sources */,
 				575772DE1DE3A6E800AC3303 /* Usuario+CoreDataProperties.m in Sources */,
 				578F85481DDD25B400EA5018 /* TableViewControllerContatos.m in Sources */,
 				9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */,
 				570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */,
 				570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */,
 				575772DD1DE3A6E800AC3303 /* Usuario+CoreDataClass.m in Sources */,
+				573B001C1DE50E390024B1AB /* TableViewControllerIteracoes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

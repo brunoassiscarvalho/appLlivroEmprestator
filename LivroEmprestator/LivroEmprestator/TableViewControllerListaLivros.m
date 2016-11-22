@@ -11,6 +11,7 @@
 #import "Livro+CoreDataClass.h"
 #import "ViewControllerLivro.h"
 #import "TableViewCellLivro.h"
+#import "ViewControllerDetalheLivro.h"
 
 @interface TableViewControllerListaLivros () <NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
@@ -87,11 +88,11 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Celula Selecionada: %@", indexPath);
-    [self performSegueWithIdentifier:@"segueEditaLivro" sender:self];
+    [self performSegueWithIdentifier:@"segueListaLivrosDetalhe" sender:self];
    
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"segueEditaLivro"]){
         NSIndexPath *indexPath = [_tabelaMeusLivros indexPathForSelectedRow];
         Livro *livro = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -99,7 +100,18 @@
         [destino setLivroSelecionado:livro];
     
     }
+}*/
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"segueListaLivrosDetalhe"] || [segue.identifier isEqualToString:@"segueEditaLivro"]){
+        NSIndexPath *indexPath = [_tabelaMeusLivros indexPathForSelectedRow];
+        Livro *livro = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        ViewControllerDetalheLivro  *destino = segue.destinationViewController;
+        [destino setLivroSelecionado:livro];
+        
+    }
 }
+
 
 
 #pragma mark - UITableViewDelegate

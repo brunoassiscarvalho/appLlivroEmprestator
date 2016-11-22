@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Livro+CoreDataClass.h"
 
 @interface TableViewControllerContatos : UITableViewController
+@property Livro *livroSelecionado;
 
 @end

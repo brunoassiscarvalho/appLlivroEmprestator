@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.23274563209999999" green="0.45670841020000003" blue="0.0087828540409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.55294117649999996" green="0.61960784310000006" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="n26-5c-r2k" firstAttribute="centerY" secondItem="Rrw-ux-5td" secondAttribute="centerY" id="HVr-Tw-jBc"/>
                             <constraint firstItem="f7v-UA-kZK" firstAttribute="leading" secondItem="Rrw-ux-5td" secondAttribute="leadingMargin" id="MiD-5e-Dhz"/>
@@ -40,6 +40,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="Rrw-ux-5td" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AKd-ib-Edg"/>
                     <constraint firstItem="Rrw-ux-5td" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="GaV-dk-V1L"/>
