@@ -111,12 +111,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 return self.fetchedResultsController.sections.count;
-    return 0;
+  
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
-    return 0;
+  
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

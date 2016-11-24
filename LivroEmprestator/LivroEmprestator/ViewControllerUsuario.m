@@ -58,6 +58,8 @@
     [usuario setNome:self.nome.text];
     
     
+      
+    
     NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy"];
     

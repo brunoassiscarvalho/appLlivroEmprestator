@@ -1,5 +1,5 @@
 //
-//  Usuario+CoreDataClass.h
+//  Interacoes+CoreDataClass.h
 //  LivroEmprestator
 //
 //  Created by ALUNO on 23/11/16.
@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Livro, Usuario;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Usuario : NSManagedObject
+@interface Interacoes : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Usuario+CoreDataProperties.h"
+#import "Interacoes+CoreDataProperties.h"
