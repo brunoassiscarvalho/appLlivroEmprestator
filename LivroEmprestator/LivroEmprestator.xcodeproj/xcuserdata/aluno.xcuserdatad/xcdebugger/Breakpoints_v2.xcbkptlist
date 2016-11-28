@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LivroEmprestator/TableViewControllerListaLivros.m"
-            timestampString = "501634234.836198"
+            timestampString = "502069449.105163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "@implementation TableViewControllerListaLivros"
             landmarkType = "3">
          </BreakpointContent>

@@ -13,7 +13,8 @@
 #import "TableViewCellLivro.h"
 #import "ViewControllerDetalheLivro.h"
 
-@interface TableViewControllerListaLivros () <NSFetchedResultsControllerDelegate, UITableViewDelegate>
+@interface TableViewControllerListaLivros ()  <NSURLSessionDataDelegate,NSFetchedResultsControllerDelegate, UITableViewDelegate>
+@property (strong , nonatomic) NSMutableData * bytesResposta;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _bytesResposta = [NSMutableData new];
 }
 - (NSFetchedResultsController *)fetchedResultsController {
     if (!_fetchedResultsController) {
@@ -43,8 +45,12 @@
     return _fetchedResultsController;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSURLSessionConfiguration *sc = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sc delegate:self delegateQueue:nil];
+    NSURLSessionDataTask *dataTask= [ session dataTaskWithURL:[NSURL URLWithString:@"https://www.googleapis.com/books/v1/volumes?q=guerra%20dos%20tronos"]];
+    [dataTask resume];
     
     NSError *erro;
     if (![self.fetchedResultsController performFetch:&erro]) {
@@ -59,6 +65,65 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - NSURLSessionDataDelegate
+-(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
+    [_bytesResposta appendData:data];
+}
+
+-(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error{
+    if(error){
+        NSLog(@"Erro de conexão: %@",error);
+    }else{
+        NSError *erroJSON;
+        NSDictionary *listas = [NSJSONSerialization JSONObjectWithData:_bytesResposta options:kNilOptions error:&erroJSON];
+        
+        if(erroJSON){
+            NSLog(@"JSON recebido é inválido: %@",erroJSON);
+        }else{
+            
+            AppDelegate *delegate = (AppDelegate *)
+            [[UIApplication sharedApplication]delegate];
+            NSPersistentContainer *container = delegate.persistentContainer;
+            NSManagedObjectContext *context = container.viewContext;
+            
+            NSLog(@"Dados recebidos:%@", listas);
+            NSLog(@"Total livros: %@", listas[@"totalItems"]);
+            
+                //for (NSDictionary*lista in listas){
+            
+            
+            
+            NSArray<NSDictionary *> *items = listas[@"items"];
+                   // NSArray<NSDictionary *> *items= listas[@"];
+            
+            for (NSDictionary *item in items){
+                Livro *livroCoreData = [NSEntityDescription insertNewObjectForEntityForName:@"Livro" inManagedObjectContext:context];
+                NSDictionary *livro = [item objectForKey:@"volumeInfo"];
+                NSLog(@"Titulo: %@", livro[@"title"]);
+                NSArray *autores = livro[@"authors"];
+                for (int i = 0; i < [autores count]; i++) {
+                    [livroCoreData setTitulo: autores[i]];
+                }
+           //
+                NSDictionary *imageLinks = livro[@"imageLinks"];
+                NSString  *smallThumbnail = [imageLinks objectForKey:@"smallThumbnail"];
+                
+                NSURLSessionDownloadTask *taskFoto = [session downloadTaskWithURL:[NSURL URLWithString:smallThumbnail] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error){
+                    if(error) {
+                        
+                    }else{
+                        [livroCoreData setImagem:[NSData dataWithContentsOfURL:location]];
+                    }
+                }];
+                [taskFoto resume];
+            [livroCoreData setTitulo:[livro objectForKey:@"title"]];
+            //[livroCoreData setImagem:[livro objectForKey:@"email"]];
+           }
+        }
+    }
+}
+
 
 #pragma mark - Table view data source
 

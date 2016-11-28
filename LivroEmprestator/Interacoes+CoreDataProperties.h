@@ -2,7 +2,7 @@
 //  Interacoes+CoreDataProperties.h
 //  LivroEmprestator
 //
-//  Created by ALUNO on 23/11/16.
+//  Created by ALUNO on 28/11/16.
 //  Copyright © 2016 IESB. All rights reserved.
 //
 
@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSDate *timestamp;
 @property (nonatomic) int16_t tipoIteracao;
 @property (nullable, nonatomic, retain) Livro *livro;
-@property (nullable, nonatomic, retain) Usuario *usuarioLeitor;
 @property (nullable, nonatomic, retain) Usuario *usuarioEmprestador;
+@property (nullable, nonatomic, retain) Usuario *usuarioLeitor;
 
 @end
 
