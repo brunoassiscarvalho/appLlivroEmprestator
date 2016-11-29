@@ -103,20 +103,10 @@
                 NSLog(@"Titulo: %@", livro[@"title"]);
                 NSArray *autores = livro[@"authors"];
                 for (int i = 0; i < [autores count]; i++) {
-                    [livroCoreData setTitulo: autores[i]];
+                   // [livroCoreData setAutor: autores[i]];
                 }
            //
-                NSDictionary *imageLinks = livro[@"imageLinks"];
-                NSString  *smallThumbnail = [imageLinks objectForKey:@"smallThumbnail"];
-                
-                NSURLSessionDownloadTask *taskFoto = [session downloadTaskWithURL:[NSURL URLWithString:smallThumbnail] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error){
-                    if(error) {
-                        
-                    }else{
-                        [livroCoreData setImagem:[NSData dataWithContentsOfURL:location]];
-                    }
-                }];
-                [taskFoto resume];
+                             
             [livroCoreData setTitulo:[livro objectForKey:@"title"]];
             //[livroCoreData setImagem:[livro objectForKey:@"email"]];
            }
