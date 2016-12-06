@@ -56,8 +56,11 @@
 */
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"segueLivroListaUsuarios"]){        TableViewControllerContatos *destino = segue.destinationViewController;
+    if([segue.identifier isEqualToString:@"segueLivroListaUsuarios"]){
+        TableViewControllerContatos *destino = segue.destinationViewController;
+        
         [destino setLivroSelecionado:_livroSelecionado];
+        [destino setValor:@"pegarEmprestado"];
         
     }
 }

@@ -10,4 +10,6 @@
 
 @interface TableViewCellInteracoes : UITableViewCell
 
+-(void) mostrarImagemUsuario: (UIImage *)usuarioImagem imagemLivro:(UIImage*) livroImagem;
+
 @end

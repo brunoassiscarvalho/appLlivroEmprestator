@@ -139,18 +139,24 @@ return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfO
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Celula Selecionada: %@", indexPath);
-    [self performSegueWithIdentifier:@"confirmarInteracao" sender:self];
+    if([_valor isEqualToString:@"pegarEmprestado"]){
+        [self performSegueWithIdentifier:@"confirmarInteracao" sender:self];
+    }else{
+        [self performSegueWithIdentifier:@"detalheUsuario" sender:self];
+    }
     
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"confirmarInteracao"] ){
+        _valor=@"";
         NSIndexPath *indexPath = [_listaUsuarios indexPathForSelectedRow];
         Usuario *usuarioIteracao = [self.fetchedResultsController objectAtIndexPath:indexPath];
         Livro *livroIteracao = _livroSelecionado;
         ViewControllerIteracoes  *destino = segue.destinationViewController;
         [destino setLivroSelecionado:livroIteracao];
         [destino setUsuarioSolicitado:usuarioIteracao];
+        
         
     }
 }

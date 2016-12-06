@@ -7,6 +7,8 @@
 //
 
 #import "ViewControllerIteracoes.h"
+#import "AppDelegate.h"
+#import "Interacoes+CoreDataClass.h"
 
 
 @interface ViewControllerIteracoes ()
@@ -52,5 +54,37 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)salvarIteracao:(UIButton *)sender {
+    
+    AppDelegate *delegate = (AppDelegate *)
+    [[UIApplication sharedApplication]delegate];
+    NSPersistentContainer *container = delegate.persistentContainer;
+    NSManagedObjectContext *context = container.viewContext;
+    Interacoes *interacao = [NSEntityDescription insertNewObjectForEntityForName:@"Interacoes" inManagedObjectContext:context];
+    
+    [interacao setLivro:_livroSelecionado];
+    [interacao setUsuarioSolicitado:_usuarioSolicitado];
+    
+    NSDate *currDate = [NSDate date];
+    [interacao setTimestamp:currDate];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"dd.MM.YY HH:mm:ss"];
+    NSString *dateString = [dateFormatter stringFromDate:currDate];
+    NSLog(@"%@",dateString);
+    
+    
+    
+/*    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    NSDate *data = [formatter dateFromString:self.dataNascimento.text];*/
+    
+    NSError *erroCoreData;
+    if(![context save:&erroCoreData]){
+        NSLog(@"Erro ao salvar INTERACAO: %@" , erroCoreData);
+    }else{
+        NSLog(@"Interação Incluida");
+    }
+    
+}
 
 @end

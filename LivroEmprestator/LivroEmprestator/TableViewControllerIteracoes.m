@@ -7,8 +7,14 @@
 //
 
 #import "TableViewControllerIteracoes.h"
+#import "AppDelegate.h"
+#import "Interacoes+CoreDataClass.h"
+#import "TableViewCellInteracoes.h"
+#import "Livro+CoreDataClass.h"
+#import "Usuario+CoreDataClass.h"
 
-@interface TableViewControllerIteracoes ()
+@interface TableViewControllerIteracoes () <NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UITableViewDelegate>
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -24,6 +30,27 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (!_fetchedResultsController) {
+        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSPersistentContainer *persistentContainer = delegate.persistentContainer;
+        
+        NSFetchRequest *fetchRequest = [Interacoes fetchRequest];
+        [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES]]];
+        
+        _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                        managedObjectContext:persistentContainer.viewContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+        [_fetchedResultsController setDelegate:self];
+    }
+    
+    UINib *nib = [UINib nibWithNibName:@"TableViewCellInteracoes" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"TableViewCellInteracoes"];
+    
+    return _fetchedResultsController;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -32,13 +59,30 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return self.fetchedResultsController.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celulaLivro"
+     forIndexPath:indexPath];*/
+    TableViewCellInteracoes *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellInteracoes" forIndexPath:indexPath];
+    [self configurarCelula:cell noIndexPath:indexPath];
+    return cell;
+}
+
+- (void) configurarCelula: (TableViewCellInteracoes*) cell noIndexPath: (NSIndexPath *) indexPath {
+    
+    Interacoes *iteracao = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Livro *livroIteracao =iteracao.livro;
+    Usuario *solicitado =iteracao.usuarioSolicitado;
+
+    UIImage *imagemLivro = [UIImage imageWithData: livroIteracao.imagem];
+    UIImage *imagemSolicitado = [UIImage imageWithData: solicitado.imagem];
+
+    [cell mostrarImagemUsuario:imagemSolicitado imagemLivro:imagemLivro];
 }
 
 /*
