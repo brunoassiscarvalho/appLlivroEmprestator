@@ -11,6 +11,7 @@
 #import "Usuario+CoreDataClass.h"
 #import "TableViewCellContato.h"
 #import "ViewControllerIteracoes.h"
+#import "ViewControllerDetalheUsuario.h"
 
 @interface TableViewControllerContatos () <NSURLSessionDataDelegate,NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong , nonatomic) NSMutableData * bytesResposta;
@@ -156,8 +157,12 @@ return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfO
         ViewControllerIteracoes  *destino = segue.destinationViewController;
         [destino setLivroSelecionado:livroIteracao];
         [destino setUsuarioSolicitado:usuarioIteracao];
+    }else if([segue.identifier isEqualToString:@"detalheUsuario"]){
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Usuario *usuario = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
-        
+        ViewControllerDetalheUsuario  *destino = segue.destinationViewController;
+        [destino setUsuarioSelecionado:usuario];
     }
 }
 
