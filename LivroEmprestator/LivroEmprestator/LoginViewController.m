@@ -54,8 +54,11 @@
     NSError *erroCoreData;
     Usuario *usuario = [[context executeFetchRequest:fetchPorUsuario error:&erroCoreData] firstObject];
     
-    if (usuario) {
+    if (usuario && [self.senha.text isEqualToString:usuario.senha]) {
         //[self.senha.text isEqualToString:@"12345678"]
+        
+        
+        
         
         [self performSegueWithIdentifier:@"sucessoLogin" sender:login];
     }else{
@@ -75,7 +78,7 @@
         
   //manipular usuario
 
-/*        [[NSUserDefaults standardUserDefaults] setObject:@"usuario" forKey:@"UsuarioLogado"];
+        [[NSUserDefaults standardUserDefaults] setObject:@"usuario" forKey:@"UsuarioLogado"];
  
  [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
         

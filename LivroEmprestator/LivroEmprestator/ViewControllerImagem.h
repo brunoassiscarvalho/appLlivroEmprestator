@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+typedef void (^CallbackDownloadFoto)(UIImage *foto, NSError *erro);
+
 @interface ViewControllerImagem : ViewController
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewControllerListaLivros : UITableViewController
+typedef void (^CallbackDownloadFoto)(UIImage *foto, NSError *erro);
 @property (weak, nonatomic) IBOutlet UITableView *tabelaMeusLivros;
 
 @end

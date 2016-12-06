@@ -7,8 +7,8 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tipoIteracao" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="livro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Livro" syncable="YES"/>
-        <relationship name="usuarioEmprestador" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" syncable="YES"/>
-        <relationship name="usuarioLeitor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" syncable="YES"/>
+        <relationship name="usuarioSolicitado" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" syncable="YES"/>
+        <relationship name="usuarioSolicitante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" syncable="YES"/>
     </entity>
     <entity name="Livro" representedClassName="Livro" syncable="YES">
         <attribute name="ano" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,13 +26,14 @@
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imagem" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senha" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uf" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Autor" positionX="-5697" positionY="-1746" width="128" height="60"/>
         <element name="Interacoes" positionX="-5688" positionY="-1755" width="128" height="120"/>
         <element name="Livro" positionX="-5571" positionY="-1809" width="128" height="150"/>
-        <element name="Usuario" positionX="-5825" positionY="-1833" width="128" height="165"/>
-        <element name="Autor" positionX="-5697" positionY="-1746" width="128" height="60"/>
+        <element name="Usuario" positionX="-5825" positionY="-1833" width="128" height="180"/>
     </elements>
 </model>

@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerImagem.h"
+#import "NSString+Maiuscula.h"
 
 @interface ViewControllerImagem ()
 @property (weak, nonatomic) IBOutlet UIImageView *imagem;
@@ -15,13 +16,33 @@
 
 @implementation ViewControllerImagem
 
+- (void) baixarImagem: (NSURL *) url comCallback: (CallbackDownloadFoto) callback {
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            callback(nil, error);
+        }else {
+            UIImage *foto = [UIImage imageWithContentsOfFile:location.path];
+            callback(foto, nil);
+        }
+    }];
+    
+    [task resume];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self baixarImagem:nil comCallback:^(UIImage *foto, NSError *erro) {
+        
+    }];
+    
     
 
     NSURL *url = [NSURL URLWithString: @"http://lorempixel.com/400/400/"] ;
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSession *session = [NSURLSession sharedSession];
     
     NSURLSessionDownloadTask *taskFoto = [session downloadTaskWithURL:url
@@ -30,12 +51,13 @@
                                                 NSError * _Nullable error){
                                                         
                                                 if(error) {
-                                                            
+                                                    NSLog(@"erro imagem:%@",error);
                                                 }else{
                                                         self.imagem.image = [UIImage imageWithContentsOfFile:location.path];
                                                 }
                             }];
     [taskFoto resume];
+    
 
 }
 

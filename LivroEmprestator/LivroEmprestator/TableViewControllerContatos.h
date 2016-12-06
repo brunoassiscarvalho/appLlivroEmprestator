@@ -11,5 +11,6 @@
 
 @interface TableViewControllerContatos : UITableViewController
 @property Livro *livroSelecionado;
+@property (strong, nonatomic) IBOutlet UITableView *listaUsuarios;
 
 @end

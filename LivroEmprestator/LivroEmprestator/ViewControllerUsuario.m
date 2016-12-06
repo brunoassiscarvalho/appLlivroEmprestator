@@ -15,12 +15,14 @@
 @interface ViewControllerUsuario () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *apelido;
 @property (weak, nonatomic) IBOutlet UITextField *nome;
-@property (weak, nonatomic) IBOutlet UITextField *dataNascimento;
+/*@property (weak, nonatomic) IBOutlet UITextField *dataNascimento;
 @property (weak, nonatomic) IBOutlet UITextField *uf;
 @property (weak, nonatomic) IBOutlet UITextField *cidade;
 @property (weak, nonatomic) IBOutlet UITextField *email;
-@property (weak, nonatomic) IBOutlet UISwitch *sexo;
+@property (weak, nonatomic) IBOutlet UISwitch *sexo;*/
 @property (weak, nonatomic) IBOutlet UIImageView *imagemUsuario;
+@property (weak, nonatomic) IBOutlet UITextField *senha01;
+@property (weak, nonatomic) IBOutlet UITextField *senha02;
 
 
 @end
@@ -56,6 +58,9 @@
     
     [usuario setApelido:self.apelido.text];
     [usuario setNome:self.nome.text];
+    if([self.senha01.text isEqualToString:self.senha02.text]){
+        [usuario setSenha:self.senha01.text];
+    }
     
     
       
@@ -63,7 +68,7 @@
     NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy"];
     
-    NSDate *data = [formatter dateFromString:self.dataNascimento.text];
+/*    NSDate *data = [formatter dateFromString:self.dataNascimento.text];
     [usuario setDatanascimento:data];
     if( self.sexo.on){
         [usuario setSexo:@"F"];
@@ -73,9 +78,9 @@
     
     [usuario setUf:self.uf.text];
     [usuario setCidade:self.cidade.text];
-    [usuario setEmail:self.email.text];
+    [usuario setEmail:self.email.text];*/
     
-    NSData *bytesDaImagem = UIImagePNGRepresentation(_imagemUsuario.image);
+    NSData *bytesDaImagem = UIImagePNGRepresentation(self.imagemUsuario.image);
     [usuario setImagem: bytesDaImagem];
     
     NSError *erroCoreData;
@@ -87,8 +92,9 @@
 
 }
 
-- (IBAction)concluirCadastro:(id)sender {
+- (IBAction)cadastrar1passo:(id)sender {
     [self incluirUsuario];
+    [self performSegueWithIdentifier:@"continuarCadastro" sender:self];
 }
 
 - (IBAction)editarFotoUsuario:(UIButton *)sender {
@@ -130,5 +136,6 @@ UIImage *imagem = [UIImage imageWithData:bytesDaImagem];
     [picker dismissViewControllerAnimated:YES completion:nil];
     
 }
+
 
 @end

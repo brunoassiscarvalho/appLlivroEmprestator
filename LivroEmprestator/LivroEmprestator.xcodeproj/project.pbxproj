@@ -30,15 +30,17 @@
 		57B151A91D5BF434006C6560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B151A81D5BF434006C6560 /* Assets.xcassets */; };
 		57B151AC1D5BF434006C6560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B151AA1D5BF434006C6560 /* LaunchScreen.storyboard */; };
 		57D1B2D81DC010F600BD7068 /* ViewControllerUsuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D1B2D71DC010F600BD7068 /* ViewControllerUsuario.m */; };
-		57D27F981DECE91300FAEAFF /* Interacoes+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F891DECE91300FAEAFF /* Interacoes+CoreDataClass.m */; };
-		57D27F991DECE91300FAEAFF /* Interacoes+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F8B1DECE91300FAEAFF /* Interacoes+CoreDataProperties.m */; };
-		57D27F9A1DECE91300FAEAFF /* Livro+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F8D1DECE91300FAEAFF /* Livro+CoreDataClass.m */; };
-		57D27F9B1DECE91300FAEAFF /* Livro+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F8F1DECE91300FAEAFF /* Livro+CoreDataProperties.m */; };
-		57D27F9C1DECE91300FAEAFF /* Usuario+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F911DECE91300FAEAFF /* Usuario+CoreDataClass.m */; };
-		57D27F9D1DECE91300FAEAFF /* Usuario+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F931DECE91300FAEAFF /* Usuario+CoreDataProperties.m */; };
-		57D27F9E1DECE91300FAEAFF /* Autor+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F951DECE91300FAEAFF /* Autor+CoreDataClass.m */; };
-		57D27F9F1DECE91300FAEAFF /* Autor+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D27F971DECE91300FAEAFF /* Autor+CoreDataProperties.m */; };
 		57D8F10E1DD1187F0031C818 /* TableViewControllerListaLivros.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D8F10D1DD1187F0031C818 /* TableViewControllerListaLivros.m */; };
+		57F084E71DF61CB80028E9B2 /* ViewControllerIteracoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084E61DF61CB80028E9B2 /* ViewControllerIteracoes.m */; };
+		57F084F81DF624A60028E9B2 /* Livro+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084E91DF624A60028E9B2 /* Livro+CoreDataClass.m */; };
+		57F084F91DF624A60028E9B2 /* Livro+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084EB1DF624A60028E9B2 /* Livro+CoreDataProperties.m */; };
+		57F084FA1DF624A60028E9B2 /* Interacoes+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084ED1DF624A60028E9B2 /* Interacoes+CoreDataClass.m */; };
+		57F084FB1DF624A60028E9B2 /* Interacoes+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084EF1DF624A60028E9B2 /* Interacoes+CoreDataProperties.m */; };
+		57F084FC1DF624A60028E9B2 /* Usuario+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084F11DF624A60028E9B2 /* Usuario+CoreDataClass.m */; };
+		57F084FD1DF624A60028E9B2 /* Usuario+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084F31DF624A60028E9B2 /* Usuario+CoreDataProperties.m */; };
+		57F084FE1DF624A60028E9B2 /* Autor+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084F51DF624A60028E9B2 /* Autor+CoreDataClass.m */; };
+		57F084FF1DF624A60028E9B2 /* Autor+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084F71DF624A60028E9B2 /* Autor+CoreDataProperties.m */; };
+		57F085021DF63BAA0028E9B2 /* NSString+Maiuscula.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F085011DF63BAA0028E9B2 /* NSString+Maiuscula.m */; };
 		9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEC1D7F80E60078357F /* ViewPentagono.m */; };
 		9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEF1D7F84800078357F /* ViewCirculo.m */; };
 		9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAF21D7F8E6C0078357F /* LoginViewController.m */; };
@@ -86,24 +88,28 @@
 		57D1B29C1DC0055A00BD7068 /* LivroEmprestator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LivroEmprestator-Bridging-Header.h"; sourceTree = "<group>"; };
 		57D1B2D61DC010F600BD7068 /* ViewControllerUsuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerUsuario.h; sourceTree = "<group>"; };
 		57D1B2D71DC010F600BD7068 /* ViewControllerUsuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerUsuario.m; sourceTree = "<group>"; };
-		57D27F881DECE91300FAEAFF /* Interacoes+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Interacoes+CoreDataClass.h"; path = "../Interacoes+CoreDataClass.h"; sourceTree = "<group>"; };
-		57D27F891DECE91300FAEAFF /* Interacoes+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Interacoes+CoreDataClass.m"; path = "../Interacoes+CoreDataClass.m"; sourceTree = "<group>"; };
-		57D27F8A1DECE91300FAEAFF /* Interacoes+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Interacoes+CoreDataProperties.h"; path = "../Interacoes+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57D27F8B1DECE91300FAEAFF /* Interacoes+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Interacoes+CoreDataProperties.m"; path = "../Interacoes+CoreDataProperties.m"; sourceTree = "<group>"; };
-		57D27F8C1DECE91300FAEAFF /* Livro+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataClass.h"; path = "../Livro+CoreDataClass.h"; sourceTree = "<group>"; };
-		57D27F8D1DECE91300FAEAFF /* Livro+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataClass.m"; path = "../Livro+CoreDataClass.m"; sourceTree = "<group>"; };
-		57D27F8E1DECE91300FAEAFF /* Livro+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataProperties.h"; path = "../Livro+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57D27F8F1DECE91300FAEAFF /* Livro+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataProperties.m"; path = "../Livro+CoreDataProperties.m"; sourceTree = "<group>"; };
-		57D27F901DECE91300FAEAFF /* Usuario+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataClass.h"; path = "../Usuario+CoreDataClass.h"; sourceTree = "<group>"; };
-		57D27F911DECE91300FAEAFF /* Usuario+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataClass.m"; path = "../Usuario+CoreDataClass.m"; sourceTree = "<group>"; };
-		57D27F921DECE91300FAEAFF /* Usuario+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataProperties.h"; path = "../Usuario+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57D27F931DECE91300FAEAFF /* Usuario+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataProperties.m"; path = "../Usuario+CoreDataProperties.m"; sourceTree = "<group>"; };
-		57D27F941DECE91300FAEAFF /* Autor+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Autor+CoreDataClass.h"; path = "../Autor+CoreDataClass.h"; sourceTree = "<group>"; };
-		57D27F951DECE91300FAEAFF /* Autor+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Autor+CoreDataClass.m"; path = "../Autor+CoreDataClass.m"; sourceTree = "<group>"; };
-		57D27F961DECE91300FAEAFF /* Autor+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Autor+CoreDataProperties.h"; path = "../Autor+CoreDataProperties.h"; sourceTree = "<group>"; };
-		57D27F971DECE91300FAEAFF /* Autor+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Autor+CoreDataProperties.m"; path = "../Autor+CoreDataProperties.m"; sourceTree = "<group>"; };
 		57D8F10C1DD1187F0031C818 /* TableViewControllerListaLivros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerListaLivros.h; sourceTree = "<group>"; };
 		57D8F10D1DD1187F0031C818 /* TableViewControllerListaLivros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerListaLivros.m; sourceTree = "<group>"; };
+		57F084E51DF61CB80028E9B2 /* ViewControllerIteracoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerIteracoes.h; sourceTree = "<group>"; };
+		57F084E61DF61CB80028E9B2 /* ViewControllerIteracoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerIteracoes.m; sourceTree = "<group>"; };
+		57F084E81DF624A60028E9B2 /* Livro+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataClass.h"; path = "../Livro+CoreDataClass.h"; sourceTree = "<group>"; };
+		57F084E91DF624A60028E9B2 /* Livro+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataClass.m"; path = "../Livro+CoreDataClass.m"; sourceTree = "<group>"; };
+		57F084EA1DF624A60028E9B2 /* Livro+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Livro+CoreDataProperties.h"; path = "../Livro+CoreDataProperties.h"; sourceTree = "<group>"; };
+		57F084EB1DF624A60028E9B2 /* Livro+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Livro+CoreDataProperties.m"; path = "../Livro+CoreDataProperties.m"; sourceTree = "<group>"; };
+		57F084EC1DF624A60028E9B2 /* Interacoes+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Interacoes+CoreDataClass.h"; path = "../Interacoes+CoreDataClass.h"; sourceTree = "<group>"; };
+		57F084ED1DF624A60028E9B2 /* Interacoes+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Interacoes+CoreDataClass.m"; path = "../Interacoes+CoreDataClass.m"; sourceTree = "<group>"; };
+		57F084EE1DF624A60028E9B2 /* Interacoes+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Interacoes+CoreDataProperties.h"; path = "../Interacoes+CoreDataProperties.h"; sourceTree = "<group>"; };
+		57F084EF1DF624A60028E9B2 /* Interacoes+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Interacoes+CoreDataProperties.m"; path = "../Interacoes+CoreDataProperties.m"; sourceTree = "<group>"; };
+		57F084F01DF624A60028E9B2 /* Usuario+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataClass.h"; path = "../Usuario+CoreDataClass.h"; sourceTree = "<group>"; };
+		57F084F11DF624A60028E9B2 /* Usuario+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataClass.m"; path = "../Usuario+CoreDataClass.m"; sourceTree = "<group>"; };
+		57F084F21DF624A60028E9B2 /* Usuario+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Usuario+CoreDataProperties.h"; path = "../Usuario+CoreDataProperties.h"; sourceTree = "<group>"; };
+		57F084F31DF624A60028E9B2 /* Usuario+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Usuario+CoreDataProperties.m"; path = "../Usuario+CoreDataProperties.m"; sourceTree = "<group>"; };
+		57F084F41DF624A60028E9B2 /* Autor+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Autor+CoreDataClass.h"; path = "../Autor+CoreDataClass.h"; sourceTree = "<group>"; };
+		57F084F51DF624A60028E9B2 /* Autor+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Autor+CoreDataClass.m"; path = "../Autor+CoreDataClass.m"; sourceTree = "<group>"; };
+		57F084F61DF624A60028E9B2 /* Autor+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Autor+CoreDataProperties.h"; path = "../Autor+CoreDataProperties.h"; sourceTree = "<group>"; };
+		57F084F71DF624A60028E9B2 /* Autor+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Autor+CoreDataProperties.m"; path = "../Autor+CoreDataProperties.m"; sourceTree = "<group>"; };
+		57F085001DF63BAA0028E9B2 /* NSString+Maiuscula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Maiuscula.h"; sourceTree = "<group>"; };
+		57F085011DF63BAA0028E9B2 /* NSString+Maiuscula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Maiuscula.m"; sourceTree = "<group>"; };
 		9C28EAEB1D7F80E60078357F /* ViewPentagono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPentagono.h; sourceTree = "<group>"; };
 		9C28EAEC1D7F80E60078357F /* ViewPentagono.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPentagono.m; sourceTree = "<group>"; };
 		9C28EAEE1D7F84800078357F /* ViewCirculo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCirculo.h; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 				57B151AD1D5BF434006C6560 /* Info.plist */,
 				57B151A51D5BF434006C6560 /* LivroEmprestator.xcdatamodeld */,
 				57B151991D5BF434006C6560 /* Supporting Files */,
+				57F085001DF63BAA0028E9B2 /* NSString+Maiuscula.h */,
+				57F085011DF63BAA0028E9B2 /* NSString+Maiuscula.m */,
 			);
 			path = LivroEmprestator;
 			sourceTree = "<group>";
@@ -199,6 +207,8 @@
 				573B001B1DE50E390024B1AB /* TableViewControllerIteracoes.m */,
 				574170431DEE2CEE00B8F462 /* ViewControllerImagem.h */,
 				574170441DEE2CEE00B8F462 /* ViewControllerImagem.m */,
+				57F084E51DF61CB80028E9B2 /* ViewControllerIteracoes.h */,
+				57F084E61DF61CB80028E9B2 /* ViewControllerIteracoes.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,22 +216,22 @@
 		57D1B2B11DC0074600BD7068 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
-				57D27F881DECE91300FAEAFF /* Interacoes+CoreDataClass.h */,
-				57D27F891DECE91300FAEAFF /* Interacoes+CoreDataClass.m */,
-				57D27F8A1DECE91300FAEAFF /* Interacoes+CoreDataProperties.h */,
-				57D27F8B1DECE91300FAEAFF /* Interacoes+CoreDataProperties.m */,
-				57D27F8C1DECE91300FAEAFF /* Livro+CoreDataClass.h */,
-				57D27F8D1DECE91300FAEAFF /* Livro+CoreDataClass.m */,
-				57D27F8E1DECE91300FAEAFF /* Livro+CoreDataProperties.h */,
-				57D27F8F1DECE91300FAEAFF /* Livro+CoreDataProperties.m */,
-				57D27F901DECE91300FAEAFF /* Usuario+CoreDataClass.h */,
-				57D27F911DECE91300FAEAFF /* Usuario+CoreDataClass.m */,
-				57D27F921DECE91300FAEAFF /* Usuario+CoreDataProperties.h */,
-				57D27F931DECE91300FAEAFF /* Usuario+CoreDataProperties.m */,
-				57D27F941DECE91300FAEAFF /* Autor+CoreDataClass.h */,
-				57D27F951DECE91300FAEAFF /* Autor+CoreDataClass.m */,
-				57D27F961DECE91300FAEAFF /* Autor+CoreDataProperties.h */,
-				57D27F971DECE91300FAEAFF /* Autor+CoreDataProperties.m */,
+				57F084E81DF624A60028E9B2 /* Livro+CoreDataClass.h */,
+				57F084E91DF624A60028E9B2 /* Livro+CoreDataClass.m */,
+				57F084EA1DF624A60028E9B2 /* Livro+CoreDataProperties.h */,
+				57F084EB1DF624A60028E9B2 /* Livro+CoreDataProperties.m */,
+				57F084EC1DF624A60028E9B2 /* Interacoes+CoreDataClass.h */,
+				57F084ED1DF624A60028E9B2 /* Interacoes+CoreDataClass.m */,
+				57F084EE1DF624A60028E9B2 /* Interacoes+CoreDataProperties.h */,
+				57F084EF1DF624A60028E9B2 /* Interacoes+CoreDataProperties.m */,
+				57F084F01DF624A60028E9B2 /* Usuario+CoreDataClass.h */,
+				57F084F11DF624A60028E9B2 /* Usuario+CoreDataClass.m */,
+				57F084F21DF624A60028E9B2 /* Usuario+CoreDataProperties.h */,
+				57F084F31DF624A60028E9B2 /* Usuario+CoreDataProperties.m */,
+				57F084F41DF624A60028E9B2 /* Autor+CoreDataClass.h */,
+				57F084F51DF624A60028E9B2 /* Autor+CoreDataClass.m */,
+				57F084F61DF624A60028E9B2 /* Autor+CoreDataProperties.h */,
+				57F084F71DF624A60028E9B2 /* Autor+CoreDataProperties.m */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -301,16 +311,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				578F854C1DDD25E700EA5018 /* TableViewCellContato.m in Sources */,
-				57D27F981DECE91300FAEAFF /* Interacoes+CoreDataClass.m in Sources */,
-				57D27F991DECE91300FAEAFF /* Interacoes+CoreDataProperties.m in Sources */,
+				57F084E71DF61CB80028E9B2 /* ViewControllerIteracoes.m in Sources */,
 				57D8F10E1DD1187F0031C818 /* TableViewControllerListaLivros.m in Sources */,
-				57D27F9B1DECE91300FAEAFF /* Livro+CoreDataProperties.m in Sources */,
+				57F085021DF63BAA0028E9B2 /* NSString+Maiuscula.m in Sources */,
 				9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */,
-				57D27F9C1DECE91300FAEAFF /* Usuario+CoreDataClass.m in Sources */,
+				57F084FE1DF624A60028E9B2 /* Autor+CoreDataClass.m in Sources */,
+				57F084F91DF624A60028E9B2 /* Livro+CoreDataProperties.m in Sources */,
 				578F85441DDD14B700EA5018 /* TableViewCellLivro.m in Sources */,
 				57B151A11D5BF434006C6560 /* ViewController.m in Sources */,
 				57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */,
-				57D27F9D1DECE91300FAEAFF /* Usuario+CoreDataProperties.m in Sources */,
 				57B1519B1D5BF434006C6560 /* main.m in Sources */,
 				9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */,
 				573B00111DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m in Sources */,
@@ -318,16 +327,19 @@
 				573B00141DE507E10024B1AB /* ViewControllerConfig.m in Sources */,
 				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
 				57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */,
+				57F084FA1DF624A60028E9B2 /* Interacoes+CoreDataClass.m in Sources */,
+				57F084FC1DF624A60028E9B2 /* Usuario+CoreDataClass.m in Sources */,
 				57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */,
-				57D27F9F1DECE91300FAEAFF /* Autor+CoreDataProperties.m in Sources */,
 				573B00181DE50BB70024B1AB /* TableViewCellInteracoes.m in Sources */,
 				578F85481DDD25B400EA5018 /* TableViewControllerContatos.m in Sources */,
+				57F084FF1DF624A60028E9B2 /* Autor+CoreDataProperties.m in Sources */,
 				9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */,
+				57F084FB1DF624A60028E9B2 /* Interacoes+CoreDataProperties.m in Sources */,
+				57F084FD1DF624A60028E9B2 /* Usuario+CoreDataProperties.m in Sources */,
 				570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */,
-				57D27F9A1DECE91300FAEAFF /* Livro+CoreDataClass.m in Sources */,
 				570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */,
+				57F084F81DF624A60028E9B2 /* Livro+CoreDataClass.m in Sources */,
 				573B001C1DE50E390024B1AB /* TableViewControllerIteracoes.m in Sources */,
-				57D27F9E1DECE91300FAEAFF /* Autor+CoreDataClass.m in Sources */,
 				574170451DEE2CEE00B8F462 /* ViewControllerImagem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

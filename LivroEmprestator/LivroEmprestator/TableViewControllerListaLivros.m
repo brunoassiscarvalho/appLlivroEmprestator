@@ -108,13 +108,33 @@
            //
                              
             [livroCoreData setTitulo:[livro objectForKey:@"title"]];
-            //[livroCoreData setImagem:[livro objectForKey:@"email"]];
+                
+                NSString *imageLinks = livro[@"imageLinks"][@"smallThumbnail"];
+                
+                [self baixarImagem:[NSURL URLWithString:imageLinks] comCallback:^(UIImage *foto, NSError *erro) {
+                     NSData *bytesDaImagem = UIImagePNGRepresentation(foto);
+                    [livroCoreData setImagem: bytesDaImagem];
+                }];
+                
            }
         }
     }
 }
 
-
+- (void) baixarImagem: (NSURL *) url comCallback: (CallbackDownloadFoto) callback {
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            callback(nil, error);
+        }else {
+            UIImage *foto = [UIImage imageWithContentsOfFile:location.path];
+            callback(foto, nil);
+        }
+    }];
+    
+    [task resume];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

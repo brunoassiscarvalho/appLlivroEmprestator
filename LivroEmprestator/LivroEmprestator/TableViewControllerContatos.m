@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Usuario+CoreDataClass.h"
 #import "TableViewCellContato.h"
+#import "ViewControllerIteracoes.h"
 
 @interface TableViewControllerContatos () <NSURLSessionDataDelegate,NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong , nonatomic) NSMutableData * bytesResposta;
@@ -134,6 +135,24 @@ return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfO
     //Para converter NSdata para imagem
     //UIImage *imagem = [UIImage imageWithData:livro.imagem];
     [cell preencherComApelido:contato.apelido];
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Celula Selecionada: %@", indexPath);
+    [self performSegueWithIdentifier:@"confirmarInteracao" sender:self];
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"confirmarInteracao"] ){
+        NSIndexPath *indexPath = [_listaUsuarios indexPathForSelectedRow];
+        Usuario *usuarioIteracao = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        Livro *livroIteracao = _livroSelecionado;
+        ViewControllerIteracoes  *destino = segue.destinationViewController;
+        [destino setLivroSelecionado:livroIteracao];
+        [destino setUsuarioSolicitado:usuarioIteracao];
+        
+    }
 }
 
 @end
