@@ -9,10 +9,13 @@
 #import "ViewControllerUsuario.h"
 #import "AppDelegate.h"
 #import "Usuario+CoreDataClass.h"
+#import "ViewControllerUsuario2.h"
+
 @import Photos;
 @import MobileCoreServices;
 
 @interface ViewControllerUsuario () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *apelido;
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 /*@property (weak, nonatomic) IBOutlet UITextField *dataNascimento;
@@ -23,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imagemUsuario;
 @property (weak, nonatomic) IBOutlet UITextField *senha01;
 @property (weak, nonatomic) IBOutlet UITextField *senha02;
+@property Usuario *usuario;
+
 
 
 @end
@@ -54,12 +59,12 @@
     [[UIApplication sharedApplication]delegate];
     NSPersistentContainer *container = delegate.persistentContainer;
     NSManagedObjectContext *context = container.viewContext;
-    Usuario *usuario = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
+    self.usuario = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
     
-    [usuario setApelido:self.apelido.text];
-    [usuario setNome:self.nome.text];
+    [self.usuario setApelido:self.apelido.text];
+    [self.usuario setNome:self.nome.text];
     if([self.senha01.text isEqualToString:self.senha02.text]){
-        [usuario setSenha:self.senha01.text];
+        [self.usuario setSenha:self.senha01.text];
     }
     
     
@@ -81,13 +86,13 @@
     [usuario setEmail:self.email.text];*/
     
     NSData *bytesDaImagem = UIImagePNGRepresentation(self.imagemUsuario.image);
-    [usuario setImagem: bytesDaImagem];
+    [self.usuario setImagem: bytesDaImagem];
     
     NSError *erroCoreData;
     if(![context save:&erroCoreData]){
         NSLog(@"Deu Erro! %@" , erroCoreData);
     }else{
-        NSLog(@"Produto incluido com sucesso!");
+        NSLog(@"Usuario incluido com sucesso!");
     }
 
 }
@@ -96,6 +101,17 @@
     [self incluirUsuario];
     [self performSegueWithIdentifier:@"continuarCadastro" sender:self];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"continuarCadastro"]){
+        
+        ViewControllerUsuario2  *destino = segue.destinationViewController;
+        [destino setNovoUsuario:_usuario];
+        
+    }
+}
+
+
 
 - (IBAction)editarFotoUsuario:(UIButton *)sender {
     

@@ -65,6 +65,12 @@
     [interacao setLivro:_livroSelecionado];
     [interacao setUsuarioSolicitado:_usuarioSolicitado];
     
+    NSString *idUsuarioSolicitante = [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
+    
+    NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
+    
+    [interacao setUsuarioSolicitante:[context objectWithID:idSolicitante]];
+    
     NSDate *currDate = [NSDate date];
     [interacao setTimestamp:currDate];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];

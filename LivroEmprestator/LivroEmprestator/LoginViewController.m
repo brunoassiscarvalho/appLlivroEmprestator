@@ -57,6 +57,12 @@
     if (usuario && [self.senha.text isEqualToString:usuario.senha]) {
         //[self.senha.text isEqualToString:@"12345678"]
         
+        NSString *identificador = [[[usuario objectID] URIRepresentation] absoluteString];
+        
+        
+        
+        [[NSUserDefaults standardUserDefaults] setObject:identificador forKey:@"UsuarioLogado"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         
         
@@ -73,30 +79,7 @@
         [self presentViewController:falhaLogin animated:YES completion:nil];
         
     }
-    
- /*   if([self.usuario.text isEqualToString:@"Bruno"] && [self.senha.text isEqualToString:@"12345678"]){
-        
-  //manipular usuario
 
-        [[NSUserDefaults standardUserDefaults] setObject:@"usuario" forKey:@"UsuarioLogado"];
- 
- [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
-        
-        //salvar
-        NSManagedObjectID *identificador = [usuario objectID];
-        
-        
-        NSFetchRequest *fetchPorID = [NSFetchRequest fetchRequestWithEntityName:@"Usuario"];
-        
-        //recuperar
-        
-        [fetchPorID setPredicate:[NSPredicate predicateWithFormat:@"objectID == %@", identificador]];
-        [fetchPorID setFetchLimit:1];
-        
-        Usuario *x = [[context executeFetchRequest:fetchPorID error:nil] firstObject];
-  
-  }
-*/
 
 }
 

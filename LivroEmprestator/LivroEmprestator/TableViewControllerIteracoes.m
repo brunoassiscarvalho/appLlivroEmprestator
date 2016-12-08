@@ -51,6 +51,17 @@
     return _fetchedResultsController;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSError *erro;
+    if (![self.fetchedResultsController performFetch:&erro]) {
+        NSLog(@"Erro ao recuperar interações: %@", erro);
+    }else {
+        [self.tableView reloadData];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -64,6 +75,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
+
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     /*  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celulaLivro"
@@ -83,6 +95,15 @@
     UIImage *imagemSolicitado = [UIImage imageWithData: solicitado.imagem];
 
     [cell mostrarImagemUsuario:imagemSolicitado imagemLivro:imagemLivro];
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200; //retornar aqui a altura estimada da célula... olhe no XIB a altura.
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension; //isso faz a tableView aceitar células com alturas dinâmicas
 }
 
 /*

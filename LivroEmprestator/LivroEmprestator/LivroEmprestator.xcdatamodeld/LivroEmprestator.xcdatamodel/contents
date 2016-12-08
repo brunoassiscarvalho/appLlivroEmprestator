@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15F34" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Autor" representedClassName="Autor" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="livro" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Livro" inverseName="autor" inverseEntity="Livro" syncable="YES"/>
     </entity>
     <entity name="Interacoes" representedClassName="Interacoes" syncable="YES">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -16,8 +17,8 @@
         <attribute name="imagem" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="resumo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="autor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Autor" syncable="YES"/>
-        <relationship name="usuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" syncable="YES"/>
+        <relationship name="autor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Autor" inverseName="livro" inverseEntity="Autor" syncable="YES"/>
+        <relationship name="usuario" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Usuario" inverseName="livro" inverseEntity="Usuario" syncable="YES"/>
     </entity>
     <entity name="Usuario" representedClassName="Usuario" syncable="YES">
         <attribute name="apelido" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,11 +30,12 @@
         <attribute name="senha" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uf" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="livro" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Livro" inverseName="usuario" inverseEntity="Livro" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Autor" positionX="-5697" positionY="-1746" width="128" height="60"/>
+        <element name="Autor" positionX="-5697" positionY="-1746" width="128" height="75"/>
         <element name="Interacoes" positionX="-5688" positionY="-1755" width="128" height="120"/>
         <element name="Livro" positionX="-5571" positionY="-1809" width="128" height="150"/>
-        <element name="Usuario" positionX="-5825" positionY="-1833" width="128" height="180"/>
+        <element name="Usuario" positionX="-5825" positionY="-1833" width="128" height="195"/>
     </elements>
 </model>

@@ -2,7 +2,7 @@
 //  Usuario+CoreDataProperties.h
 //  LivroEmprestator
 //
-//  Created by ALUNO on 05/12/16.
+//  Created by ALUNO on 07/12/16.
 //  Copyright © 2016 IESB. All rights reserved.
 //
 
@@ -21,9 +21,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *email;
 @property (nullable, nonatomic, retain) NSData *imagem;
 @property (nullable, nonatomic, copy) NSString *nome;
+@property (nullable, nonatomic, copy) NSString *senha;
 @property (nullable, nonatomic, copy) NSString *sexo;
 @property (nullable, nonatomic, copy) NSString *uf;
-@property (nullable, nonatomic, copy) NSString *senha;
+@property (nullable, nonatomic, retain) NSSet<Livro *> *livro;
+
+@end
+
+@interface Usuario (CoreDataGeneratedAccessors)
+
+- (void)addLivroObject:(Livro *)value;
+- (void)removeLivroObject:(Livro *)value;
+- (void)addLivro:(NSSet<Livro *> *)values;
+- (void)removeLivro:(NSSet<Livro *> *)values;
 
 @end
 
