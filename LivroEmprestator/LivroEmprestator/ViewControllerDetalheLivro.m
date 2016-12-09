@@ -9,6 +9,7 @@
 #import "ViewControllerDetalheLivro.h"
 #import "Livro+CoreDataClass.h"
 #import "TableViewControllerContatos.h"
+#import "Autor+CoreDataClass.h"
 
 
 
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titulo;
 @property (weak, nonatomic) IBOutlet UILabel *autor;
 @property (weak, nonatomic) IBOutlet UIImageView *imagem;
+@property (weak, nonatomic) IBOutlet UILabel *resumo;
 
 
 @end
@@ -31,6 +33,20 @@
 /*        [self.ano setText:_livroSelecionado.ano];
         [self.edicao setText:_livroSelecionado.edicao];
         [self.resumo setText:_livroSelecionado.resumo];*/
+        NSSet *autores = _livroSelecionado.autor;
+        Autor *autorObj;
+        NSMutableString *concatenaAutores=[NSMutableString string];
+        
+        
+        for(autorObj in autores){
+            NSMutableString *mutableString = [autorObj.nome mutableCopy];
+            [concatenaAutores appendString:mutableString ];
+            [concatenaAutores appendString:@", " ];
+        }
+        [self.autor setText:concatenaAutores];
+        [self.resumo setText:_livroSelecionado.resumo];
+        
+        
         
         UIImage *imagemLivro = [UIImage imageWithData:_livroSelecionado.imagem];
         [self.imagem setImage: imagemLivro];

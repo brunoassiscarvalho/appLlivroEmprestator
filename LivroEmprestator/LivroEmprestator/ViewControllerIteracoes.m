@@ -9,6 +9,7 @@
 #import "ViewControllerIteracoes.h"
 #import "AppDelegate.h"
 #import "Interacoes+CoreDataClass.h"
+#import "Autor+CoreDataClass.h"
 
 
 @interface ViewControllerIteracoes ()
@@ -36,6 +37,18 @@
     [self.usuarioApelido setText:_usuarioSolicitado.apelido];
     UIImage *imagemUsuario = [UIImage imageWithData:_usuarioSolicitado.imagem];
     [self.usuarioImagem setImage:imagemUsuario];
+    
+    NSSet *autores = _livroSelecionado.autor;
+    Autor *autor;
+    NSMutableString *concatenaAutores=[NSMutableString string];
+    
+    
+    for(autor in autores){
+        NSMutableString *mutableString = [autor.nome mutableCopy];
+        [concatenaAutores appendString:mutableString ];
+        [concatenaAutores appendString:@", " ];
+    }
+    [self.livroAutor setText:concatenaAutores];
     
     // Do any additional setup after loading the view.
 }

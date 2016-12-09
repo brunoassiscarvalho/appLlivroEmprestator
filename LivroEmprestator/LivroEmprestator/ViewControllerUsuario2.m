@@ -63,6 +63,9 @@
     }
     
 }
+- (IBAction)salvarUsuario:(UIButton *)sender {
+    [self incluirUsuario];
+}
 
 
 /*
