@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Livro+CoreDataClass.h"
 #import "Usuario+CoreDataClass.h"
+#import "Interacoes+CoreDataClass.h"
 
 @interface ViewControllerIteracoes : UIViewController
 @property Livro *livroSelecionado;
 @property Usuario *usuarioSolicitante;
 @property Usuario *usuarioSolicitado;
+@property Interacoes *iteracaoSelecionada;
 
 
 @end

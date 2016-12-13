@@ -8,10 +8,11 @@
 
 #import "TableViewControllerIteracoes.h"
 #import "AppDelegate.h"
-#import "Interacoes+CoreDataClass.h"
 #import "TableViewCellInteracoes.h"
+#import "Interacoes+CoreDataClass.h"
 #import "Livro+CoreDataClass.h"
 #import "Usuario+CoreDataClass.h"
+#import "ViewControllerIteracoes.h"
 
 @interface TableViewControllerIteracoes () <NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
@@ -95,6 +96,22 @@
     UIImage *imagemSolicitado = [UIImage imageWithData: solicitado.imagem];
 
     [cell mostrarImagemUsuario:imagemSolicitado imagemLivro:imagemLivro];
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Celula Selecionada: %@", indexPath);
+    [self performSegueWithIdentifier:@"segueDetalheIteracao" sender:self];
+
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"segueDetalheIteracao"] ){
+        NSIndexPath *indexPath = [_listaIteracoes indexPathForSelectedRow];
+        Interacoes *iteracao = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        ViewControllerIteracoes  *destino = segue.destinationViewController;
+        [destino setIteracaoSelecionada:iteracao];
+    }
 }
 
 #pragma mark - UITableViewDelegate

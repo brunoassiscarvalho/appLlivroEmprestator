@@ -10,6 +10,8 @@
 #import "Livro+CoreDataClass.h"
 #import "TableViewControllerContatos.h"
 #import "Autor+CoreDataClass.h"
+#import "AppDelegate.h"
+#import "Usuario+CoreDataClass.h"
 
 
 
@@ -78,11 +80,28 @@
         [destino setLivroSelecionado:_livroSelecionado];
         [destino setValor:@"pegarEmprestado"];
         
+    }else if([segue.identifier isEqualToString:@"segueEstante"]){
+        AppDelegate *delegate = (AppDelegate *)
+        [[UIApplication sharedApplication]delegate];
+        NSPersistentContainer *container = delegate.persistentContainer;
+        NSManagedObjectContext *context = container.viewContext;
+        NSString *idUsuarioSolicitante = [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
+        
+        NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
+        
+        Usuario *usuarioLogado = [context objectWithID:idSolicitante];
+        [usuarioLogado addLivroObject:_livroSelecionado];
+
+        
     }
+    
 }
 - (IBAction)pegarEmprestado:(UIButton *)sender {
     [self performSegueWithIdentifier:@"segueLivroListaUsuarios" sender:sender];
 
+}
+- (IBAction)colocarEstante:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"segueEstante" sender:sender];
 }
 
 @end

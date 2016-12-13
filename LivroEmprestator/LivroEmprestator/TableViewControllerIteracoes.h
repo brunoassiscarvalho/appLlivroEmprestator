@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewControllerIteracoes : UITableViewController
+@property (strong, nonatomic) IBOutlet UITableView *listaIteracoes;
 
 @end
