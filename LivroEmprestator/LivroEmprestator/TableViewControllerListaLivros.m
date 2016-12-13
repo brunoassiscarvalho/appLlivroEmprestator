@@ -52,13 +52,13 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sc delegate:self delegateQueue:nil];
     NSURLSessionDataTask *dataTask= [ session dataTaskWithURL:[NSURL URLWithString:@"https://www.googleapis.com/books/v1/volumes?q=guerra%20dos%20tronos"]];
     [dataTask resume];
-    
     NSError *erro;
     if (![self.fetchedResultsController performFetch:&erro]) {
         NSLog(@"Erro ao recuperar pessoas: %@", erro);
     }else {
         [self.tableView reloadData];
     }
+   
 }
 
 
@@ -68,14 +68,15 @@
 }
 
 #pragma mark - NSURLSessionDataDelegate
--(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
-    [_bytesResposta appendData:data];
+-(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{    [_bytesResposta appendData:data];
 }
 
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error{
     if(error){
         NSLog(@"Erro de conexão: %@",error);
     }else{
+        
+        //pegar JSON
         NSError *erroJSON;
         NSDictionary *listas = [NSJSONSerialization JSONObjectWithData:_bytesResposta options:kNilOptions error:&erroJSON];
         
@@ -90,54 +91,63 @@
             
             NSLog(@"Dados recebidos:%@", listas);
             NSLog(@"Total livros: %@", listas[@"totalItems"]);
-            
-            //for (NSDictionary*lista in listas){
-            
-            
-            
+ 
             NSArray<NSDictionary *> *items = listas[@"items"];
-            // NSArray<NSDictionary *> *items= listas[@"];
+            
+            NSFetchRequest *buscarLivro = [Livro fetchRequest];
+            
             
             for (NSDictionary *item in items){
                 Livro *livroCoreData = [NSEntityDescription insertNewObjectForEntityForName:@"Livro" inManagedObjectContext:context];
                 NSDictionary *livro = [item objectForKey:@"volumeInfo"];
-                NSLog(@"Titulo: %@", livro[@"title"]);
+                NSLog(@"Titulo LIvro: %@", livro[@"title"]);
                 NSArray *autores = livro[@"authors"];
                 
-                for (NSString *autor in autores) {
-                    NSFetchRequest *buscarAutor = [Autor fetchRequest];
-                    [buscarAutor setPredicate:[NSPredicate predicateWithFormat:@"nome LIKE %@", autor]];
-                    [buscarAutor setFetchLimit:1];
+                [buscarLivro setPredicate:[NSPredicate predicateWithFormat:@"titulo LIKE %@", livro[@"title"]]];
+                [buscarLivro setFetchLimit:1];
+                
+                NSError *erroCoreDataLivro;
+                
+                Livro *livroQueJaExiste = [[context executeFetchRequest:buscarLivro error:&erroCoreDataLivro] firstObject];
+                
+                
+                if (!livroQueJaExiste) {
+                    //grava o livro
                     
-                    NSError *erroCoreData;
+                    [livroCoreData setTitulo:[livro objectForKey:@"title"]];
+                    [livroCoreData setResumo:[livro objectForKey:@"description"]];
                     
                     
-                    Autor *autorQueJaExiste = [[context executeFetchRequest:buscarAutor error:&erroCoreData] firstObject];
+                    NSString *imageLinks = livro[@"imageLinks"][@"smallThumbnail"];
                     
-                    if (!autorQueJaExiste) {
+                    [self baixarImagem:[NSURL URLWithString:imageLinks] comCallback:^(UIImage *foto, NSError *erro) {
+                        NSData *bytesDaImagem = UIImagePNGRepresentation(foto);
+                        [livroCoreData setImagem: bytesDaImagem];
+                    }];
+                    
+                    
+                    //buscar os autores e gravar
+                    for (NSString *autor in autores) {
+                        NSFetchRequest *buscarAutor = [Autor fetchRequest];
+                        [buscarAutor setPredicate:[NSPredicate predicateWithFormat:@"nome LIKE %@", autor]];
+                        [buscarAutor setFetchLimit:1];
                         
-                        Autor *novoAutor = [NSEntityDescription insertNewObjectForEntityForName:@"Autor" inManagedObjectContext:context];
-                        [novoAutor setNome:autor];
-                        [novoAutor addLivroObject:livroCoreData];
-                        //
-                    }else{
-                        [autorQueJaExiste addLivroObject:livroCoreData];
+                        NSError *erroCoreData;
+                        
+                        
+                        Autor *autorQueJaExiste = [[context executeFetchRequest:buscarAutor error:&erroCoreData] firstObject];
+                        
+                        if (!autorQueJaExiste) {
+                            
+                            Autor *novoAutor = [NSEntityDescription insertNewObjectForEntityForName:@"Autor" inManagedObjectContext:context];
+                            [novoAutor setNome:autor];
+                            [novoAutor addLivroObject:livroCoreData];
+                            
+                        }else{
+                            [autorQueJaExiste addLivroObject:livroCoreData];
+                        }
                     }
-                    
                 }
-                //
-                
-                [livroCoreData setTitulo:[livro objectForKey:@"title"]];
-                [livroCoreData setResumo:[livro objectForKey:@"description"]];
-                
-                
-                NSString *imageLinks = livro[@"imageLinks"][@"smallThumbnail"];
-                
-                [self baixarImagem:[NSURL URLWithString:imageLinks] comCallback:^(UIImage *foto, NSError *erro) {
-                    NSData *bytesDaImagem = UIImagePNGRepresentation(foto);
-                    [livroCoreData setImagem: bytesDaImagem];
-                }];
-                
             }
         }
     }

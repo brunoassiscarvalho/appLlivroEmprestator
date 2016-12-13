@@ -65,6 +65,9 @@
 }
 - (IBAction)salvarUsuario:(UIButton *)sender {
     [self incluirUsuario];
+    
+    [self performSegueWithIdentifier:@"segueBoasVindas" sender:self];
+    
 }
 
 

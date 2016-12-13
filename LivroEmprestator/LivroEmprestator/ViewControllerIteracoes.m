@@ -19,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *usuarioApelido;
 @property (weak, nonatomic) IBOutlet UIImageView *usuarioImagem;
+@property (weak, nonatomic) IBOutlet UIButton *btConfirmarIteracao;
 
 @property (weak, nonatomic) IBOutlet UILabel *iteracaoRotulo;
 @property Usuario *usuarioLogado;
@@ -45,23 +46,53 @@
         _usuarioSolicitado=_iteracaoSelecionada.usuarioSolicitado;
          _usuarioSolicitante=_iteracaoSelecionada.usuarioSolicitante;
         
-        //if(_usuarioSolicitante==self.usuarioLogado){
+        if(_usuarioSolicitante==self.usuarioLogado){
             if(_iteracaoSelecionada.tipoIteracao==1){
-                [self.iteracaoRotulo setText:@"solicitado emprestimo"];
+                [self.iteracaoRotulo setText:@"Você solicitou o emprestimo deste livro em:"];
+                self.btConfirmarIteracao.hidden = YES;
             }else if(_iteracaoSelecionada.tipoIteracao==2){
-                [self.iteracaoRotulo setText:@"autorizou o emprestimo"];
+                [self.iteracaoRotulo setText:@"A autorização do emprestimo foi feita em:"];
+                
             }else if(_iteracaoSelecionada.tipoIteracao==3){
-                [self.iteracaoRotulo setText:@"recebeu o livro"];
+                [self.iteracaoRotulo setText:@"Você recebeu o livro em:"];
             }else if(_iteracaoSelecionada.tipoIteracao==4){
-                [self.iteracaoRotulo setText:@"nao autorizou o emprestimo"];
+                [self.iteracaoRotulo setText:@"Seu emprestimo não foi autorizado:"];
+                self.btConfirmarIteracao.hidden = YES;
             }else if(_iteracaoSelecionada.tipoIteracao==5){
-                [self.iteracaoRotulo setText:@"devolucao"];
+                [self.iteracaoRotulo setText:@"Você pediu pra devolver o livro em:"];
             }else if(_iteracaoSelecionada.tipoIteracao==6){
-                [self.iteracaoRotulo setText:@"confirmacao de devolucao"];
+                self.btConfirmarIteracao.hidden = YES;
+                [self.iteracaoRotulo setText:@"Você devolveu o livro em:"];
             }
             
         
-       // }
+        }else if(_usuarioSolicitado==self.usuarioLogado){
+            if(_iteracaoSelecionada.tipoIteracao==1){
+                [self.iteracaoRotulo setText:@"Foi solicitado o emprestimo em:"];
+            }else if(_iteracaoSelecionada.tipoIteracao==2){
+                
+                 self.btConfirmarIteracao.hidden = YES;
+                [self.iteracaoRotulo setText:@"Você autorizou o emprestimo em:"];
+               
+                
+            }else if(_iteracaoSelecionada.tipoIteracao==3){
+                
+                [self.iteracaoRotulo setText:@"Você entregou o livro em:"];
+                
+            }else if(_iteracaoSelecionada.tipoIteracao==4){
+                self.btConfirmarIteracao.hidden = YES;
+                [self.iteracaoRotulo setText:@"Você não autorizou o emprestimo em:"];
+                
+            }else if(_iteracaoSelecionada.tipoIteracao==5){
+                self.btConfirmarIteracao.hidden = YES;
+                [self.iteracaoRotulo setText:@"Foi solicitada a devolução do livro em:"];
+                
+            }else if(_iteracaoSelecionada.tipoIteracao==6){
+                [self.iteracaoRotulo setText:@"Você recebeu o livro em:"];
+            }
+            
+            
+        }
     }
     
     [self.livroTitulo setText:_livroSelecionado.titulo];
@@ -126,6 +157,9 @@
         [interacao setUsuarioSolicitado:_usuarioSolicitado];
         [interacao setUsuarioSolicitante:self.usuarioLogado];
         [interacao setTipoIteracao:1];
+         self.btConfirmarIteracao.hidden = YES;
+        [self.iteracaoRotulo setText:@"solicitado emprestimo"];
+       
         _iteracaoSelecionada = interacao;
         
     }else{

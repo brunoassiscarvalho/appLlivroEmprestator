@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *autor;
 @property (weak, nonatomic) IBOutlet UIImageView *imagem;
 @property (weak, nonatomic) IBOutlet UILabel *resumo;
+@property (weak, nonatomic) IBOutlet UIButton *btEuTenho;
 
 
 @end
@@ -90,7 +91,16 @@
         NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
         
         Usuario *usuarioLogado = [context objectWithID:idSolicitante];
+        
         [usuarioLogado addLivroObject:_livroSelecionado];
+        self.btEuTenho.hidden=YES;
+        
+        NSError *erroCoreData;
+        if(![context save:&erroCoreData]){
+            NSLog(@"Deu Erro! %@" , erroCoreData);
+        }else{
+            NSLog(@"Livro vinculado ao usuario!");
+        }
 
         
     }

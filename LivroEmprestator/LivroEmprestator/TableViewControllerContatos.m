@@ -38,7 +38,6 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sc delegate:self delegateQueue:nil];
     NSURLSessionDataTask *dataTask= [ session dataTaskWithURL:[NSURL URLWithString:@"https://jsonplaceholder.typicode.com/users"]];
     [dataTask resume];
-    
     NSError *erro;
     if (![self.fetchedResultsController performFetch:&erro]) {
         NSLog(@"Erro ao recuperar pessoas: %@", erro);
