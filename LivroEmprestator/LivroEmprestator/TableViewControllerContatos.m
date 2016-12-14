@@ -116,7 +116,15 @@ return self.fetchedResultsController.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
+    NSInteger linhas;
+    if(_livroSelecionado!=nil){
+        linhas = _livroSelecionado.usuario.count;
+    }else{
+         linhas= [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
+    }
+    
+   
+return linhas;
   
 }
 
@@ -129,12 +137,32 @@ return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfO
 }
 
 - (void) configurarCelula: (TableViewCellContato *) cell noIndexPath: (NSIndexPath *) indexPath {
-    Usuario *contato = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Usuario *contato;
+    if(_livroSelecionado!=nil){
+        
+        NSSet *usuariQueTemEsteLivro = _livroSelecionado.usuario;
+        if(usuariQueTemEsteLivro != nil){
+            NSArray *myArray = [usuariQueTemEsteLivro allObjects];
+            
+            contato = [myArray objectAtIndex:(indexPath.row)];
+            
+            UIImage *imagemLivro = [UIImage imageWithData:contato.imagem];
+
+        }
+        
+        
+    }else{
+        contato =[self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
+    
     // NSInteger numeroIndice = indexPath.row;
     // NSString *integerAsString = [NSString stringWithFormat: @"%ld", (long)numeroIndice];
     //Para converter NSdata para imagem
     //UIImage *imagem = [UIImage imageWithData:livro.imagem];
-    [cell preencherComApelido:contato.apelido];
+    if(contato!=nil){
+        [cell preencherComApelido:contato.apelido];
+    }
+    
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

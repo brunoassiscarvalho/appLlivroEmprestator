@@ -94,6 +94,34 @@
             </objects>
             <point key="canvasLocation" x="4405.6000000000004" y="-2.2488755622188905"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="nn5-8Y-Muq">
+            <objects>
+                <viewController id="H4l-a7-hj0" customClass="ViewControllerMap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dbf-uN-L15"/>
+                        <viewControllerLayoutGuide type="bottom" id="yWk-Nq-xM6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dg0-CT-4RY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0L-Jt-gCu">
+                                <frame key="frameInset" minX="16" minY="20" width="343" height="639"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Dg0-CT-4RY" id="5ze-aD-3RJ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="UXJ-pV-Nel"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lN-c7-xAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="-801"/>
+        </scene>
         <!--Emprestadores-->
         <scene sceneID="qA5-mH-YHh">
             <objects>
@@ -444,7 +472,7 @@
         <scene sceneID="l1b-Dw-vJo">
             <objects>
                 <collectionViewController id="afu-e9-yp4" customClass="CollectionViewControllerEstante" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Vp6-lr-TH6">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vp6-lr-TH6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
@@ -573,6 +601,7 @@
                         <segue destination="VgO-G7-9mR" kind="relationship" relationship="viewControllers" id="G2j-RP-3SK"/>
                         <segue destination="fNQ-Oe-Qa6" kind="relationship" relationship="viewControllers" id="9Ia-UK-qSs"/>
                         <segue destination="fSR-bd-dOQ" kind="relationship" relationship="viewControllers" id="evU-FQ-LMe"/>
+                        <segue destination="H4l-a7-hj0" kind="relationship" relationship="viewControllers" id="0mc-oc-PFU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylu-y5-mXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1048,8 +1077,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="huU-dE-4q0"/>
-        <segue reference="UfS-VE-tg5"/>
-        <segue reference="IpM-2W-lW7"/>
+        <segue reference="RCn-ul-a6s"/>
         <segue reference="BLl-jb-QEF"/>
+        <segue reference="IpM-2W-lW7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -43,6 +43,8 @@
 		57ECD0781E00982600FF5565 /* CollectionViewControllerEstante.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ECD0771E00982600FF5565 /* CollectionViewControllerEstante.m */; };
 		57ECD07C1E009D1300FF5565 /* CollectionViewCellEstante.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ECD07A1E009D1300FF5565 /* CollectionViewCellEstante.m */; };
 		57ECD07D1E009D1300FF5565 /* CollectionViewCellEstante.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57ECD07B1E009D1300FF5565 /* CollectionViewCellEstante.xib */; };
+		57EFE8671E01EDE7003C4997 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EFE8661E01EDE7003C4997 /* MapKit.framework */; };
+		57EFE86A1E01EEE1003C4997 /* ViewControllerMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EFE8691E01EEE1003C4997 /* ViewControllerMap.m */; };
 		57F084E71DF61CB80028E9B2 /* ViewControllerIteracoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084E61DF61CB80028E9B2 /* ViewControllerIteracoes.m */; };
 		57F085021DF63BAA0028E9B2 /* NSString+Maiuscula.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F085011DF63BAA0028E9B2 /* NSString+Maiuscula.m */; };
 		9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEC1D7F80E60078357F /* ViewPentagono.m */; };
@@ -117,6 +119,9 @@
 		57ECD0791E009D1300FF5565 /* CollectionViewCellEstante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellEstante.h; sourceTree = "<group>"; };
 		57ECD07A1E009D1300FF5565 /* CollectionViewCellEstante.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellEstante.m; sourceTree = "<group>"; };
 		57ECD07B1E009D1300FF5565 /* CollectionViewCellEstante.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCellEstante.xib; sourceTree = "<group>"; };
+		57EFE8661E01EDE7003C4997 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		57EFE8681E01EEE1003C4997 /* ViewControllerMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerMap.h; sourceTree = "<group>"; };
+		57EFE8691E01EEE1003C4997 /* ViewControllerMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerMap.m; sourceTree = "<group>"; };
 		57F084E51DF61CB80028E9B2 /* ViewControllerIteracoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerIteracoes.h; sourceTree = "<group>"; };
 		57F084E61DF61CB80028E9B2 /* ViewControllerIteracoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerIteracoes.m; sourceTree = "<group>"; };
 		57F085001DF63BAA0028E9B2 /* NSString+Maiuscula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Maiuscula.h"; sourceTree = "<group>"; };
@@ -134,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EFE8671E01EDE7003C4997 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +152,7 @@
 				57B151981D5BF434006C6560 /* LivroEmprestator */,
 				57B151971D5BF434006C6560 /* Products */,
 				57D1B29C1DC0055A00BD7068 /* LivroEmprestator-Bridging-Header.h */,
+				57EFE8651E01EDE6003C4997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +234,8 @@
 				57ECD0791E009D1300FF5565 /* CollectionViewCellEstante.h */,
 				57ECD07A1E009D1300FF5565 /* CollectionViewCellEstante.m */,
 				57ECD07B1E009D1300FF5565 /* CollectionViewCellEstante.xib */,
+				57EFE8681E01EEE1003C4997 /* ViewControllerMap.h */,
+				57EFE8691E01EEE1003C4997 /* ViewControllerMap.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -252,6 +261,14 @@
 				57ECD06D1E00969600FF5565 /* Autor+CoreDataProperties.m */,
 			);
 			name = Entidades;
+			sourceTree = "<group>";
+		};
+		57EFE8651E01EDE6003C4997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57EFE8661E01EDE7003C4997 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +365,7 @@
 				57ECD0701E00969600FF5565 /* Interacoes+CoreDataClass.m in Sources */,
 				573B00111DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m in Sources */,
 				57D1B2D81DC010F600BD7068 /* ViewControllerUsuario.m in Sources */,
+				57EFE86A1E01EEE1003C4997 /* ViewControllerMap.m in Sources */,
 				57ECD0781E00982600FF5565 /* CollectionViewControllerEstante.m in Sources */,
 				573B00141DE507E10024B1AB /* ViewControllerConfig.m in Sources */,
 				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
