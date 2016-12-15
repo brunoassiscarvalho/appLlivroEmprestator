@@ -34,31 +34,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
     [self baixarImagem:nil comCallback:^(UIImage *foto, NSError *erro) {
         
     }];
     
     
-
+    
     NSURL *url = [NSURL URLWithString: @"http://lorempixel.com/400/400/"] ;
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSession *session = [NSURLSession sharedSession];
     
     NSURLSessionDownloadTask *taskFoto = [session downloadTaskWithURL:url
-                                            completionHandler:^(NSURL *_Nullable location,
-                                                NSURLResponse * _Nullable response,
-                                                NSError * _Nullable error){
+                                                    completionHandler:^(NSURL *_Nullable location,
+                                                                        NSURLResponse * _Nullable response,
+                                                                        NSError * _Nullable error){
                                                         
-                                                if(error) {
-                                                    NSLog(@"erro imagem:%@",error);
-                                                }else{
-                                                        self.imagem.image = [UIImage imageWithContentsOfFile:location.path];
-                                                }
-                            }];
+                                                        if(error) {
+                                                            NSLog(@"erro imagem:%@",error);
+                                                        }else{
+                                                            self.imagem.image = [UIImage imageWithContentsOfFile:location.path];
+                                                        }
+                                                    }];
     [taskFoto resume];
     
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,13 +68,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

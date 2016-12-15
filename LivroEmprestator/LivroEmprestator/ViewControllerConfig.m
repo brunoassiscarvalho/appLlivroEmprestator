@@ -7,9 +7,13 @@
 //
 
 #import "ViewControllerConfig.h"
+
+#import "AppDelegate.h"
+#import "Usuario+CoreDataClass.h"
 #import "ViewControllerUsuario.h"
 
-@interface ViewControllerConfig ()
+@interface ViewControllerConfig ()<NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UITableViewDelegate>
+
 
 @end
 
@@ -17,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
+
     // Do any additional setup after loading the view.
 }
 
@@ -42,13 +48,31 @@
     }
 }*/
 - (IBAction)meusDados:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"segueConfigMeusDados" sender:sender];
+    [self performSegueWithIdentifier:@"configMeusDados" sender:sender];
     
 }
 
-- (IBAction)meusLivros:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"segueConfigMeusLivros" sender:sender];
-    
+- (IBAction)minhaEstante:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"configEstante" sender:sender];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"configMeusDados"]){
+        
+        AppDelegate *delegate = (AppDelegate *)
+        [[UIApplication sharedApplication]delegate];
+        NSPersistentContainer *container = delegate.persistentContainer;
+        NSManagedObjectContext *context = container.viewContext;
+        NSString *idUsuarioSolicitante = [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
+        
+        NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
+        
+        Usuario *usuarioLogado = [context objectWithID:idSolicitante];
+        
+        ViewControllerUsuario  *destino = segue.destinationViewController;
+        [destino setUsuarioLogado:usuarioLogado];
+        
+    }
 }
 
 @end

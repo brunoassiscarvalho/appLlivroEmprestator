@@ -18,14 +18,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *apelido;
 @property (weak, nonatomic) IBOutlet UITextField *nome;
-/*@property (weak, nonatomic) IBOutlet UITextField *dataNascimento;
-@property (weak, nonatomic) IBOutlet UITextField *uf;
-@property (weak, nonatomic) IBOutlet UITextField *cidade;
-@property (weak, nonatomic) IBOutlet UITextField *email;
-@property (weak, nonatomic) IBOutlet UISwitch *sexo;*/
 @property (weak, nonatomic) IBOutlet UIImageView *imagemUsuario;
 @property (weak, nonatomic) IBOutlet UITextField *senha01;
 @property (weak, nonatomic) IBOutlet UITextField *senha02;
+
 @property Usuario *usuario;
 
 
@@ -36,6 +32,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if(_usuarioLogado!=nil){
+        [self.email setText:_usuarioLogado.email];
+        [self.apelido setAllowsEditingTextAttributes:NO];
+        [self.nome setAllowsEditingTextAttributes:NO];
+        
+        
+    }
     // Do any additional setup after loading the view.
 }
 

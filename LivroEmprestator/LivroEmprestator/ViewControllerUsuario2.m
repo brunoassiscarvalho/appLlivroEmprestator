@@ -44,9 +44,9 @@
     //NSDate *data = [formatter dateFromString:self.dataNascimento.date];
      [usuario setDatanascimento:self.dataNascimento.date];
      if( self.sexo.on){
-     [usuario setSexo:@"F"];
-     }else{
      [usuario setSexo:@"M"];
+     }else{
+     [usuario setSexo:@"F"];
      }
      
      [usuario setUf:self.uf.text];

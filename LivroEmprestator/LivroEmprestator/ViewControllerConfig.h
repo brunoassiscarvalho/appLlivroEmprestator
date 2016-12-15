@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Usuario+CoreDataClass.h"
 
 @interface ViewControllerConfig : ViewController
-
+@property Usuario *usuarioLogadoConfig;
 @end

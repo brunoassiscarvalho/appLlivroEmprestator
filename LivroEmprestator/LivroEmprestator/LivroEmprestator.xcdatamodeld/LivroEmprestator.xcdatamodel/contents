@@ -36,7 +36,7 @@
     </entity>
     <elements>
         <element name="Autor" positionX="-5697" positionY="-1746" width="128" height="75"/>
-        <element name="Interacoes" positionX="-5688" positionY="-1755" width="128" height="120"/>
+        <element name="Interacoes" positionX="-5688" positionY="-1755" width="128" height="30"/>
         <element name="Livro" positionX="-5571" positionY="-1809" width="128" height="150"/>
         <element name="Usuario" positionX="-5825" positionY="-1833" width="128" height="225"/>
     </elements>

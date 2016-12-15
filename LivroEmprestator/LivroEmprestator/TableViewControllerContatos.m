@@ -34,10 +34,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    NSURLSessionConfiguration *sc = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:sc delegate:self delegateQueue:nil];
-    NSURLSessionDataTask *dataTask= [ session dataTaskWithURL:[NSURL URLWithString:@"https://jsonplaceholder.typicode.com/users"]];
-    [dataTask resume];
+   
     NSError *erro;
     if (![self.fetchedResultsController performFetch:&erro]) {
         NSLog(@"Erro ao recuperar pessoas: %@", erro);
@@ -52,40 +49,10 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark - NSURLSessionDataDelegate
--(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
-    [_bytesResposta appendData:data];
-}
 
 
 
--(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error{
-    if(error){
-        NSLog(@"Erro de conexão: %@",error);
-    }else{
-        NSError *erroJSON;
-        NSArray<NSDictionary *> *usuarios = [NSJSONSerialization JSONObjectWithData:_bytesResposta options:kNilOptions error:&erroJSON];
-        
-        if(erroJSON){
-            NSLog(@"JSON recebido é inválido: %@",erroJSON);
-        }else{
-            
-            AppDelegate *delegate = (AppDelegate *)
-            [[UIApplication sharedApplication]delegate];
-            NSPersistentContainer *container = delegate.persistentContainer;
-            NSManagedObjectContext *context = container.viewContext;
-            
-            NSLog(@"Dados recebidos:%@", usuarios);
-            for (NSDictionary *usuario in usuarios){
-                NSLog(@"Usuario: %@", [usuario objectForKey:@"name"]);
-                Usuario *usuarioCoreData = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
-                
-                [usuarioCoreData setApelido:[usuario objectForKey:@"username"]];
-                [usuarioCoreData setNome:[usuario objectForKey:@"name"]];
-                [usuarioCoreData setEmail:[usuario objectForKey:@"email"]];
-            }
-        }
-    }
-}
+
 
 - (NSFetchedResultsController *)fetchedResultsController {
     if (!_fetchedResultsController) {
@@ -146,7 +113,7 @@ return linhas;
             
             contato = [myArray objectAtIndex:(indexPath.row)];
             
-            UIImage *imagemLivro = [UIImage imageWithData:contato.imagem];
+            UIImage *imagemContato = [UIImage imageWithData:contato.imagem];
 
         }
         
@@ -160,7 +127,8 @@ return linhas;
     //Para converter NSdata para imagem
     //UIImage *imagem = [UIImage imageWithData:livro.imagem];
     if(contato!=nil){
-        [cell preencherComApelido:contato.apelido];
+        UIImage *imagem = [UIImage imageWithData:contato.imagem];
+        [cell preencherComApelido:contato.apelido comImagem:imagem];
     }
     
 }

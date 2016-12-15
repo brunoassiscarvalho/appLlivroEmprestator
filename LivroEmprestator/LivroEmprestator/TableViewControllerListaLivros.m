@@ -98,7 +98,7 @@
             
             
             for (NSDictionary *item in items){
-                Livro *livroCoreData = [NSEntityDescription insertNewObjectForEntityForName:@"Livro" inManagedObjectContext:context];
+                
                 NSDictionary *livro = [item objectForKey:@"volumeInfo"];
                 NSLog(@"Titulo LIvro: %@", livro[@"title"]);
                 NSArray *autores = livro[@"authors"];
@@ -113,6 +113,7 @@
                 
                 if (!livroQueJaExiste) {
                     //grava o livro
+                    Livro *livroCoreData = [NSEntityDescription insertNewObjectForEntityForName:@"Livro" inManagedObjectContext:context];
                     
                     [livroCoreData setTitulo:[livro objectForKey:@"title"]];
                     [livroCoreData setResumo:[livro objectForKey:@"description"]];
@@ -211,6 +212,20 @@
     NSLog(@"Celula Selecionada: %@", indexPath);
     [self performSegueWithIdentifier:@"segueListaLivrosDetalhe" sender:self];
     
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
 }
 
 

@@ -28,9 +28,9 @@
     // Configure the view for the selected state
 }
 
--(void) preencherComApelido: (NSString *)apelido {
+-(void) preencherComApelido: (NSString *)apelido comImagem: (UIImage *)imagem{
     [self.apelido setText:apelido];
-    
+    [self.imagem setImage:imagem];
     }
 
 

@@ -21,6 +21,8 @@
 		578F85481DDD25B400EA5018 /* TableViewControllerContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 578F85471DDD25B400EA5018 /* TableViewControllerContatos.m */; };
 		578F854C1DDD25E700EA5018 /* TableViewCellContato.m in Sources */ = {isa = PBXBuildFile; fileRef = 578F854A1DDD25E700EA5018 /* TableViewCellContato.m */; };
 		578F854D1DDD25E700EA5018 /* TableViewCellContato.xib in Resources */ = {isa = PBXBuildFile; fileRef = 578F854B1DDD25E700EA5018 /* TableViewCellContato.xib */; };
+		579F609B1E033FE4006E1AE8 /* TableViewControllerEstanteEd.m in Sources */ = {isa = PBXBuildFile; fileRef = 579F609A1E033FE4006E1AE8 /* TableViewControllerEstanteEd.m */; };
+		579F609E1E035AF5006E1AE8 /* ViewControllerImagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 579F609D1E035AF5006E1AE8 /* ViewControllerImagem.m */; };
 		57B1519B1D5BF434006C6560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1519A1D5BF434006C6560 /* main.m */; };
 		57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B1519D1D5BF434006C6560 /* AppDelegate.m */; };
 		57B151A11D5BF434006C6560 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B151A01D5BF434006C6560 /* ViewController.m */; };
@@ -78,6 +80,10 @@
 		578F85491DDD25E700EA5018 /* TableViewCellContato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellContato.h; sourceTree = "<group>"; };
 		578F854A1DDD25E700EA5018 /* TableViewCellContato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellContato.m; sourceTree = "<group>"; };
 		578F854B1DDD25E700EA5018 /* TableViewCellContato.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellContato.xib; sourceTree = "<group>"; };
+		579F60991E033FE4006E1AE8 /* TableViewControllerEstanteEd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerEstanteEd.h; sourceTree = "<group>"; };
+		579F609A1E033FE4006E1AE8 /* TableViewControllerEstanteEd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerEstanteEd.m; sourceTree = "<group>"; };
+		579F609C1E035AF5006E1AE8 /* ViewControllerImagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerImagem.h; sourceTree = "<group>"; };
+		579F609D1E035AF5006E1AE8 /* ViewControllerImagem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerImagem.m; sourceTree = "<group>"; };
 		57B151961D5BF434006C6560 /* LivroEmprestator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivroEmprestator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B1519A1D5BF434006C6560 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57B1519C1D5BF434006C6560 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -236,6 +242,10 @@
 				57ECD07B1E009D1300FF5565 /* CollectionViewCellEstante.xib */,
 				57EFE8681E01EEE1003C4997 /* ViewControllerMap.h */,
 				57EFE8691E01EEE1003C4997 /* ViewControllerMap.m */,
+				579F60991E033FE4006E1AE8 /* TableViewControllerEstanteEd.h */,
+				579F609A1E033FE4006E1AE8 /* TableViewControllerEstanteEd.m */,
+				579F609C1E035AF5006E1AE8 /* ViewControllerImagem.h */,
+				579F609D1E035AF5006E1AE8 /* ViewControllerImagem.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -350,6 +360,7 @@
 				57F084E71DF61CB80028E9B2 /* ViewControllerIteracoes.m in Sources */,
 				57D8F10E1DD1187F0031C818 /* TableViewControllerListaLivros.m in Sources */,
 				57F085021DF63BAA0028E9B2 /* NSString+Maiuscula.m in Sources */,
+				579F609E1E035AF5006E1AE8 /* ViewControllerImagem.m in Sources */,
 				57ECD0731E00969600FF5565 /* Livro+CoreDataProperties.m in Sources */,
 				9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */,
 				57ECD0741E00969600FF5565 /* Autor+CoreDataClass.m in Sources */,
@@ -367,6 +378,7 @@
 				57D1B2D81DC010F600BD7068 /* ViewControllerUsuario.m in Sources */,
 				57EFE86A1E01EEE1003C4997 /* ViewControllerMap.m in Sources */,
 				57ECD0781E00982600FF5565 /* CollectionViewControllerEstante.m in Sources */,
+				579F609B1E033FE4006E1AE8 /* TableViewControllerEstanteEd.m in Sources */,
 				573B00141DE507E10024B1AB /* ViewControllerConfig.m in Sources */,
 				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
 				57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */,

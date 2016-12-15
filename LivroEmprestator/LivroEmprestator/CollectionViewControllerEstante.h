@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Usuario+CoreDataClass.h"
 
 @interface CollectionViewControllerEstante : UICollectionViewController
 
+@property  Usuario *usuarioSelecionado;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerDetalheUsuario.h"
+#import "CollectionViewControllerEstante.h"
 
 @interface ViewControllerDetalheUsuario ()
 @property (weak, nonatomic) IBOutlet UILabel *apelido;
@@ -38,6 +39,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)mostrarEstante:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"estanteOutros" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"estanteOutros"] ){
+ 
+        CollectionViewControllerEstante *destino = segue.destinationViewController;
+        [destino setUsuarioSelecionado:_usuarioSelecionado];
+    }
+}
+
 
 /*
 #pragma mark - Navigation

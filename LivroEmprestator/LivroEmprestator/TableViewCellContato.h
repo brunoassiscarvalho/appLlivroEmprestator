@@ -10,5 +10,5 @@
 
 @interface TableViewCellContato : UITableViewCell
 
--(void) preencherComApelido: (NSString *)apelido;
+-(void) preencherComApelido: (NSString *)apelido comImagem: (UIImage *)imagem;
 @end

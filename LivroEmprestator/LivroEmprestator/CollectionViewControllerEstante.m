@@ -72,7 +72,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _usuarioLogado.livro.count;
+    return _usuarioSelecionado.livro.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -86,7 +86,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void) configurarCelula: (CollectionViewCellEstante*) cell noIndexPath: (NSIndexPath *) indexPath {
     
     
-    NSSet *livrosUsuario = _usuarioLogado.livro;
+    NSSet *livrosUsuario = _usuarioSelecionado.livro;
     if(livrosUsuario!=nil){
         NSArray *myArray = [livrosUsuario allObjects];
         

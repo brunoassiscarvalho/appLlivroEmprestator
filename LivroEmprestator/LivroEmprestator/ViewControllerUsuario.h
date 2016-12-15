@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Usuario+CoreDataClass.h"
 
 @interface ViewControllerUsuario : UIViewController
-
+@property Usuario *usuarioLogado;
 @end
