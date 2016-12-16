@@ -48,18 +48,26 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     NSURLSessionConfiguration *sc = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sc delegate:self delegateQueue:nil];
     NSURLSessionDataTask *dataTask= [ session dataTaskWithURL:[NSURL URLWithString:@"https://www.googleapis.com/books/v1/volumes?q=guerra%20dos%20tronos"]];
     [dataTask resume];
+    
+    
     NSError *erro;
     if (![self.fetchedResultsController performFetch:&erro]) {
         NSLog(@"Erro ao recuperar pessoas: %@", erro);
     }else {
         [self.tableView reloadData];
     }
-   
 }
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -152,6 +160,7 @@
             }
         }
     }
+    
 }
 
 - (void) baixarImagem: (NSURL *) url comCallback: (CallbackDownloadFoto) callback {
@@ -214,19 +223,7 @@
     
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-}
 
 
 

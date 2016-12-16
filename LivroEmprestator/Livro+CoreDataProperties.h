@@ -2,7 +2,7 @@
 //  Livro+CoreDataProperties.h
 //  LivroEmprestator
 //
-//  Created by ALUNO on 13/12/16.
+//  Created by ALUNO on 16/12/16.
 //  Copyright © 2016 IESB. All rights reserved.
 //
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *titulo;
 @property (nullable, nonatomic, retain) NSSet<Autor *> *autor;
 @property (nullable, nonatomic, retain) NSSet<Usuario *> *usuario;
+@property (nullable, nonatomic, retain) NSSet<Interacoes *> *interacoes;
 
 @end
 
@@ -36,6 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeUsuarioObject:(Usuario *)value;
 - (void)addUsuario:(NSSet<Usuario *> *)values;
 - (void)removeUsuario:(NSSet<Usuario *> *)values;
+
+- (void)addInteracoesObject:(Interacoes *)value;
+- (void)removeInteracoesObject:(Interacoes *)value;
+- (void)addInteracoes:(NSSet<Interacoes *> *)values;
+- (void)removeInteracoes:(NSSet<Interacoes *> *)values;
 
 @end
 

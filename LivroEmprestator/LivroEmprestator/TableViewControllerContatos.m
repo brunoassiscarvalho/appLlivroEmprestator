@@ -16,6 +16,7 @@
 @interface TableViewControllerContatos () <NSURLSessionDataDelegate,NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong , nonatomic) NSMutableData * bytesResposta;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property Usuario *usuarioLogado;
 
 
 @end
@@ -25,6 +26,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _bytesResposta = [NSMutableData new];
+    
+    AppDelegate *delegate = (AppDelegate *)
+    [[UIApplication sharedApplication]delegate];
+    NSPersistentContainer *container = delegate.persistentContainer;
+    NSManagedObjectContext *context = container.viewContext;
+    NSString *idUsuarioSolicitante = [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
+    
+    NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
+    
+    self.usuarioLogado = [context objectWithID:idSolicitante];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -58,8 +70,11 @@
     if (!_fetchedResultsController) {
         AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSPersistentContainer *persistentContainer = delegate.persistentContainer;
+      
+        
         
         NSFetchRequest *fetchRequest = [Usuario fetchRequest];
+        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"apelido != %@", self.usuarioLogado.apelido]];
         [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"apelido" ascending:YES]]];
         
         _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
@@ -107,14 +122,11 @@ return linhas;
     Usuario *contato;
     if(_livroSelecionado!=nil){
         
-        NSSet *usuariQueTemEsteLivro = _livroSelecionado.usuario;
-        if(usuariQueTemEsteLivro != nil){
-            NSArray *myArray = [usuariQueTemEsteLivro allObjects];
+        NSSet *usuarioQueTemEsteLivro = _livroSelecionado.usuario;
+        if(usuarioQueTemEsteLivro != nil){
+            NSArray *myArray = [usuarioQueTemEsteLivro allObjects];
             
             contato = [myArray objectAtIndex:(indexPath.row)];
-            
-            UIImage *imagemContato = [UIImage imageWithData:contato.imagem];
-
         }
         
         
@@ -122,10 +134,6 @@ return linhas;
         contato =[self.fetchedResultsController objectAtIndexPath:indexPath];
     }
     
-    // NSInteger numeroIndice = indexPath.row;
-    // NSString *integerAsString = [NSString stringWithFormat: @"%ld", (long)numeroIndice];
-    //Para converter NSdata para imagem
-    //UIImage *imagem = [UIImage imageWithData:livro.imagem];
     if(contato!=nil){
         UIImage *imagem = [UIImage imageWithData:contato.imagem];
         [cell preencherComApelido:contato.apelido comImagem:imagem];
@@ -153,7 +161,8 @@ return linhas;
         [destino setLivroSelecionado:livroIteracao];
         [destino setUsuarioSolicitado:usuarioIteracao];
     }else if([segue.identifier isEqualToString:@"detalheUsuario"]){
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Usuario *usuario = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
         ViewControllerDetalheUsuario  *destino = segue.destinationViewController;

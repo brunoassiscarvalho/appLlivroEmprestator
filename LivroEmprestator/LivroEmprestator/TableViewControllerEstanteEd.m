@@ -26,14 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tabela setDataSource:self];
+
     
-    self.nomes = [[NSMutableArray alloc] init];
-    
-    [self.nomes addObject:[NSString stringWithFormat:@"Fulano"]];
-    [self.nomes addObject:[NSString stringWithFormat:@"Beltrano"]];
-    [self.nomes addObject:[NSString stringWithFormat:@"Celtrano"]];
-    [self.nomes addObject:[NSString stringWithFormat:@"Ciclano"]];
     
     AppDelegate *delegate = (AppDelegate *)
     [[UIApplication sharedApplication]delegate];
@@ -44,6 +38,7 @@
     NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
     
     self.usuarioLogado = [context objectWithID:idSolicitante];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

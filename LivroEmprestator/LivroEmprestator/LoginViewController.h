@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void (^CallbackDownloadFoto)(UIImage *foto, NSError *erro);
+
 
 
 @interface LoginViewController : UIViewController

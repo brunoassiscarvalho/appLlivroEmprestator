@@ -7,7 +7,7 @@
     <entity name="Interacoes" representedClassName="Interacoes" syncable="YES">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tipoIteracao" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="livro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Livro" syncable="YES"/>
+        <relationship name="livro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Livro" inverseName="interacoes" inverseEntity="Livro" syncable="YES"/>
         <relationship name="usuarioSolicitado" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="iteracoesSolicitado" inverseEntity="Usuario" syncable="YES"/>
         <relationship name="usuarioSolicitante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="iteracoesSolicitante" inverseEntity="Usuario" syncable="YES"/>
     </entity>
@@ -18,6 +18,7 @@
         <attribute name="resumo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="autor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Autor" inverseName="livro" inverseEntity="Autor" syncable="YES"/>
+        <relationship name="interacoes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Interacoes" inverseName="livro" inverseEntity="Interacoes" syncable="YES"/>
         <relationship name="usuario" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Usuario" inverseName="livro" inverseEntity="Usuario" syncable="YES"/>
     </entity>
     <entity name="Usuario" representedClassName="Usuario" syncable="YES">
@@ -30,14 +31,14 @@
         <attribute name="senha" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uf" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="iteracoesSolicitado" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Interacoes" inverseName="usuarioSolicitado" inverseEntity="Interacoes" syncable="YES"/>
-        <relationship name="iteracoesSolicitante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Interacoes" inverseName="usuarioSolicitante" inverseEntity="Interacoes" syncable="YES"/>
+        <relationship name="iteracoesSolicitado" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Interacoes" inverseName="usuarioSolicitado" inverseEntity="Interacoes" syncable="YES"/>
+        <relationship name="iteracoesSolicitante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Interacoes" inverseName="usuarioSolicitante" inverseEntity="Interacoes" syncable="YES"/>
         <relationship name="livro" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Livro" inverseName="usuario" inverseEntity="Livro" syncable="YES"/>
     </entity>
     <elements>
         <element name="Autor" positionX="-5697" positionY="-1746" width="128" height="75"/>
-        <element name="Interacoes" positionX="-5688" positionY="-1755" width="128" height="30"/>
-        <element name="Livro" positionX="-5571" positionY="-1809" width="128" height="150"/>
+        <element name="Interacoes" positionX="-5688" positionY="-1755" width="128" height="120"/>
+        <element name="Livro" positionX="-5571" positionY="-1809" width="128" height="165"/>
         <element name="Usuario" positionX="-5825" positionY="-1833" width="128" height="225"/>
     </elements>
 </model>

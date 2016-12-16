@@ -12,7 +12,7 @@
 @interface ViewControllerDetalheUsuario ()
 @property (weak, nonatomic) IBOutlet UILabel *apelido;
 @property (weak, nonatomic) IBOutlet UILabel *nome;
-@property (weak, nonatomic) IBOutlet UILabel *idade;
+
 @property (weak, nonatomic) IBOutlet UILabel *email;
 @property (weak, nonatomic) IBOutlet UIImageView *imagem;
 

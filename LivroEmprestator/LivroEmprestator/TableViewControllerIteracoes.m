@@ -16,6 +16,8 @@
 
 @interface TableViewControllerIteracoes () <NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property Usuario *usuarioLogado;
+@property (strong, nonatomic) NSMutableArray<Interacoes*> *arrayIteracoes;
 
 @end
 
@@ -24,6 +26,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    AppDelegate *delegate = (AppDelegate *)
+    [[UIApplication sharedApplication]delegate];
+    NSPersistentContainer *container = delegate.persistentContainer;
+    NSManagedObjectContext *context = container.viewContext;
+    NSString *idUsuarioSolicitante = [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
+    
+    NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
+    
+    self.usuarioLogado = [context objectWithID:idSolicitante];
+    
+    NSSet *usuarioSolicitado = _usuarioLogado.iteracoesSolicitado;
+    NSSet *usuarioSolicitante = _usuarioLogado.iteracoesSolicitante;
+    
+    
+    
+    
+    if(usuarioSolicitado != nil){
+        [ self.arrayIteracoes addObjectsFromArray: [usuarioSolicitado allObjects]];
+        // contato = [myArray objectAtIndex:(indexPath.row)];
+    }
+   
+    NSSet *usuarioSolicitantes = _usuarioLogado.iteracoesSolicitante;
+    if(usuarioSolicitantes != nil){
+       [self.arrayIteracoes addObjectsFromArray: [usuarioSolicitante allObjects]];
+        // contato = [myArray objectAtIndex:(indexPath.row)];
+    }
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -31,7 +61,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (NSFetchedResultsController *)fetchedResultsController {
+/*- (NSFetchedResultsController *)fetchedResultsController {
     if (!_fetchedResultsController) {
         AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSPersistentContainer *persistentContainer = delegate.persistentContainer;
@@ -58,10 +88,11 @@
     NSError *erro;
     if (![self.fetchedResultsController performFetch:&erro]) {
         NSLog(@"Erro ao recuperar interações: %@", erro);
+        
     }else {
         [self.tableView reloadData];
     }
-}
+}*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -71,11 +102,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.fetchedResultsController.sections.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self.fetchedResultsController.sections objectAtIndex:section] numberOfObjects];
+    return self.arrayIteracoes.count;
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,7 +119,7 @@
 
 - (void) configurarCelula: (TableViewCellInteracoes*) cell noIndexPath: (NSIndexPath *) indexPath {
     
-    Interacoes *iteracao = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Interacoes *iteracao = [self.arrayIteracoes objectAtIndex:indexPath.row];
     Livro *livroIteracao =iteracao.livro;
     Usuario *solicitado =iteracao.usuarioSolicitado;
 

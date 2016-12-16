@@ -13,7 +13,7 @@
 #import "ViewControllerUsuario.h"
 
 @interface ViewControllerConfig ()<NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UITableViewDelegate>
-
+@property Usuario *usuarioLogado;
 
 @end
 
@@ -21,6 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    AppDelegate *delegate = (AppDelegate *)
+    [[UIApplication sharedApplication]delegate];
+    NSPersistentContainer *container = delegate.persistentContainer;
+    NSManagedObjectContext *context = container.viewContext;
+    NSString *idUsuarioSolicitante = [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
+    
+    NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
+    
+    self.usuarioLogado = [context objectWithID:idSolicitante];
  
 
     // Do any additional setup after loading the view.
@@ -48,30 +58,30 @@
     }
 }*/
 - (IBAction)meusDados:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"configMeusDados" sender:sender];
+    [self performSegueWithIdentifier:@"configMeusDados" sender:self];
     
 }
 
 - (IBAction)minhaEstante:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"configEstante" sender:sender];
+    [self performSegueWithIdentifier:@"configEstante" sender:self];
+}
+
+
+
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Celula Selecionada: %@", indexPath);
+
+    
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"configMeusDados"]){
+    if([segue.identifier isEqualToString:@"configMeusDados"] ){
         
-        AppDelegate *delegate = (AppDelegate *)
-        [[UIApplication sharedApplication]delegate];
-        NSPersistentContainer *container = delegate.persistentContainer;
-        NSManagedObjectContext *context = container.viewContext;
-        NSString *idUsuarioSolicitante = [[NSUserDefaults standardUserDefaults] objectForKey:@"UsuarioLogado"];
-        
-        NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
-        
-        Usuario *usuarioLogado = [context objectWithID:idSolicitante];
-        
+        Usuario *usuario = _usuarioLogado;
         ViewControllerUsuario  *destino = segue.destinationViewController;
-        [destino setUsuarioLogado:usuarioLogado];
-        
+        [destino setUsuarioLogado:usuario];
     }
 }
 

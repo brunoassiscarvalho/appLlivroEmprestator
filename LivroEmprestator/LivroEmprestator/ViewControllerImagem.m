@@ -7,7 +7,7 @@
 //
 
 #import "ViewControllerImagem.h"
-#import "NSString+Maiuscula.h"
+
 
 @interface ViewControllerImagem ()
 @property (weak, nonatomic) IBOutlet UIImageView *imagem;

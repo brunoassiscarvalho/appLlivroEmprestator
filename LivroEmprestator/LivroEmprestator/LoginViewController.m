@@ -192,9 +192,6 @@
         //[self.senha.text isEqualToString:@"12345678"]
         
         NSString *identificador = [[[usuario objectID] URIRepresentation] absoluteString];
-        
-        
-        
         [[NSUserDefaults standardUserDefaults] setObject:identificador forKey:@"UsuarioLogado"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
@@ -217,20 +214,6 @@
 
 }
 
-- (void) baixarImagem: (NSURL *) url comCallback: (CallbackDownloadFoto) callback {
-    NSURLSession *session = [NSURLSession sharedSession];
-    
-    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error) {
-            callback(nil, error);
-        }else {
-            UIImage *foto = [UIImage imageWithContentsOfFile:location.path];
-            callback(foto, nil);
-        }
-    }];
-    
-    [task resume];
-}
 
 
 

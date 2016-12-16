@@ -2,7 +2,7 @@
 //  Usuario+CoreDataProperties.m
 //  LivroEmprestator
 //
-//  Created by ALUNO on 13/12/16.
+//  Created by ALUNO on 16/12/16.
 //  Copyright © 2016 IESB. All rights reserved.
 //
 
@@ -23,8 +23,8 @@
 @dynamic senha;
 @dynamic sexo;
 @dynamic uf;
-@dynamic livro;
 @dynamic iteracoesSolicitado;
 @dynamic iteracoesSolicitante;
+@dynamic livro;
 
 @end
