@@ -21,6 +21,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imagemUsuario;
 @property (weak, nonatomic) IBOutlet UITextField *senha01;
 @property (weak, nonatomic) IBOutlet UITextField *senha02;
+@property (weak, nonatomic) IBOutlet UILabel *labelApelido;
+@property (weak, nonatomic) IBOutlet UILabel *labelApelidoBox;
+@property (weak, nonatomic) IBOutlet UILabel *labelSenha1;
+@property (weak, nonatomic) IBOutlet UILabel *labelSenha2;
+@property (assign) BOOL editando;
 
 @property Usuario *usuario;
 
@@ -34,10 +39,20 @@
     [super viewDidLoad];
     if(_usuarioLogado!=nil){
         [self.email setText:_usuarioLogado.email];
+        [self.labelApelidoBox setHidden:YES];
+        [self.apelido setHidden:YES];
+        [self.nome setText:_usuarioLogado.nome];
         [self.apelido setAllowsEditingTextAttributes:NO];
-        [self.nome setAllowsEditingTextAttributes:NO];
+        [self.labelApelido setText:_usuarioLogado.apelido];
+        [self.senha01 setHidden:YES];
+        [self.senha02 setHidden:YES];
+        [self.labelSenha1 setHidden:YES];
+        [self.labelSenha2 setHidden:YES];
+        self.editando =YES;
         
         
+    }else{
+     self.editando =NO;
     }
     // Do any additional setup after loading the view.
 }
@@ -62,31 +77,26 @@
     [[UIApplication sharedApplication]delegate];
     NSPersistentContainer *container = delegate.persistentContainer;
     NSManagedObjectContext *context = container.viewContext;
-    self.usuario = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
-    
-    [self.usuario setApelido:self.apelido.text];
-    [self.usuario setNome:self.nome.text];
-    if([self.senha01.text isEqualToString:self.senha02.text]){
-        [self.usuario setSenha:self.senha01.text];
+    if(self.editando){
+        self.usuario = _usuarioLogado;
+
+    }else{
+        self.usuario = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
+        
+        
+        [self.usuario setApelido:self.apelido.text];
+        
+        if([self.senha01.text isEqualToString:self.senha02.text]){
+            [self.usuario setSenha:self.senha01.text];
+        }
+        
     }
-    
-    
+
+    [self.usuario setNome:self.nome.text];
+    [self.usuario setEmail:self.email.text];
       
     
-    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd/MM/yyyy"];
-    
-/*    NSDate *data = [formatter dateFromString:self.dataNascimento.text];
-    [usuario setDatanascimento:data];
-    if( self.sexo.on){
-        [usuario setSexo:@"F"];
-    }else{
-        [usuario setSexo:@"M"];
-    }
-    
-    [usuario setUf:self.uf.text];
-    [usuario setCidade:self.cidade.text];
-    [usuario setEmail:self.email.text];*/
+   
     
     NSData *bytesDaImagem = UIImagePNGRepresentation(self.imagemUsuario.image);
     [self.usuario setImagem: bytesDaImagem];
@@ -109,7 +119,8 @@
     if([segue.identifier isEqualToString:@"continuarCadastro"]){
         
         ViewControllerUsuario2  *destino = segue.destinationViewController;
-        [destino setNovoUsuario:_usuario];
+        [destino setNovoUsuario:self.usuario];
+        [destino setEditando:self.editando];
         
     }
 }
@@ -156,5 +167,12 @@ UIImage *imagem = [UIImage imageWithData:bytesDaImagem];
     
 }
 
+- (IBAction)voltar:(UIBarButtonItem *)sender {
+    if(_editando){
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+    [self performSegueWithIdentifier:@"voltarLogin" sender:self];
+    }
+}
 
 @end

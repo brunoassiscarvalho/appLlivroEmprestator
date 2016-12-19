@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (weak, nonatomic) IBOutlet UITextField *usuario;
 @property (weak, nonatomic) IBOutlet UITextField *senha;
+@property (weak, nonatomic) IBOutlet UIView *logo;
 
 
 @end
@@ -48,6 +49,13 @@
     }else {
         NSLog(@"Recuperou pessoas");
     }
+    UIView *myView = self.logo;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        myView.frame = CGRectMake(myView.frame.origin.x, myView.frame.origin.y, 0.0, 0.0);
+    } completion:^(BOOL finished){
+    }];
+    
     
 }
 

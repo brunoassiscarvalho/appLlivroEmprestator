@@ -30,7 +30,7 @@
     
     NSManagedObjectID *idSolicitante = [container.persistentStoreCoordinator managedObjectIDForURIRepresentation:[NSURL URLWithString:idUsuarioSolicitante]];
     
-    self.usuarioLogado = [context objectWithID:idSolicitante];
+    _usuarioLogadoConfig = [context objectWithID:idSolicitante];
  
 
     // Do any additional setup after loading the view.
@@ -58,14 +58,17 @@
     }
 }*/
 - (IBAction)meusDados:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"configMeusDados" sender:self];
+    [self performSegueWithIdentifier:@"configMeusDados" sender:sender];
     
 }
 
 - (IBAction)minhaEstante:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"configEstante" sender:self];
+    [self performSegueWithIdentifier:@"configEstante" sender:sender];
 }
 
+- (IBAction)alterarSenha:(UIButton *)sender {
+ [self performSegueWithIdentifier:@"configAlterarSenha" sender:sender];
+}
 
 
 
@@ -79,9 +82,10 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"configMeusDados"] ){
         
-        Usuario *usuario = _usuarioLogado;
+        
         ViewControllerUsuario  *destino = segue.destinationViewController;
-        [destino setUsuarioLogado:usuario];
+        [destino setUsuarioLogado:_usuarioLogadoConfig];
+        
     }
 }
 

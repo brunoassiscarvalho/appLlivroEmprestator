@@ -11,5 +11,6 @@
 
 @interface ViewControllerUsuario2 : UIViewController
 @property Usuario *novoUsuario;
+@property (assign) BOOL editando;
 
 @end

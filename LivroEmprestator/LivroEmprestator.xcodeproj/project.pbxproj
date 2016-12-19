@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57072D971E084B7200C3131B /* ControllerAlterarSenha.m in Sources */ = {isa = PBXBuildFile; fileRef = 57072D961E084B7200C3131B /* ControllerAlterarSenha.m */; };
 		570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */; };
 		570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD01D77AEC5001EC129 /* TableListaContatos.m */; };
 		570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD31D77BA26001EC129 /* ViewFiguras.m */; };
@@ -54,6 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57072D951E084B7200C3131B /* ControllerAlterarSenha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerAlterarSenha.h; sourceTree = "<group>"; };
+		57072D961E084B7200C3131B /* ControllerAlterarSenha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerAlterarSenha.m; sourceTree = "<group>"; };
 		570E5DCC1D77AB22001EC129 /* ViewLIstaContatos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewLIstaContatos.h; sourceTree = "<group>"; };
 		570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewLIstaContatos.m; sourceTree = "<group>"; };
 		570E5DCF1D77AEC5001EC129 /* TableListaContatos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListaContatos.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				579F609A1E033FE4006E1AE8 /* TableViewControllerEstanteEd.m */,
 				579F609C1E035AF5006E1AE8 /* ViewControllerImagem.h */,
 				579F609D1E035AF5006E1AE8 /* ViewControllerImagem.m */,
+				57072D951E084B7200C3131B /* ControllerAlterarSenha.h */,
+				57072D961E084B7200C3131B /* ControllerAlterarSenha.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				57D8F10E1DD1187F0031C818 /* TableViewControllerListaLivros.m in Sources */,
 				57A7ED0B1E04705300DCE9A1 /* Interacoes+CoreDataClass.m in Sources */,
 				579F609E1E035AF5006E1AE8 /* ViewControllerImagem.m in Sources */,
+				57072D971E084B7200C3131B /* ControllerAlterarSenha.m in Sources */,
 				9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */,
 				578F85441DDD14B700EA5018 /* TableViewCellLivro.m in Sources */,
 				57B151A11D5BF434006C6560 /* ViewController.m in Sources */,

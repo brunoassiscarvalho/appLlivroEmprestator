@@ -22,11 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    if(_editando){
+        if([_novoUsuario.sexo isEqualToString:@"F"]){
+            [self.sexo setOn:NO];
+        }else{
+            [self.sexo setOn:YES];
+        }
+        [self.uf setText:_novoUsuario.uf];
+        [self.cidade setText:_novoUsuario.cidade];
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
+    
     // Dispose of any resources that can be recreated.
 }
 
@@ -36,7 +52,8 @@
     [[UIApplication sharedApplication]delegate];
     NSPersistentContainer *container = delegate.persistentContainer;
     NSManagedObjectContext *context = container.viewContext;
-    Usuario *usuario = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
+    Usuario *usuario = _novoUsuario;
+  
     
     NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy"];
@@ -64,9 +81,15 @@
     
 }
 - (IBAction)salvarUsuario:(UIButton *)sender {
-    [self incluirUsuario];
     
-    [self performSegueWithIdentifier:@"segueBoasVindas" sender:self];
+    [self incluirUsuario];
+    if(_editando){
+        [self performSegueWithIdentifier:@"segueVoltaConfig" sender:self];
+    }else{
+     [self performSegueWithIdentifier:@"segueBoasVindas" sender:self];
+    }
+    
+   
     
 }
 

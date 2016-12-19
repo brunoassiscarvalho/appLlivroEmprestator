@@ -70,8 +70,6 @@
     if (!_fetchedResultsController) {
         AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSPersistentContainer *persistentContainer = delegate.persistentContainer;
-      
-        
         
         NSFetchRequest *fetchRequest = [Usuario fetchRequest];
         [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"apelido != %@", self.usuarioLogado.apelido]];
@@ -153,9 +151,11 @@ return linhas;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"confirmarInteracao"] ){
-        _valor=@"";
+        NSSet *usuarioQueTemEsteLivro = _livroSelecionado.usuario;
         NSIndexPath *indexPath = [_listaUsuarios indexPathForSelectedRow];
-        Usuario *usuarioIteracao = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        NSArray *myArray = [usuarioQueTemEsteLivro allObjects];
+        Usuario *usuarioIteracao = [myArray objectAtIndex:(indexPath.row)];
+        //Usuario *usuarioIteracao = [self.fetchedResultsController objectAtIndexPath:indexPath];
         Livro *livroIteracao = _livroSelecionado;
         ViewControllerIteracoes  *destino = segue.destinationViewController;
         [destino setLivroSelecionado:livroIteracao];
