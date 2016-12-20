@@ -22,7 +22,7 @@
                     </imageView>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.88622384050000003" green="0.0020040209680000001" blue="0.33407645959999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.55294117649999996" green="0.61960784310000006" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
             <size key="customSize" width="50" height="97"/>
             <connections>
                 <outlet property="imagemLivro" destination="J0z-6Z-1x4" id="eaB-mx-nsz"/>

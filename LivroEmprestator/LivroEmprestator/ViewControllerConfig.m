@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Usuario+CoreDataClass.h"
 #import "ViewControllerUsuario.h"
+#import "ViewControllerDetalheUsuario.h"
 
 @interface ViewControllerConfig ()<NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property Usuario *usuarioLogado;
@@ -70,22 +71,23 @@
  [self performSegueWithIdentifier:@"configAlterarSenha" sender:sender];
 }
 
-
-
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Celula Selecionada: %@", indexPath);
-
-    
-    
+- (IBAction)excluirCadastro:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"excluirCadastro" sender:sender];
 }
+
+
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"configMeusDados"] ){
-        
-        
         ViewControllerUsuario  *destino = segue.destinationViewController;
         [destino setUsuarioLogado:_usuarioLogadoConfig];
-        
+    }
+    
+    if([segue.identifier isEqualToString:@"excluirCadastro"] ){
+        ViewControllerDetalheUsuario  *destino = segue.destinationViewController;
+        [destino setExcluindo:YES];
+        [destino setUsuarioSelecionado:_usuarioLogadoConfig];
     }
 }
 

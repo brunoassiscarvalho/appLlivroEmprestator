@@ -171,7 +171,7 @@ UIImage *imagem = [UIImage imageWithData:bytesDaImagem];
     if(_editando){
         [self.navigationController popViewControllerAnimated:YES];
     }else{
-    [self performSegueWithIdentifier:@"voltarLogin" sender:self];
+        [self performSegueWithIdentifier:@"voltarLogin" sender:nil];
     }
 }
 

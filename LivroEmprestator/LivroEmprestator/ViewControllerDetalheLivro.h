@@ -11,5 +11,6 @@
 
 @interface ViewControllerDetalheLivro : ViewController
 @property Livro *livroSelecionado;
+@property Usuario *usuarioEstante;
 
 @end

@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *usuario;
 @property (weak, nonatomic) IBOutlet UITextField *senha;
 @property (weak, nonatomic) IBOutlet UIView *logo;
+@property (weak, nonatomic) IBOutlet UIView *viewLogo;
 
 
 @end
@@ -49,15 +50,26 @@
     }else {
         NSLog(@"Recuperou pessoas");
     }
-    UIView *myView = self.logo;
     
-    [UIView animateWithDuration:0.5 animations:^{
-        myView.frame = CGRectMake(myView.frame.origin.x, myView.frame.origin.y, 0.0, 0.0);
-    } completion:^(BOOL finished){
+    
+  [UIView animateWithDuration:0.5 animations:^{
+        self.logo.frame=self.viewLogo.frame;
     }];
     
     
+   /* [UIView animateWithDuration:3.0
+                     animations:^{
+                         self.logo.center = CGPointMake(self.logo.center.x, self.logo.center.y - 100.0);
+                     }];*/
+    
+    
 }
+-(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.logo.frame=self.viewLogo.frame;
+    }];
+}
+
 
 
 - (void)didReceiveMemoryWarning {

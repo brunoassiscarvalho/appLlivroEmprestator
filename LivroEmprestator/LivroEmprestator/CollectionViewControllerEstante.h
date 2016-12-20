@@ -10,6 +10,8 @@
 #import "Usuario+CoreDataClass.h"
 
 @interface CollectionViewControllerEstante : UICollectionViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *estanteDeLivros;
+
 
 @property  Usuario *usuarioSelecionado;
 @end

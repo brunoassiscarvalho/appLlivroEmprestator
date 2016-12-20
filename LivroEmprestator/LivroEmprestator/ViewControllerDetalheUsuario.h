@@ -11,5 +11,6 @@
 
 @interface ViewControllerDetalheUsuario : UIViewController
 @property  Usuario *usuarioSelecionado;
+@property (assign) BOOL excluindo;
 
 @end

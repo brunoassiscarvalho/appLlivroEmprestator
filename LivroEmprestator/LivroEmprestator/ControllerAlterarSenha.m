@@ -64,9 +64,11 @@
             NSLog(@"Deu Erro ao alterar a senha! %@" , erroCoreData);
         }else{
             NSLog(@"Senha alterada!");
+            
+            [self.navigationController popViewControllerAnimated:YES];
         }
         
-        [self performSegueWithIdentifier:@"sucessoAlterarSenha" sender:sender];
+        
     }else{
        
         UIAlertController *falhaSenha = [UIAlertController alertControllerWithTitle:@"ERRO"

@@ -11,11 +11,14 @@
 #import "Usuario+CoreDataClass.h"
 #import "Livro+CoreDataClass.h"
 #import "CollectionViewCellEstante.h"
+#import "ViewControllerDetalheLivro.h"
 
 
-@interface CollectionViewControllerEstante ()<NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UITableViewDelegate>
+@interface CollectionViewControllerEstante ()<NSURLSessionDataDelegate, NSFetchedResultsControllerDelegate, UICollectionViewDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property Usuario *usuarioLogado;
+@property Livro *livroDaestante;
+@property NSIndexPath *itemSelecionado;
 @end
 
 @implementation CollectionViewControllerEstante
@@ -103,6 +106,29 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSSet *livrosUsuario = _usuarioSelecionado.livro;
+    NSArray *myArray = [livrosUsuario allObjects];
+    _livroDaestante = [myArray objectAtIndex:(indexPath.item)];
+    [self performSegueWithIdentifier:@"estanteLivrosDetalhe" sender:self];
+    
+    
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"estanteLivrosDetalhe"]){
+        
+        
+       
+        ViewControllerDetalheLivro  *destino = segue.destinationViewController;
+        [destino setLivroSelecionado:_livroDaestante];
+        [destino setUsuarioEstante:_usuarioSelecionado];
+        
+    }
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

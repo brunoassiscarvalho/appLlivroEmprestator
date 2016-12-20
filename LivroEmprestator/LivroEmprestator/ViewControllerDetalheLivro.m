@@ -12,6 +12,7 @@
 #import "Autor+CoreDataClass.h"
 #import "AppDelegate.h"
 #import "Usuario+CoreDataClass.h"
+#import "ViewControllerIteracoes.h"
 
 
 
@@ -103,11 +104,25 @@
         }
 
         
+    }else  if([segue.identifier isEqualToString:@"estanteConfirmaEmprestimo"] ){
+    
+        Usuario *usuarioIteracao = _usuarioEstante;
+        
+        Livro *livroIteracao = _livroSelecionado;
+        ViewControllerIteracoes  *destino = segue.destinationViewController;
+        [destino setLivroSelecionado:livroIteracao];
+        [destino setUsuarioSolicitado:usuarioIteracao];
     }
     
 }
 - (IBAction)pegarEmprestado:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"segueLivroListaUsuarios" sender:sender];
+    if(_usuarioEstante){
+    
+        [self performSegueWithIdentifier:@"estanteConfirmaEmprestimo" sender:sender];
+    }else{
+        [self performSegueWithIdentifier:@"segueLivroListaUsuarios" sender:sender];
+    }
+    
 
 }
 - (IBAction)colocarEstante:(UIButton *)sender {

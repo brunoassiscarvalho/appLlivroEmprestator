@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		57072D971E084B7200C3131B /* ControllerAlterarSenha.m in Sources */ = {isa = PBXBuildFile; fileRef = 57072D961E084B7200C3131B /* ControllerAlterarSenha.m */; };
-		570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */; };
-		570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD01D77AEC5001EC129 /* TableListaContatos.m */; };
-		570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */ = {isa = PBXBuildFile; fileRef = 570E5DD31D77BA26001EC129 /* ViewFiguras.m */; };
 		57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */ = {isa = PBXBuildFile; fileRef = 57355F751DC9616C004A778C /* ViewControllerLivro.m */; };
 		573B00111DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m in Sources */ = {isa = PBXBuildFile; fileRef = 573B00101DE4F0CB0024B1AB /* ViewControllerDetalheLivro.m */; };
 		573B00141DE507E10024B1AB /* ViewControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 573B00131DE507E10024B1AB /* ViewControllerConfig.m */; };
@@ -49,20 +46,12 @@
 		57EFE8671E01EDE7003C4997 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EFE8661E01EDE7003C4997 /* MapKit.framework */; };
 		57EFE86A1E01EEE1003C4997 /* ViewControllerMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EFE8691E01EEE1003C4997 /* ViewControllerMap.m */; };
 		57F084E71DF61CB80028E9B2 /* ViewControllerIteracoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F084E61DF61CB80028E9B2 /* ViewControllerIteracoes.m */; };
-		9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEC1D7F80E60078357F /* ViewPentagono.m */; };
-		9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAEF1D7F84800078357F /* ViewCirculo.m */; };
 		9C28EAF31D7F8E6C0078357F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C28EAF21D7F8E6C0078357F /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57072D951E084B7200C3131B /* ControllerAlterarSenha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerAlterarSenha.h; sourceTree = "<group>"; };
 		57072D961E084B7200C3131B /* ControllerAlterarSenha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerAlterarSenha.m; sourceTree = "<group>"; };
-		570E5DCC1D77AB22001EC129 /* ViewLIstaContatos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewLIstaContatos.h; sourceTree = "<group>"; };
-		570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewLIstaContatos.m; sourceTree = "<group>"; };
-		570E5DCF1D77AEC5001EC129 /* TableListaContatos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListaContatos.h; sourceTree = "<group>"; };
-		570E5DD01D77AEC5001EC129 /* TableListaContatos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListaContatos.m; sourceTree = "<group>"; };
-		570E5DD21D77BA26001EC129 /* ViewFiguras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewFiguras.h; sourceTree = "<group>"; };
-		570E5DD31D77BA26001EC129 /* ViewFiguras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFiguras.m; sourceTree = "<group>"; };
 		57355F741DC9616C004A778C /* ViewControllerLivro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerLivro.h; sourceTree = "<group>"; };
 		57355F751DC9616C004A778C /* ViewControllerLivro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerLivro.m; sourceTree = "<group>"; };
 		573B000F1DE4F0CB0024B1AB /* ViewControllerDetalheLivro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDetalheLivro.h; sourceTree = "<group>"; };
@@ -132,10 +121,6 @@
 		57EFE8691E01EEE1003C4997 /* ViewControllerMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerMap.m; sourceTree = "<group>"; };
 		57F084E51DF61CB80028E9B2 /* ViewControllerIteracoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerIteracoes.h; sourceTree = "<group>"; };
 		57F084E61DF61CB80028E9B2 /* ViewControllerIteracoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerIteracoes.m; sourceTree = "<group>"; };
-		9C28EAEB1D7F80E60078357F /* ViewPentagono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPentagono.h; sourceTree = "<group>"; };
-		9C28EAEC1D7F80E60078357F /* ViewPentagono.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPentagono.m; sourceTree = "<group>"; };
-		9C28EAEE1D7F84800078357F /* ViewCirculo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCirculo.h; sourceTree = "<group>"; };
-		9C28EAEF1D7F84800078357F /* ViewCirculo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCirculo.m; sourceTree = "<group>"; };
 		9C28EAF11D7F8E6C0078357F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9C28EAF21D7F8E6C0078357F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,16 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				57B1519A1D5BF434006C6560 /* main.m */,
-				570E5DCC1D77AB22001EC129 /* ViewLIstaContatos.h */,
-				570E5DCD1D77AB22001EC129 /* ViewLIstaContatos.m */,
-				570E5DCF1D77AEC5001EC129 /* TableListaContatos.h */,
-				570E5DD01D77AEC5001EC129 /* TableListaContatos.m */,
-				570E5DD21D77BA26001EC129 /* ViewFiguras.h */,
-				570E5DD31D77BA26001EC129 /* ViewFiguras.m */,
-				9C28EAEB1D7F80E60078357F /* ViewPentagono.h */,
-				9C28EAEC1D7F80E60078357F /* ViewPentagono.m */,
-				9C28EAEE1D7F84800078357F /* ViewCirculo.h */,
-				9C28EAEF1D7F84800078357F /* ViewCirculo.m */,
 				57D1B2D61DC010F600BD7068 /* ViewControllerUsuario.h */,
 				57D1B2D71DC010F600BD7068 /* ViewControllerUsuario.m */,
 				57BB90FF1DF8CB5900F3D833 /* ViewControllerUsuario2.h */,
@@ -362,7 +337,6 @@
 				57A7ED0B1E04705300DCE9A1 /* Interacoes+CoreDataClass.m in Sources */,
 				579F609E1E035AF5006E1AE8 /* ViewControllerImagem.m in Sources */,
 				57072D971E084B7200C3131B /* ControllerAlterarSenha.m in Sources */,
-				9C28EAED1D7F80E60078357F /* ViewPentagono.m in Sources */,
 				578F85441DDD14B700EA5018 /* TableViewCellLivro.m in Sources */,
 				57B151A11D5BF434006C6560 /* ViewController.m in Sources */,
 				57B1519E1D5BF434006C6560 /* AppDelegate.m in Sources */,
@@ -377,17 +351,13 @@
 				57A7ED081E04705300DCE9A1 /* Livro+CoreDataProperties.m in Sources */,
 				579F609B1E033FE4006E1AE8 /* TableViewControllerEstanteEd.m in Sources */,
 				573B00141DE507E10024B1AB /* ViewControllerConfig.m in Sources */,
-				570E5DD11D77AEC5001EC129 /* TableListaContatos.m in Sources */,
 				57355F761DC9616C004A778C /* ViewControllerLivro.m in Sources */,
 				57B151A71D5BF434006C6560 /* LivroEmprestator.xcdatamodeld in Sources */,
 				57DDDC381DF77BF500502FE8 /* ViewControllerDetalheUsuario.m in Sources */,
 				573B00181DE50BB70024B1AB /* TableViewCellInteracoes.m in Sources */,
 				57A7ED0A1E04705300DCE9A1 /* Autor+CoreDataProperties.m in Sources */,
 				578F85481DDD25B400EA5018 /* TableViewControllerContatos.m in Sources */,
-				9C28EAF01D7F84800078357F /* ViewCirculo.m in Sources */,
-				570E5DCE1D77AB22001EC129 /* ViewLIstaContatos.m in Sources */,
 				57A7ED0C1E04705300DCE9A1 /* Interacoes+CoreDataProperties.m in Sources */,
-				570E5DD41D77BA26001EC129 /* ViewFiguras.m in Sources */,
 				573B001C1DE50E390024B1AB /* TableViewControllerIteracoes.m in Sources */,
 				57A7ED071E04705300DCE9A1 /* Livro+CoreDataClass.m in Sources */,
 				57ECD07C1E009D1300FF5565 /* CollectionViewCellEstante.m in Sources */,
